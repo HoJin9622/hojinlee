@@ -1,5 +1,8 @@
 import PostPreview from '@/components/PostPreview'
-import { getPostMetadata } from '@/utils/posts'
+import {
+  getPostMetadata,
+  getPostMetadataFilteredByCategory,
+} from '@/utils/posts'
 
 export default function Posts({
   searchParams,
@@ -11,7 +14,7 @@ export default function Posts({
   }
 
   const category = searchParams.category.toString()
-  const posts = getPostMetadata(category)
+  const posts = getPostMetadataFilteredByCategory(category)
   return (
     <div>
       {posts.map((post) => (

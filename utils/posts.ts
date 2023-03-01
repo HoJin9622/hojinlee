@@ -31,19 +31,30 @@ export function getCategories() {
   return Array.from(new Set(categories))
 }
 
-export function getPostMetadata(category: string) {
+export function getPostMetadata() {
   const markdownPosts = getMarkdownPosts()
-  const posts = markdownPosts
-    .map((fileName) => {
-      const matterResult = getFileMatterResult(fileName)
-      return {
-        title: matterResult.data.title,
-        date: matterResult.data.date,
-        subtitle: matterResult.data.subtitle,
-        category: matterResult.data.category,
-        slug: fileName.replace('.md', ''),
-      }
-    })
-    .filter((post) => post.category === category)
+  const posts = markdownPosts.map((fileName) => {
+    const matterResult = getFileMatterResult(fileName)
+    return {
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      subtitle: matterResult.data.subtitle,
+      category: matterResult.data.category,
+      slug: fileName.replace('.md', ''),
+    }
+  })
+
   return posts
+}
+
+export function getPostMetadataFilteredByCategory(category: string) {
+  return getPostMetadata().filter((post) => post.category === category)
+}
+
+export function getPostContent(slug: string) {
+  const folder = 'posts/'
+  const file = `${folder}${slug}.md`
+  const content = fs.readFileSync(file, 'utf8')
+  const matterResult = matter(content)
+  return matterResult
 }
