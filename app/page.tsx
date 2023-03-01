@@ -1,11 +1,18 @@
-import getPostMetadata from '@/components/getPostMetadata'
-import PostPreview from '@/components/PostPreview'
+import { getCategories } from '@/utils/posts'
+import Link from 'next/link'
 
 export default function Home() {
-  const postMetadata = getPostMetadata()
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ))
+  const categories = getCategories()
 
-  return <div>{postPreviews}</div>
+  return (
+    <div>
+      <ul>
+        {categories.map((category) => (
+          <Link href={`/posts?category=${category}`} key={category}>
+            <li>{category}</li>
+          </Link>
+        ))}
+      </ul>
+    </div>
+  )
 }
