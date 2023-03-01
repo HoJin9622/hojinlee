@@ -3,14 +3,12 @@ import { PostMetadata } from './PostMetadata'
 
 export default function PostPreview(props: PostMetadata) {
   return (
-    <div key={props.slug}>
-      <Link href={`/posts/${props.slug}`}>
-        <h2>
-          [{props.category}]{props.title}
-        </h2>
-      </Link>
-      <p>{props.subtitle}</p>
-      <p>{props.date}</p>
-    </div>
+    <Link href={`/posts/${props.slug}`}>
+      <div className='space-y-2 border-b-2 px-3 py-4'>
+        <h2 className='font-medium text-base'>{props.title}</h2>
+        <p className='text-sm'>{props.subtitle}</p>
+        <span className='text-sm'>{props.date}</span>
+      </div>
+    </Link>
   )
 }
