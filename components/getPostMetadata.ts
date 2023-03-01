@@ -2,6 +2,12 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { PostMetadata } from './PostMetadata'
 
+const sortByDate = (posts: PostMetadata[]) => {
+  return [...posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+}
+
 const getPostMetadata = (): PostMetadata[] => {
   const folder = 'posts/'
   const files = fs.readdirSync(folder)
@@ -18,8 +24,8 @@ const getPostMetadata = (): PostMetadata[] => {
       slug: fileName.replace('.md', ''),
     }
   })
-
-  return posts
+  const sortedPosts = sortByDate(posts)
+  return sortedPosts
 }
 
 export default getPostMetadata
