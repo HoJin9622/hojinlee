@@ -3,6 +3,7 @@ title: 'React Native에서 앱 아이콘을 변경하자'
 subtitle: 'React Native에서 앱 아이콘을 변경하자'
 date: '2021-06-09'
 category: 'React Native'
+coverImage: '/images/appicon.png'
 ---
 
 ## IOS

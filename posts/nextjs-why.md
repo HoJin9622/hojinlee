@@ -3,6 +3,7 @@ title: 'Next.js를 쓰는 이유'
 subtitle: 'Next.js를 쓰는 이유'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # Next.js가 필요한 이유

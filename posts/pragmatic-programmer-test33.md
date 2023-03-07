@@ -3,6 +3,7 @@ title: '연습문제 33 풀이'
 subtitle: '연습문제 33 풀이'
 date: '2022-04-04'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 📌 연습문제 33

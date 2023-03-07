@@ -3,6 +3,7 @@ title: 'Zappa, Github Actions, AWS Lambda를 이용한 Serverless CI/CD 구축'
 subtitle: 'serverless 애플리케이션을 만들어보자'
 date: '2022-05-22'
 category: 'Django'
+coverImage: '/images/lambda.png'
 ---
 
 ## 환경

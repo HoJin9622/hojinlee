@@ -3,6 +3,7 @@ title: 'GraphQL 기본2'
 subtitle: 'GraphQL 기본2'
 date: '2020-12-15'
 category: 'GraphQL'
+coverImage: '/images/graphql.png'
 ---
 
 ## 배열

@@ -3,6 +3,7 @@ title: 'Django 기본 파일들의 역할'
 subtitle: 'Django 기본 파일들의 역할'
 date: '2020-12-15'
 category: 'Django'
+coverImage: '/images/python-django.png'
 ---
 
 ## MVC & MTV

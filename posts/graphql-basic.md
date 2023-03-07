@@ -3,6 +3,7 @@ title: 'GraphQL 기본'
 subtitle: 'GraphQL 기본'
 date: '2020-12-15'
 category: 'GraphQL'
+coverImage: '/images/graphql.png'
 ---
 
 ## graphql

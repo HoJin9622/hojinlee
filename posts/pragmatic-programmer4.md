@@ -3,6 +3,7 @@ title: '4장. 실용주의 편집증'
 subtitle: '4장. 실용주의 편집증'
 date: '2022-03-24'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 오늘 TIL 3줄 요약

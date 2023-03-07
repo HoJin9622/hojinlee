@@ -3,6 +3,7 @@ title: 'Next.js Title 변경'
 subtitle: 'Next.js Title 변경'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # Title 변경

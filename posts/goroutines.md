@@ -3,6 +3,7 @@ title: 'Goroutines'
 subtitle: 'Goroutines을 알아보자'
 date: '2022-01-23'
 category: 'Golang'
+coverImage: '/images/go.png'
 ---
 
 ### Goroutines

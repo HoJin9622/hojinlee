@@ -3,6 +3,7 @@ title: 'GraphQL 기초'
 subtitle: 'GraphQL이란 무엇인가?'
 date: '2022-06-08'
 category: 'GraphQL'
+coverImage: '/images/graphql.png'
 ---
 
 ## 🏗 GraphQL로 영화 API 만들기

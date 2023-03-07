@@ -3,6 +3,7 @@ title: 'pipenv를 사용한 장고 개발환경 세팅'
 subtitle: 'pipenv를 사용한 장고 개발환경 세팅'
 date: '2022-02-26'
 category: 'Django'
+coverImage: '/images/python-django.png'
 ---
 
 ## pipenv

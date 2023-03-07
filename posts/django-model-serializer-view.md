@@ -3,6 +3,7 @@ title: 'Django Model, Serializer, View'
 subtitle: 'Django Model, Serializer, View'
 date: '2020-12-15'
 category: 'Django'
+coverImage: '/images/python-django.png'
 ---
 
 ## Model

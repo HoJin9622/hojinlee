@@ -3,6 +3,7 @@ title: 'Next.js Data Fetching & Dynamic Route'
 subtitle: 'Next.js Data Fetching & Dynamic Route'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # Data Fetching

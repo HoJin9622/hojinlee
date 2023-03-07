@@ -41,6 +41,7 @@ export function getPostMetadata() {
       subtitle: matterResult.data.subtitle,
       category: matterResult.data.category,
       slug: fileName.replace('.md', ''),
+      coverImage: matterResult.data.coverImage,
     }
   })
 

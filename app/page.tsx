@@ -20,13 +20,15 @@ export default function Home() {
               </p>
               <div className='flex gap-6 mt-3'>
                 <h2 className='font-bold text-base flex-1'>{post.title}</h2>
-                <Image
-                  className='w-20 h-14 object-cover rounded-sm'
-                  src='/images/avatar.png'
-                  width={80}
-                  height={56}
-                  alt='thumbnail'
-                />
+                {post.coverImage && (
+                  <Image
+                    className='w-20 h-14 object-cover rounded-sm'
+                    src={post.coverImage}
+                    width={80}
+                    height={56}
+                    alt='thumbnail'
+                  />
+                )}
               </div>
             </div>
           </Link>

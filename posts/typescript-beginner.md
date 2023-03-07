@@ -3,6 +3,7 @@ title: 'TypeScript 기본'
 subtitle: 'TypeScript에 대해 알아보자'
 date: '2022-05-01'
 category: 'Typescript'
+coverImage: '/images/typescript.jpeg'
 ---
 
 ## 📝 Table of Contents

@@ -4,4 +4,5 @@ export interface PostMetadata {
   subtitle: string
   category: string
   slug: string
+  coverImage?: string
 }

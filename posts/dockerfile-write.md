@@ -3,6 +3,7 @@ title: 'Dockerfile 작성'
 subtitle: 'Dockerfile 작성'
 date: '2022-03-20'
 category: 'Docker'
+coverImage: '/images/docker.png'
 ---
 
 # Dockerfile

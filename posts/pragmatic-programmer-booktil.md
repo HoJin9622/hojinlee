@@ -3,6 +3,7 @@ title: '나의 최애 북틸'
 subtitle: '나의 최애 북틸'
 date: '2022-03-22'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 나의 최대 북틸 3명

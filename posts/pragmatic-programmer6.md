@@ -3,6 +3,7 @@ title: '6장. 동시성'
 subtitle: '6장. 동시성'
 date: '2022-03-30'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 오늘 TIL 3줄 요약

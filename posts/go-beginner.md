@@ -2,7 +2,8 @@
 title: 'Go 문법, 타입, 함수'
 subtitle: 'Go의 변수 선언과 타입 및 함수에 대해 알아보자'
 date: '2022-01-13'
-category: 'React Native'
+category: 'Golang'
+coverImage: '/images/go.png'
 ---
 
 ## 변수 선언

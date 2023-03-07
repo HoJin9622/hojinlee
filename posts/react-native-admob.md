@@ -3,6 +3,7 @@ title: '@react-native-admob/admob 을 사용한 앱 광고'
 subtitle: 'react native AdMob 광고 삽입 방법'
 date: '2022-01-18'
 category: 'React Native'
+coverImage: '/images/admob.jpg'
 ---
 
 ### 사용 라이브러리
@@ -58,7 +59,6 @@ https://developers.google.com/admob/ios/3p-skadnetworks
 
 ```tsx
 import { BannerAd, BannerAdSize, TestIds } from '@react-native-admob/admob'
-
 ;<BannerAd size={BannerAdSize.BANNER} unitId={TestIds.BANNER} />
 ```
 

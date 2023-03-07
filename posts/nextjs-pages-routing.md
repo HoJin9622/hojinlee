@@ -3,6 +3,7 @@ title: 'Next.js Pages와 Routing'
 subtitle: 'Next.js Pages와 Routing'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # Pages 폴더

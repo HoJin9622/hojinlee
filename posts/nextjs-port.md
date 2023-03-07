@@ -3,6 +3,7 @@ title: 'Next.js 실행 포트 변경 방법'
 subtitle: 'Next.js 실행 포트 변경 방법'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # 직접 지정

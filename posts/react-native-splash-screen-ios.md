@@ -3,6 +3,7 @@ title: 'React Native Splash Screen 제작(IOS)'
 subtitle: 'React Native Splash Screen 제작(IOS)'
 date: '2021-06-09'
 category: 'React Native'
+coverImage: '/images/meerkat.png'
 ---
 
 https://github.com/crazycodeboy/react-native-splash-screen

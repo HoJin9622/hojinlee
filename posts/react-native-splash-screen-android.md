@@ -3,6 +3,7 @@ title: 'React Native Splash Screen 제작(Android)'
 subtitle: 'React Native Splash Screen 제작(Android)'
 date: '2021-06-09'
 category: 'React Native'
+coverImage: '/images/meerkat.png'
 ---
 
 https://velog.io/@hojin9622/React-Native-Splash-Screen-%EC%A0%9C%EC%9E%91IOS

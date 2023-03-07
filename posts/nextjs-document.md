@@ -3,6 +3,7 @@ title: 'Next.js _document.js'
 subtitle: 'Next.js _document.js'
 date: '2020-12-15'
 category: 'NextJS'
+coverImage: '/images/nextjs.png'
 ---
 
 # \_document.js

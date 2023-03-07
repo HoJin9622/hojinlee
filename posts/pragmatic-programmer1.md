@@ -3,6 +3,7 @@ title: '서문 ~ 1장. 실용주의 철학'
 subtitle: '서문 ~ 1장. 실용주의 철학'
 date: '2022-03-19'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 오늘 TIL 3줄 요약

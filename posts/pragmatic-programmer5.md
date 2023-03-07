@@ -3,6 +3,7 @@ title: '5장. 구부러지거나 부러지거나'
 subtitle: '5장. 구부러지거나 부러지거나'
 date: '2022-03-27'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 오늘 TIL 3줄 요약

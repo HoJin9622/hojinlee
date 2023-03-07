@@ -3,6 +3,7 @@ title: '8장. 프로젝트 전에'
 subtitle: '8장. 프로젝트 전에'
 date: '2022-04-03'
 category: '실용주의 프로그래머'
+coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 
 ## 오늘 TIL 3줄 요약
