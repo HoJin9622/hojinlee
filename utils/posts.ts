@@ -44,7 +44,7 @@ export function getPostMetadata() {
     }
   })
 
-  return posts
+  return sortByDate(posts)
 }
 
 export function getPostMetadataFilteredByCategory(category: string) {

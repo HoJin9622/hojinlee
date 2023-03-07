@@ -1,26 +1,37 @@
 import Profile from '@/components/Profile'
-import { getCategories } from '@/utils/posts'
+import { getPostMetadata } from '@/utils/posts'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
-  const categories = getCategories()
+  const posts = getPostMetadata()
 
   return (
     <div className='px-6'>
       <Profile />
+
+      <article className='space-y-1 divide-y'>
+        {posts.map((post) => (
+          <Link href={`/posts/${post.slug}`} key={post.slug}>
+            <div className='py-4'>
+              <p className='text-sm'>
+                {post.category} ·{' '}
+                <span className='text-gray-500'>{post.date}</span>
+              </p>
+              <div className='flex gap-6 mt-3'>
+                <h2 className='font-bold text-base flex-1'>{post.title}</h2>
+                <Image
+                  className='w-20 h-14 object-cover rounded-sm'
+                  src='/images/avatar.png'
+                  width={80}
+                  height={56}
+                  alt='thumbnail'
+                />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </article>
     </div>
-    // <nav className='px-3 py-4'>
-    //   <h3 className='font-medium text-lg border-b-2 pb-1 mb-3'>카테고리</h3>
-    //   <ul className='space-y-1'>
-    //     {categories.map((category) => (
-    //       <Link
-    //         className='block'
-    //         href={`/posts?category=${category}`}
-    //         key={category}
-    //       >
-    //         <li className='text-base cursor-pointer'>- {category}</li>
-    //       </Link>
-    //     ))}
-    //   </ul>
-    // </nav>
   )
 }
