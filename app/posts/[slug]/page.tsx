@@ -1,29 +1,37 @@
-import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
-import matter from 'gray-matter'
-import getPostMetadata from '@/components/getPostMetadata'
+import { getPostContent, getPostMetadata } from '@/utils/posts'
+import Image from 'next/image'
 
-const getPostContent = (slug: string) => {
-  const folder = 'posts/'
-  const file = `${folder}${slug}.md`
-  const content = fs.readFileSync(file, 'utf8')
-  const matterResult = matter(content)
-  return matterResult
+interface Props {
+  params: { slug: string }
+}
+
+export default function PostPage({ params: { slug } }: Props) {
+  const post = getPostContent(slug)
+
+  return (
+    <div className='px-6 mt-6'>
+      <h1 className='text-3xl font-bold'>{post.data.title}</h1>
+      <div className='text-sm text-gray-500'>{post.data.date}</div>
+
+      <article className='prose mt-10'>
+        {post.data.coverImage && (
+          <div className='relative aspect-video'>
+            <Image
+              className='object-contain m-0'
+              src={post.data.coverImage}
+              alt='thumbnail'
+              fill
+            />
+          </div>
+        )}
+        <Markdown>{post.content}</Markdown>
+      </article>
+    </div>
+  )
 }
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata()
   return posts.map((post) => ({ slug: post.slug }))
-}
-
-export default function PostPage(props: any) {
-  const slug = props.params.slug
-  const post = getPostContent(slug)
-
-  return (
-    <div>
-      <h1>{post.data.title}</h1>
-      <Markdown>{post.content}</Markdown>
-    </div>
-  )
 }
