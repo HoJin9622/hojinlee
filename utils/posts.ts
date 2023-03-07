@@ -1,6 +1,14 @@
-import { PostMetadata } from '@/components/PostMetadata'
 import fs from 'fs'
 import matter from 'gray-matter'
+
+type PostMetadata = {
+  title: string
+  date: string
+  subtitle: string
+  category: string
+  slug: string
+  coverImage?: string
+}
 
 const folder = 'posts/'
 
@@ -22,15 +30,6 @@ function sortByDate(posts: PostMetadata[]) {
   )
 }
 
-export function getCategories() {
-  const markdownPosts = getMarkdownPosts()
-  const categories = markdownPosts.map((fileName) => {
-    const matterResult = getFileMatterResult(fileName)
-    return matterResult.data.category
-  })
-  return Array.from(new Set(categories))
-}
-
 export function getPostMetadata() {
   const markdownPosts = getMarkdownPosts()
   const posts = markdownPosts.map((fileName) => {
@@ -46,10 +45,6 @@ export function getPostMetadata() {
   })
 
   return sortByDate(posts)
-}
-
-export function getPostMetadataFilteredByCategory(category: string) {
-  return getPostMetadata().filter((post) => post.category === category)
 }
 
 export function getPostContent(slug: string) {
