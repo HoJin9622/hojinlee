@@ -14,7 +14,7 @@ export default function PostPage({ params: { slug } }: Props) {
       <h1 className='text-3xl font-bold'>{post.data.title}</h1>
       <div className='text-sm text-gray-500'>{post.data.date}</div>
 
-      <article className='prose mt-10'>
+      <article className='prose mt-10 md:prose-lg'>
         {post.data.coverImage && (
           <div className='relative aspect-video'>
             <Image

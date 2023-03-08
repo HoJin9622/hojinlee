@@ -14,22 +14,22 @@ export default function Profile() {
   }
 
   return (
-    <div className='py-6'>
+    <div className='py-6 md:flex md:items-center md:justify-between'>
       <div className='flex items-center gap-5'>
         <Image
-          className='rounded-full w-12 h-12'
+          className='rounded-full w-12 h-12 md:hidden'
           src='/images/avatar.png'
           width={48}
           height={48}
           alt='avatar'
         />
         <div>
-          <div className='font-medium text-xl'>이호진</div>
-          <div className='text-gray-500'>Software Developer</div>
+          <div className='font-medium text-xl md:text-4xl'>이호진</div>
+          <div className='text-gray-500 md:hidden'>Software Developer</div>
         </div>
       </div>
 
-      <div className='flex items-center gap-2 mt-5'>
+      <div className='flex items-center gap-2 mt-5 md:mt-0'>
         <button
           onClick={onGithubClick}
           className='w-9 h-9 rounded-full overflow-hidden flex items-center justify-center'
