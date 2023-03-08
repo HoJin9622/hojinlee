@@ -12,7 +12,7 @@ export default function Home() {
 
       <article className='space-y-1 divide-y'>
         {posts.map((post) => (
-          <Link href={`/posts/${post.slug}`} key={post.slug}>
+          <Link className='block' href={`/posts/${post.slug}`} key={post.slug}>
             <div className='py-4'>
               <p className='text-sm'>
                 {post.category} ·{' '}
