@@ -18,11 +18,13 @@ export default function Home() {
                 {post.category} ·{' '}
                 <span className='text-gray-500'>{post.date}</span>
               </p>
-              <div className='flex gap-6 mt-3'>
-                <h2 className='font-bold text-base flex-1'>{post.title}</h2>
+              <div className='flex gap-6 mt-3 md:gap-14'>
+                <h2 className='font-bold text-base flex-1 md:text-xl'>
+                  {post.title}
+                </h2>
                 {post.coverImage && (
                   <Image
-                    className='w-20 h-14 object-cover rounded-sm'
+                    className='w-20 h-14 object-cover rounded-sm md:w-28 md:h-28'
                     src={post.coverImage}
                     width={80}
                     height={56}
