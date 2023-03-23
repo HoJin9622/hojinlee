@@ -6,5 +6,8 @@
   ],
   "scripts": {
     "dev": "yarn workspace devlog dev"
+  },
+  "devDependencies": {
+    "typescript": "4.9.5"
   }
 }
