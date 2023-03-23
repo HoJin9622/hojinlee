@@ -3,5 +3,8 @@
   "packageManager": "yarn@3.5.0",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "yarn workspace devlog dev"
+  }
 }
