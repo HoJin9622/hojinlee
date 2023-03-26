@@ -22,7 +22,7 @@ export default function Home() {
           </li>
           <Link href="https://nextlevel-monster.netlify.app">
             <li className="text-xl hover:font-medium cursor-pointer">
-              <a>&rarr; 먼스터</a>
+              <span>&rarr; 먼스터</span>
             </li>
           </Link>
         </ul>

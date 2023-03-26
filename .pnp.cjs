@@ -5297,11 +5297,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.15.10"],\
             ["@types/react", "npm:18.0.29"],\
             ["@types/react-dom", "npm:18.0.11"],\
+            ["autoprefixer", "virtual:97c7979c285a87d6033eb9f274b08cf084a4732431e408095f0a87028e9df6a17183b43d823ad7b6ac8492e13e5cc59bc5d35ec363c12599293fc0562771fda5#npm:10.4.14"],\
             ["eslint", "npm:8.36.0"],\
             ["eslint-config-next", "virtual:0c8cac371bf5377be59b50f205491e30cbe827e01e09a5d7482c7e986ca0553779cd06e45c57755a2e9ab690d96311f0cea5fbeeb43340b2149be15eb0dd3743#npm:13.2.4"],\
             ["next", "virtual:0c8cac371bf5377be59b50f205491e30cbe827e01e09a5d7482c7e986ca0553779cd06e45c57755a2e9ab690d96311f0cea5fbeeb43340b2149be15eb0dd3743#npm:13.2.4"],\
+            ["postcss", "npm:8.4.21"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0c8cac371bf5377be59b50f205491e30cbe827e01e09a5d7482c7e986ca0553779cd06e45c57755a2e9ab690d96311f0cea5fbeeb43340b2149be15eb0dd3743#npm:18.2.0"],\
+            ["tailwindcss", "virtual:97c7979c285a87d6033eb9f274b08cf084a4732431e408095f0a87028e9df6a17183b43d823ad7b6ac8492e13e5cc59bc5d35ec363c12599293fc0562771fda5#npm:3.2.7"],\
             ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"]\
           ],\
           "linkType": "SOFT"\
