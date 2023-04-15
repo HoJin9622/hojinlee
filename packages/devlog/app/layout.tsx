@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Header />
-        <main>{children}</main>
+        <main className="max-w-screen-lg mx-auto">{children}</main>
       </body>
 
       <Script
