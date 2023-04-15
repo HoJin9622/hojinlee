@@ -34,5 +34,6 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
   const post = getPostContent(slug);
   return {
     title: post.title,
+    description: post.subtitle,
   };
 }
