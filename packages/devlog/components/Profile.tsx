@@ -24,7 +24,7 @@ export default function Profile() {
           alt="avatar"
         />
         <div>
-          <div className="font-medium text-xl md:text-4xl">이호진</div>
+          <div className="font-medium text-xl md:text-4xl">Jin</div>
           <div className="text-gray-500 md:hidden">Frontend Web Developer</div>
         </div>
       </div>
