@@ -35,5 +35,13 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
   return {
     title: post.title,
     description: post.subtitle,
+    openGraph: {
+      title: post.title,
+      description: post.subtitle,
+      images: post.coverImage,
+      siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
+      locale: "ko",
+      type: "article",
+    },
   };
 }
