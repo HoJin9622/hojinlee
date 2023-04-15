@@ -3,8 +3,9 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
-  title: "이호진의 기술블로그",
-  description: "개발 내용을 정리한 블로그입니다.",
+  title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
+  description:
+    "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
 };
 
 export default function RootLayout({
