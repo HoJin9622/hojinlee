@@ -1,5 +1,5 @@
-import fs from "fs";
-import matter from "gray-matter";
+import fs from 'fs';
+import matter from 'gray-matter';
 
 type PostMetadata = {
   title: string;
@@ -10,11 +10,11 @@ type PostMetadata = {
   coverImage?: string;
 };
 
-const folder = "posts/";
+const folder = 'posts/';
 
 function getMarkdownPosts() {
   const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
+  const markdownPosts = files.filter((file) => file.endsWith('.md'));
   return markdownPosts;
 }
 
@@ -26,7 +26,7 @@ function getFileMatterResult(fileName: string) {
 
 function sortByDate(posts: PostMetadata[]) {
   return [...posts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 
@@ -39,7 +39,7 @@ export function getPostMetadata() {
       date: matterResult.data.date,
       subtitle: matterResult.data.subtitle,
       category: matterResult.data.category,
-      slug: fileName.replace(".md", ""),
+      slug: fileName.replace('.md', ''),
       coverImage: matterResult.data.coverImage,
     };
   });
@@ -48,9 +48,8 @@ export function getPostMetadata() {
 }
 
 export function getPostContent(slug: string) {
-  const folder = "posts/";
   const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
+  const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
   return {
     ...(matterResult.data as PostMetadata),

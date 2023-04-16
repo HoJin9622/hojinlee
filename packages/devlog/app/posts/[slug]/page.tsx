@@ -1,7 +1,8 @@
-import Markdown from "markdown-to-jsx";
-import { getPostContent, getPostMetadata } from "@/utils/posts";
-import Head from "next/head";
-import type { Metadata } from "next";
+import React from 'react';
+import Head from 'next/head';
+import type { Metadata } from 'next';
+import Markdown from 'markdown-to-jsx';
+import { getPostContent, getPostMetadata } from '@/utils/posts';
 
 type Props = {
   params: { slug: string };
@@ -40,8 +41,8 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
       description: post.subtitle,
       images: post.coverImage,
       siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
-      locale: "ko",
-      type: "article",
+      locale: 'ko',
+      type: 'article',
     },
   };
 }

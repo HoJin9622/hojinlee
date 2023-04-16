@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { AiFillGithub } from "react-icons/ai";
-import { ImMail4 } from "react-icons/im";
+import React from 'react';
+import Image from 'next/image';
+import { AiFillGithub } from 'react-icons/ai';
+import { ImMail4 } from 'react-icons/im';
 
 export default function Profile() {
   const onGithubClick = () => {
-    window.open("https://github.com/HoJin9622", "_blank");
+    window.open('https://github.com/HoJin9622', '_blank');
   };
 
   const onMailClick = () => {
-    window.open("mailto:kiss0104040@gmail.com");
+    window.open('mailto:kiss0104040@gmail.com');
   };
 
   return (
@@ -31,12 +32,14 @@ export default function Profile() {
 
       <div className="flex items-center gap-2 mt-5 md:mt-0">
         <button
+          type="button"
           onClick={onGithubClick}
           className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center"
         >
           <AiFillGithub size={36} />
         </button>
         <button
+          type="button"
           onClick={onMailClick}
           className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center"
         >

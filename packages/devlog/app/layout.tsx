@@ -1,7 +1,8 @@
-import Header from "@/components/Header";
-import type { Metadata } from "next";
-import Script from "next/script";
-import "./globals.css";
+import React from 'react';
+import Script from 'next/script';
+import type { Metadata } from 'next';
+import Header from '@/components/Header';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
     title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
     description:
       "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
-    images: "/images/avatar.jpg",
+    images: '/images/avatar.jpg',
     siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
-    locale: "ko",
-    type: "website",
+    locale: 'ko',
+    type: 'website',
   },
 };
 
