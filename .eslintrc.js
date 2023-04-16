@@ -3,6 +3,7 @@ module.exports = {
   plugins: ["react", "react-hooks", "jsx-a11y", "import", "@typescript-eslint"],
   extends: [
     "next/core-web-vitals",
+    "prettier",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
@@ -14,4 +15,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["packages/*/tsconfig.json"],
   },
+  rules: {
+    "react/require-default-props": 0
+  }
 };
