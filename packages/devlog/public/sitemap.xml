@@ -6,6 +6,11 @@
 	<priority>1.0</priority>
 </url>
 <url>
+	<loc>https://devlog.nextlevels.net/posts/render-to-supabase</loc>
+	<lastmod>2023-04-23T17:53:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
 	<loc>https://devlog.nextlevels.net/posts/react-native-svg</loc>
 	<lastmod>2023-03-15T17:53:50+01:00</lastmod>
 	<priority>0.8</priority>
