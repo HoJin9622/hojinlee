@@ -3,6 +3,7 @@ import Head from 'next/head';
 import type { Metadata } from 'next';
 import Markdown from 'markdown-to-jsx';
 import { getPostContent, getPostMetadata } from '@/utils/posts';
+import Comments from '@/components/Comments';
 
 type Props = {
   params: { slug: string };
@@ -22,6 +23,8 @@ export default function PostPage({ params: { slug } }: Props) {
       <article className="prose mt-10 md:prose-lg">
         <Markdown>{post.content}</Markdown>
       </article>
+
+      <Comments />
     </div>
   );
 }
