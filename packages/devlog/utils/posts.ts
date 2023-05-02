@@ -26,23 +26,26 @@ function getFileMatterResult(fileName: string) {
 
 function sortByDate(posts: PostMetadata[]) {
   return [...posts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }
 
 export function getPostMetadata() {
   const markdownPosts = getMarkdownPosts();
-  const posts = markdownPosts.map((fileName) => {
-    const matterResult = getFileMatterResult(fileName);
-    return {
-      title: matterResult.data.title,
-      date: matterResult.data.date,
-      subtitle: matterResult.data.subtitle,
-      category: matterResult.data.category,
-      slug: fileName.replace('.md', ''),
-      coverImage: matterResult.data.coverImage,
-    };
-  });
+  const posts = markdownPosts
+    .map((fileName) => {
+      const matterResult = getFileMatterResult(fileName);
+      return {
+        title: matterResult.data.title,
+        date: matterResult.data.date,
+        subtitle: matterResult.data.subtitle,
+        category: matterResult.data.category,
+        slug: fileName.replace('.md', ''),
+        coverImage: matterResult.data.coverImage,
+        draft: matterResult.data.draft,
+      };
+    })
+    .filter((post) => !post.draft);
 
   return sortByDate(posts);
 }
