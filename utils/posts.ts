@@ -1,4 +1,5 @@
 import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter'
 
 export type PostMetadata = {
@@ -10,7 +11,7 @@ export type PostMetadata = {
   coverImage?: string
 }
 
-const folder = 'posts/'
+const folder = path.join(process.cwd(), 'posts')
 
 function getMarkdownPosts() {
   const files = fs.readdirSync(folder)
@@ -19,7 +20,7 @@ function getMarkdownPosts() {
 }
 
 function getFileMatterResult(fileName: string) {
-  const fileContents = fs.readFileSync(`${folder}${fileName}`)
+  const fileContents = fs.readFileSync(`${folder}/${fileName}`)
   const matterResult = matter(fileContents)
   return matterResult
 }
@@ -51,7 +52,7 @@ export function getPostMetadata() {
 }
 
 export function getPostContent(slug: string) {
-  const file = `${folder}${slug}.md`
+  const file = `${folder}/${slug}.md`
   const content = fs.readFileSync(file, 'utf8')
   const matterResult = matter(content)
   return {
