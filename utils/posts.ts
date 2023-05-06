@@ -1,7 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 
-type PostMetadata = {
+export type PostMetadata = {
   title: string
   date: string
   subtitle: string
