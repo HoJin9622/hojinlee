@@ -1,8 +1,8 @@
-import React from 'react';
-import Script from 'next/script';
-import type { Metadata } from 'next';
-import Header from '@/components/Header';
-import './globals.css';
+import React from 'react'
+import Script from 'next/script'
+import type { Metadata } from 'next'
+import Header from '@/components/Header'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
@@ -17,25 +17,25 @@ export const metadata: Metadata = {
     locale: 'ko',
     type: 'website',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
+    <html lang='ko'>
       <body>
         <Header />
-        <main className="max-w-screen-lg mx-auto">{children}</main>
+        <main className='max-w-screen-lg mx-auto'>{children}</main>
       </body>
 
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`}
-        strategy="afterInteractive"
+        strategy='afterInteractive'
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id='google-analytics' strategy='afterInteractive'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
@@ -45,5 +45,5 @@ export default function RootLayout({
         `}
       </Script>
     </html>
-  );
+  )
 }
