@@ -1,16 +1,17 @@
-import React from 'react'
-import Post from '@/components/Post'
-import Profile from '@/components/Profile'
-import { getPostMetadata } from '@/utils/posts'
+import React from 'react';
+
+import Post from '@/components/Post';
+import Profile from '@/components/Profile';
+import { getPostMetadata } from '@/utils/posts';
 
 export default function Home() {
-  const posts = getPostMetadata()
+  const posts = getPostMetadata();
 
   return (
-    <div className='px-6'>
+    <div className="px-6">
       <Profile />
 
-      <article className='space-y-1 divide-y'>
+      <article className="space-y-1 divide-y">
         {posts.map((post) => (
           <Post
             key={post.slug}
@@ -23,5 +24,5 @@ export default function Home() {
         ))}
       </article>
     </div>
-  )
+  );
 }
