@@ -12,7 +12,7 @@ export default function Home() {
     <div className="px-6">
       <Profile />
 
-      <Categories />
+      <Categories path="/" />
 
       <article className="space-y-1 divide-y">
         {posts.map((post) => (
