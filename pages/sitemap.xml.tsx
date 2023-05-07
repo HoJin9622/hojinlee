@@ -10,10 +10,12 @@ function generateSiteMap(posts: PostMetadata[]) {
             <loc>${EXTERNAL_DATA_URL}</loc>
         </url>
       ${posts
-        .map(({ slug }) => {
+        .map(({ slug, date }) => {
           return `
         <url>
             <loc>${`${EXTERNAL_DATA_URL}/posts/${slug}`}</loc>
+            <lastmod>${date}</lastmod>
+            <priority>1.0</priority>
         </url>
       `
         })
