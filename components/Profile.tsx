@@ -18,7 +18,7 @@ export default function Profile() {
     <div className="py-6 md:flex md:items-center md:justify-between">
       <div className="flex items-center gap-5">
         <Image
-          className="rounded-full w-12 h-12 md:hidden"
+          className="rounded-full w-12 h-12"
           src="/images/avatar.jpg"
           width={48}
           height={48}
@@ -26,7 +26,7 @@ export default function Profile() {
         />
         <div>
           <div className="font-medium text-xl md:text-4xl">Jin</div>
-          <div className="text-gray-500 md:hidden">Frontend Web Developer</div>
+          <div className="text-gray-500">Frontend Web Developer</div>
         </div>
       </div>
 
