@@ -2,7 +2,7 @@
 title: 'StatelessWidget, StatefulWidget 이란'
 subtitle: 'StatelessWidget, StatefulWidget 이란'
 date: '2021-10-27'
-category: 'Flutter'
+category: 'flutter'
 ---
 
 ### 개인공부 기록

@@ -2,7 +2,7 @@
 title: 'Kotlin 배열과 형변환'
 subtitle: '배열 선언과 사용return 타입과 매개변수 타입을 명시해줘야한다.반환값을 생략할 수 있다.'
 date: '2020-12-15'
-category: 'Kotlin'
+category: 'kotlin'
 ---
 
 # 배열

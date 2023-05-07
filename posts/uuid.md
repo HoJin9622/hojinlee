@@ -2,7 +2,7 @@
 title: 'uuid를 이용한 고유한 값 생성'
 subtitle: 'uuid 를 이용해 고유값 생성하기'
 date: '2021-01-24'
-category: 'Javascript'
+category: 'javascript'
 ---
 
 ## uuid란?

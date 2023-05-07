@@ -2,7 +2,7 @@
 title: 'Django REST API 튜토리얼'
 subtitle: 'Django REST API 튜토리얼'
 date: '2020-12-15'
-category: 'Django'
+category: 'django'
 coverImage: '/images/python-django.png'
 ---
 

@@ -2,7 +2,7 @@
 title: '9장. 실용주의 프로젝트'
 subtitle: '9장. 실용주의 프로젝트'
 date: '2022-04-06'
-category: '실용주의 프로그래머'
+category: 'book'
 coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 

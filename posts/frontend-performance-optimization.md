@@ -1,9 +1,9 @@
 ---
-title: "프론트엔드 성능 최적화 가이드"
-subtitle: ""
-date: "2023-04-27"
-category: "프론트엔드 성능 최적화 가이드"
-coverImage: "/images/go.png"
+title: '프론트엔드 성능 최적화 가이드'
+subtitle: ''
+date: '2023-04-27'
+category: 'book'
+coverImage: '/images/go.png'
 draft: true
 ---
 

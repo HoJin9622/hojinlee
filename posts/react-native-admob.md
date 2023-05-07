@@ -2,7 +2,7 @@
 title: '@react-native-admob/admob 을 사용한 앱 광고'
 subtitle: 'react native AdMob 광고 삽입 방법'
 date: '2022-01-18'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/admob.jpg'
 ---
 
@@ -58,8 +58,8 @@ https://developers.google.com/admob/ios/3p-skadnetworks
 ### 앱 코드
 
 ```tsx
-import { BannerAd, BannerAdSize, TestIds } from '@react-native-admob/admob'
-;<BannerAd size={BannerAdSize.BANNER} unitId={TestIds.BANNER} />
+import { BannerAd, BannerAdSize, TestIds } from '@react-native-admob/admob';
+<BannerAd size={BannerAdSize.BANNER} unitId={TestIds.BANNER} />;
 ```
 
 unitId는 테스트 시에는 반드시 TestIds.BANNER의 값을 사용해야한다.

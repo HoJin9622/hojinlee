@@ -2,7 +2,7 @@
 title: 'react native image crop picker "Invalid image selected"'
 subtitle: 'react native image crop picker "Invalid image selected"'
 date: '2021-01-15'
-category: 'React Native'
+category: 'react-native'
 ---
 
 React native image crop picker를 사용 도중 디폴트로 나오는 최근 사용한 사진을 선택하지 않고 download 등과 같이 다른 갤러리를 이용하여 안드로이드에서 사진을 업로드 할 때 catch 문에서 `Invalid image selected` 에러가 출력되었다.

@@ -2,7 +2,7 @@
 title: 'react native 앱 이름 변경'
 subtitle: 'react native 앱 이름 변경'
 date: '2022-12-25'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/react-native.png'
 ---
 

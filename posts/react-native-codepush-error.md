@@ -2,7 +2,7 @@
 title: "Use of undeclared identifier 'CodePush' 에러 해결"
 subtitle: "Use of undeclared identifier 'CodePush' 에러 해결"
 date: '2021-02-16'
-category: 'React Native'
+category: 'react-native'
 ---
 
 React Native IOS 에 코드푸시를 적용한 후 Archive를 할 때 `Use of undeclared identifier 'CodePush'` 라는 에러가 발생하였다.

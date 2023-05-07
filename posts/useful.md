@@ -2,7 +2,7 @@
 title: '유용한 것들 모음'
 subtitle: '유용한 것들 모음'
 date: '2021-09-28'
-category: '잡담'
+category: 'memo'
 ---
 
 ## Visual Studio Code Extension

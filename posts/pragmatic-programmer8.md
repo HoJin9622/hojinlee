@@ -2,7 +2,7 @@
 title: '8장. 프로젝트 전에'
 subtitle: '8장. 프로젝트 전에'
 date: '2022-04-03'
-category: '실용주의 프로그래머'
+category: 'book'
 coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 

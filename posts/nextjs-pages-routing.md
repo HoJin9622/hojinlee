@@ -2,7 +2,7 @@
 title: 'Next.js Pages와 Routing'
 subtitle: 'Next.js Pages와 Routing'
 date: '2020-12-15'
-category: 'NextJS'
+category: 'nextjs'
 coverImage: '/images/nextjs.png'
 ---
 
@@ -13,13 +13,13 @@ next.js 에서는 `import React from 'react'`를 쓰지않아도 정상동작한
 pages폴더에 second.js 파일을 만들고
 
 ```js
-import React from 'react'
+import React from 'react';
 
 function Second(props) {
-  return <div>This is Second Page</div>
+  return <div>This is Second Page</div>;
 }
 
-export default Second
+export default Second;
 ```
 
 위 코드를 입력한 후 웹사이트의 /second 페이지로 가면 `This is SecondPage`라고 나타나게 된다.
@@ -34,10 +34,10 @@ function ReadMe(props) {
     <div>
       <h1>Read Me</h1>
     </div>
-  )
+  );
 }
 
-export default ReadMe
+export default ReadMe;
 ```
 
 그 후 /articles/readme 페이지로 가보면 작성한 화면을 볼 수 있다.
@@ -50,10 +50,10 @@ function Page(props) {
     <div>
       <h1>Article List</h1>
     </div>
-  )
+  );
 }
 
-export default Page
+export default Page;
 ```
 
 그 후 /articles 페이지로 가보면 작성한 화면을 볼 수 있다.
@@ -63,7 +63,7 @@ export default Page
 모든 페이지들을 감싸는 영역
 
 ```js
-import '../styles/globals.css'
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -71,10 +71,10 @@ function MyApp({ Component, pageProps }) {
       <p>텍스트 출력</p>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
 ```
 
 위와 같이 작성하게되면 모든 페이지에서 "텍스트 출력"이라는 글을 확인할 수 있다.
@@ -82,7 +82,7 @@ export default MyApp
 # Link
 
 ```js
-import Link from 'next/link'
+import Link from 'next/link';
 
 function Page(props) {
   return (
@@ -91,16 +91,16 @@ function Page(props) {
 
       <ul>
         <li>
-          <Link href='/articles/readme'>
+          <Link href="/articles/readme">
             <a>README</a>
           </Link>
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-export default Page
+export default Page;
 ```
 
 next/link에서 Link를 import하여 a 태그를 Link 태그로 감싸주고 href를 설정해주면 SPA처럼 동작하게 된다.
@@ -108,33 +108,33 @@ next/link에서 Link를 import하여 a 태그를 Link 태그로 감싸주고 hre
 # Route
 
 ```js
-import { Button } from 'antd'
-import axios from 'axios'
-import Router from 'next/router'
+import { Button } from 'antd';
+import axios from 'axios';
+import Router from 'next/router';
 
 function GetDouble(props) {
   return (
-    <div className='w-full h-screen flex flex-col justify-center items-center'>
-      <div className='text-6xl'>{props.value}</div>
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <div className="text-6xl">{props.value}</div>
 
-      <div className='mt-4'>
+      <div className="mt-4">
         <Button onClick={() => Router.back()}>돌아가기</Button>
       </div>
     </div>
-  )
+  );
 }
 
 GetDouble.getInitialProps = async function (context) {
-  const value = context.query.value
+  const value = context.query.value;
   const response = await axios.get(
-    'http://localhost:1234' + '/api/double?value=' + value
-  )
+    'http://localhost:1234' + '/api/double?value=' + value,
+  );
   return {
     value: response.data.value,
-  }
-}
+  };
+};
 
-export default GetDouble
+export default GetDouble;
 ```
 
 next/js에서 Router를 import 한다.

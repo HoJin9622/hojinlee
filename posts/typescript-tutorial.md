@@ -2,7 +2,7 @@
 title: 'TypeScript 튜토리얼'
 subtitle: 'TypeScript 튜토리얼'
 date: '2020-12-15'
-category: 'Typescript'
+category: 'typescript'
 coverImage: '/images/typescript.jpeg'
 ---
 
@@ -67,13 +67,13 @@ tsconfig.json 파일의 compilerOptions의 outDir을 dist로 생성하면 index.
 ```ts
 const name = 'Hojin',
   age = 24,
-  gender = 'male'
+  gender = 'male';
 
 const sayHi = (name, age, gender?) => {
-  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`)
-}
+  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
+};
 
-sayHi(name, age)
+sayHi(name, age);
 ```
 
 sayHi 함수의 gender 뒤에 ?를 붙이지 않으면 실행 시 에러가 발생된다.
@@ -84,12 +84,12 @@ sayHi 함수의 gender 뒤에 ?를 붙이지 않으면 실행 시 에러가 발�
 
 ```ts
 const sayHi = (name: string, age: number, gender: string): string => {
-  return `Hello ${name}, you are ${age}, you are a ${gender}!`
-}
+  return `Hello ${name}, you are ${age}, you are a ${gender}!`;
+};
 
-console.log(sayHi('Hojin', 444, 'male'))
+console.log(sayHi('Hojin', 444, 'male'));
 
-export {}
+export {};
 ```
 
 매개변수에 :string, :number 과 같이 type을 지정해줄 수 있다.
@@ -100,24 +100,24 @@ export {}
 
 ```ts
 interface Human {
-  name: string
-  age: number
-  gender: string
+  name: string;
+  age: number;
+  gender: string;
 }
 
 const person = {
   name: 'hojin',
   age: 22,
   gender: 'male',
-}
+};
 
 const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}!`
-}
+  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}!`;
+};
 
-console.log(sayHi(person))
+console.log(sayHi(person));
 
-export {}
+export {};
 ```
 
 interface는 object를 넘겨줄 때 사용된다.
@@ -128,25 +128,25 @@ interface는 object를 넘겨줄 때 사용된다.
 
 ```ts
 class Human {
-  public name: string
-  public age: number
-  public gender: string
+  public name: string;
+  public age: number;
+  public gender: string;
   constructor(name: string, age: number, gender: string) {
-    this.name = name
-    this.age = age
-    this.gender = gender
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
   }
 }
 
-const hojin = new Human('hojin', 24, 'male')
+const hojin = new Human('hojin', 24, 'male');
 
 const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}!`
-}
+  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}!`;
+};
 
-console.log(sayHi(hojin))
+console.log(sayHi(hojin));
 
-export {}
+export {};
 ```
 
 class <클래스명>으로 선언한다.

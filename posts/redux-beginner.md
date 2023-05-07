@@ -2,7 +2,7 @@
 title: 'Redux 기본 사용법'
 subtitle: 'Redux 기본 사용법'
 date: '2020-12-15'
-category: 'React'
+category: 'react'
 ---
 
 # Redux란?
@@ -27,11 +27,11 @@ npm을 사용한다면 위 명령어를 사용할 수 있다.
 ## createStore & reducer
 
 ```js
-import { createStore } from 'redux'
+import { createStore } from 'redux';
 
-const reducer = () => {}
+const reducer = () => {};
 
-const store = createStore(reducer)
+const store = createStore(reducer);
 ```
 
 redux에는 createStore라는 함수가 있다.
@@ -43,12 +43,12 @@ reducer가 "hello"를 return한다면 "hello"가 어플리케이션에 있는 da
 
 ```js
 const countModifier = () => {
-  return 'hello'
-}
+  return 'hello';
+};
 
-const countStore = createStore(countModifier)
+const countStore = createStore(countModifier);
 
-console.log(countStore.getState()) // console : hello
+console.log(countStore.getState()); // console : hello
 ```
 
 createStore 함수로 만들어지는 store의 변수명은 위 예시처럼 countStore처럼 다른 이름 이어도 상관없으며 reducer도 마찬가지이다.
@@ -62,13 +62,13 @@ action은 redux에서 function을 부를 때 쓰는 두번째 paremeter, 혹은 
 
 ```js
 const countModifier = (count = 0, action) => {
-  console.log(action) // {type: "@@redux/INITp.b.n.o.c.r"} {type: "HELLO"}
-  return count
-}
+  console.log(action); // {type: "@@redux/INITp.b.n.o.c.r"} {type: "HELLO"}
+  return count;
+};
 
-const countStore = createStore(countModifier)
+const countStore = createStore(countModifier);
 
-countStore.dispatch({ type: 'HELLO' })
+countStore.dispatch({ type: 'HELLO' });
 ```
 
 dispatch는 reducer에 action을 보내는 방법이다.
@@ -79,24 +79,24 @@ dispatch를 사용하면 redux가 countModifier를 호출할 것이고 console.l
 ```js
 const countModifier = (count = 0, action) => {
   if (action.type === 'ADD') {
-    return count + 1
+    return count + 1;
   } else if (action.type === 'MINUS') {
-    return count - 1
+    return count - 1;
   } else {
-    return count
+    return count;
   }
-}
+};
 
-const countStore = createStore(countModifier)
+const countStore = createStore(countModifier);
 
-countStore.dispatch({ type: 'ADD' })
-countStore.dispatch({ type: 'ADD' })
-countStore.dispatch({ type: 'ADD' })
-countStore.dispatch({ type: 'ADD' })
-countStore.dispatch({ type: 'ADD' })
-countStore.dispatch({ type: 'MINUS' })
+countStore.dispatch({ type: 'ADD' });
+countStore.dispatch({ type: 'ADD' });
+countStore.dispatch({ type: 'ADD' });
+countStore.dispatch({ type: 'ADD' });
+countStore.dispatch({ type: 'ADD' });
+countStore.dispatch({ type: 'MINUS' });
 
-console.log(countStore.getState()) // 4
+console.log(countStore.getState()); // 4
 ```
 
 dispatch로 type: "ADD"를 5번 보냄으로써 count + 5가 되고
@@ -108,10 +108,10 @@ subscribe는 state안에 있는 변화들을 알 수 있게 해준다.
 
 ```js
 const onChange = () => {
-  console.log(countStore.getState())
-}
+  console.log(countStore.getState());
+};
 
-countStore.subscribe(onChange)
+countStore.subscribe(onChange);
 ```
 
 위의 결과로 state가 변경되면 onChange 함수가 실행되어 `console.log` 결과로 값이 변경되는 것을 볼 수 있다.
@@ -125,30 +125,30 @@ redux 공식문서에서도 switch를 사용하고 훨씬 낫다고 한다.
 `type: ADD` 로 하면 오타로 `type: ADDD` 로 했을 경우 js 는 ADDD가 선언되지 않았다고 에러를 알려줄 것이다.
 
 ```js
-const ADD = 'ADD'
-const MINUS = 'MINUS'
+const ADD = 'ADD';
+const MINUS = 'MINUS';
 
 const countModifier = (count = 0, action) => {
   switch (action.type) {
     case ADD:
-      return count + 1
+      return count + 1;
     case MINUS:
-      return count - 1
+      return count - 1;
     default:
-      return count
+      return count;
   }
-}
+};
 
-const countStore = createStore(countModifier)
+const countStore = createStore(countModifier);
 
 const onChange = () => {
-  number.innerText = countStore.getState()
-}
+  number.innerText = countStore.getState();
+};
 
-countStore.subscribe(onChange)
+countStore.subscribe(onChange);
 
-add.addEventListener('click', () => countStore.dispatch({ type: ADD }))
-minus.addEventListener('click', () => countStore.dispatch({ type: MINUS }))
+add.addEventListener('click', () => countStore.dispatch({ type: ADD }));
+minus.addEventListener('click', () => countStore.dispatch({ type: MINUS }));
 ```
 
 위 코드는 if문을 case문으로 수정하고 `{type: 'ADD'}`를 `{type: ADD}`로 수정한 것이다.

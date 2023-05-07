@@ -2,7 +2,7 @@
 title: 'Route53 도메인 등록'
 subtitle: 'Route53 도메인 등록'
 date: '2022-01-27'
-category: 'AWS'
+category: 'infra'
 coverImage: '/images/route53.png'
 ---
 

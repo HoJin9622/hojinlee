@@ -1,9 +1,9 @@
 ---
-title: "Render에서 Supabase로 데이터베이스 마이그레이션"
-subtitle: "Render postgresql DB에서 Supabase DB로의 전환!"
-date: "2023-04-23"
-category: "Infra"
-coverImage: "/images/supabase.jpg"
+title: 'Render에서 Supabase로 데이터베이스 마이그레이션'
+subtitle: 'Render postgresql DB에서 Supabase DB로의 전환!'
+date: '2023-04-23'
+category: 'infra'
+coverImage: '/images/supabase.jpg'
 ---
 
 ## 배경

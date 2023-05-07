@@ -2,7 +2,7 @@
 title: 'GraphQL 기본'
 subtitle: 'GraphQL 기본'
 date: '2020-12-15'
-category: 'GraphQL'
+category: 'graphql'
 coverImage: '/images/graphql.png'
 ---
 
@@ -24,15 +24,15 @@ yarn add graphql-yoga
 ```
 
 ```js
-import { GraphQLServer } from 'graphql-yoga'
-import resolvers from './graphql/resolvers'
+import { GraphQLServer } from 'graphql-yoga';
+import resolvers from './graphql/resolvers';
 
 const server = new GraphQLServer({
   typeDefs: 'graphql/schema.graphql',
   resolvers,
-})
+});
 
-server.start(() => console.log('Graphql Server Running'))
+server.start(() => console.log('Graphql Server Running'));
 ```
 
 index.js 내용
@@ -50,9 +50,9 @@ const resolvers = {
   Query: {
     name: () => 'hojin',
   },
-}
+};
 
-export default resolvers
+export default resolvers;
 ```
 
 graphql/resolvers.js 내용

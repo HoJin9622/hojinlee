@@ -2,7 +2,7 @@
 title: '먼스터 NestJS에서 Django로 서버전환'
 subtitle: '😆 서버 전환에 성공한 회고'
 date: '2022-11-18'
-category: '회고록'
+category: 'review'
 coverImage: '/images/monster.png'
 ---
 

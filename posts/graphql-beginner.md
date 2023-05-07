@@ -2,7 +2,7 @@
 title: 'GraphQL 기초'
 subtitle: 'GraphQL이란 무엇인가?'
 date: '2022-06-08'
-category: 'GraphQL'
+category: 'graphql'
 coverImage: '/images/graphql.png'
 ---
 
@@ -76,9 +76,9 @@ const typeDefs = gql`
     text: String
     hello: String
   }
-`
+`;
 
-const server = new ApolloServer({ typeDefs })
+const server = new ApolloServer({ typeDefs });
 ```
 
 ## <a name="3"></a>Scalar Type
@@ -98,7 +98,7 @@ const typeDefs = gql`
     allTweets: [Tweet]
     tweet(id: ID): Tweet
   }
-`
+`;
 ```
 
 GraphQL 객체에는 이름과 필드가 있지만, 이러한 필드는 구체적인 데이터로 해석되어야 합니다. Scalar Type은 쿼리의 잎을 나타냅니다.
@@ -150,15 +150,15 @@ Resolver는 Apollo Server에 특정 type과 관련된 데이터를 어떻게 fet
 const resolvers = {
   Query: {
     allTweets() {
-      return tweets
+      return tweets;
     },
     tweet(_, { id }) {
-      return tweets.find((tweet) => tweet.id === id)
+      return tweets.find((tweet) => tweet.id === id);
     },
   },
-}
+};
 
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({ typeDefs, resolvers });
 ```
 
 Resolver의 첫번째 매개변수는 root, 두번째 매개변수는 args로 args에서 정의한 매개변수를 가져올 수 있습니다.

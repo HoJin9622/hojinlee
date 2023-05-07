@@ -2,7 +2,7 @@
 title: '3장. 기본 도구'
 subtitle: '3장. 기본 도구'
 date: '2022-03-24'
-category: '실용주의 프로그래머'
+category: 'book'
 coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 

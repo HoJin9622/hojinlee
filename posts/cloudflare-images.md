@@ -2,7 +2,7 @@
 title: 'Cloudflare Images'
 subtitle: 'Cloudflare Images 란 무엇인가?'
 date: '2022-05-10'
-category: 'Cloudflare'
+category: 'infra'
 coverImage: '/images/cloudflare.jpeg'
 ---
 

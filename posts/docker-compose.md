@@ -2,7 +2,7 @@
 title: 'Docker Compose'
 subtitle: 'Docker Compose 란 다중 컨테이너 도커 애플리케이션을 정의하고 실행하기 위한 도구'
 date: '2022-03-20'
-category: 'Docker'
+category: 'docker'
 coverImage: '/images/docker.png'
 ---
 

@@ -2,7 +2,7 @@
 title: 'react native에 svg 파일 표시하기'
 subtitle: 'react native에 svg 파일 표시하기'
 date: '2022-12-29'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/react-native.png'
 ---
 

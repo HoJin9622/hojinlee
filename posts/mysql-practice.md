@@ -2,7 +2,7 @@
 title: '생활코딩 mysql 연습'
 subtitle: '생활코딩 mysql 연습'
 date: '2021-09-28'
-category: '잡담'
+category: 'infra'
 ---
 
 # mysql
