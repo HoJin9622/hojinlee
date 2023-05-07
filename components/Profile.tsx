@@ -32,6 +32,7 @@ export default function Profile() {
 
       <div className="flex items-center gap-2 mt-5 md:mt-0">
         <button
+          aria-label="github"
           type="button"
           onClick={onGithubClick}
           className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center"
@@ -39,6 +40,7 @@ export default function Profile() {
           <AiFillGithub size={36} />
         </button>
         <button
+          aria-label="mail"
           type="button"
           onClick={onMailClick}
           className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center"
