@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import type { Metadata } from 'next'
 import Markdown from 'markdown-to-jsx'
 import { getPostContent, getPostMetadata } from '@/utils/posts'
@@ -14,9 +13,6 @@ export default function PostPage({ params: { slug } }: Props) {
 
   return (
     <div className='px-6 mt-6'>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
       <h1 className='text-3xl font-bold'>{post.title}</h1>
       <div className='text-sm text-gray-500'>{post.date}</div>
 
