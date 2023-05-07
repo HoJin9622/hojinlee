@@ -2,7 +2,7 @@
 title: 'TypeScript 기본'
 subtitle: 'TypeScript에 대해 알아보자'
 date: '2022-05-01'
-category: 'Typescript'
+category: 'typescript'
 coverImage: '/images/typescript.jpeg'
 ---
 
@@ -56,10 +56,10 @@ npm으로 설치한 node_modules에 존재하는 Javascript 파일에 대한 typ
 
 ```js
 export function init(config) {
-  return true
+  return true;
 }
 export function exit(code) {
-  return code + 1
+  return code + 1;
 }
 ```
 
@@ -68,11 +68,11 @@ js로 작성된 간단한 파일이 있따.
 ### index.ts
 
 ```ts
-import { init, exit } from 'myPackage'
+import { init, exit } from 'myPackage';
 
-init({ url: 'true' })
+init({ url: 'true' });
 
-exit(1)
+exit(1);
 ```
 
 myPackage를 import하게되면 myPackage에 대한 type을 찾을 수 없다며 에러가 표시된다.
@@ -81,12 +81,12 @@ myPackage를 import하게되면 myPackage에 대한 type을 찾을 수 없다며
 
 ```ts
 interface Config {
-  url: string
+  url: string;
 }
 
 declare module 'myPackage' {
-  function init(config: Config): boolean
-  function exit(code: number): number
+  function init(config: Config): boolean;
+  function exit(code: number): number;
 }
 ```
 
@@ -118,10 +118,10 @@ JSDoc은 기존 프로젝트에 존재하는 Javascript 파일들과 Typescript�
 ### index.ts
 
 ```ts
-import { init, exit } from './myPackage'
+import { init, exit } from './myPackage';
 
-init({ url: 'hi', debug: false })
-exit(1)
+init({ url: 'hi', debug: false });
+exit(1);
 ```
 
 index.ts 에서는 myPackage 라는 이름의 js 파일을 import 해준다.
@@ -138,7 +138,7 @@ index.ts 에서는 myPackage 라는 이름의 js 파일을 import 해준다.
  * @returns {boolean}
  */
 export function init(config) {
-  return true
+  return true;
 }
 
 /**
@@ -147,7 +147,7 @@ export function init(config) {
  * @returns {number}
  */
 export function exit(code) {
-  return code + 1
+  return code + 1;
 }
 ```
 

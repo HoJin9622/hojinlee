@@ -2,7 +2,7 @@
 title: 'ReactNative에 폰트 적용하기'
 subtitle: 'ReactNative에 폰트 적용하기'
 date: '2020-12-15'
-category: 'React Native'
+category: 'react-native'
 ---
 
 ## 폰트 다운로드

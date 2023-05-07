@@ -2,7 +2,7 @@
 title: '2022 Dev-Matching: 웹 프론트엔드 개발자(하반기)-1 후기'
 subtitle: 'vanilla js...'
 date: '2022-09-06'
-category: '잡담'
+category: 'review'
 coverImage: '/images/2022-dev-matching-frontend-review.png'
 ---
 

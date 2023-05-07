@@ -2,7 +2,7 @@
 title: 'MongoDB Create/Read/Delete'
 subtitle: 'MongoDB Create/Read/Delete'
 date: '2020-12-15'
-category: '잡담'
+category: 'infra'
 ---
 
 # Database 생성

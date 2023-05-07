@@ -2,7 +2,7 @@
 title: 'Next.js Data Fetching & Dynamic Route'
 subtitle: 'Next.js Data Fetching & Dynamic Route'
 date: '2020-12-15'
-category: 'NextJS'
+category: 'nextjs'
 coverImage: '/images/nextjs.png'
 ---
 
@@ -19,32 +19,32 @@ useEffect를 사용하고 axios를 이용하여 get을 한 후 데이터를 가�
 # getInitialProps
 
 ```js
-import Link from 'next/link'
-import axios from 'axios'
+import Link from 'next/link';
+import axios from 'axios';
 
 function GetUuid(props) {
   return (
-    <div className='h-screen v-full flex flex-col justify-center items-center'>
+    <div className="h-screen v-full flex flex-col justify-center items-center">
       {props.uuid}
-      <div className='mt-4'>
-        <Link href='/'>
+      <div className="mt-4">
+        <Link href="/">
           <a>돌아가기</a>
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
 // getInitialProps
 GetUuid.getInitialProps = async function () {
   // 반드시 async function 으로 작성
-  const response = await axios.get('http://localhost:1234' + '/api/uuid')
+  const response = await axios.get('http://localhost:1234' + '/api/uuid');
   return {
     uuid: response.data.uuid,
-  }
-}
+  };
+};
 
-export default GetUuid
+export default GetUuid;
 ```
 
 GetUuid 컴포넌트에 getInitialProps를 추가해준다.
@@ -62,32 +62,32 @@ getInitialProps는 pages 폴더 밑에서만 동작한다.(사용자가 생성�
 # queryString
 
 ```js
-import { Button } from 'antd'
-import axios from 'axios'
+import { Button } from 'antd';
+import axios from 'axios';
 
 function GetDouble(props) {
   return (
-    <div className='w-full h-screen flex flex-col justify-center items-center'>
-      <div className='text-6xl'>{props.value}</div>
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <div className="text-6xl">{props.value}</div>
 
-      <div className='mt-4'>
+      <div className="mt-4">
         <Button>돌아가기</Button>
       </div>
     </div>
-  )
+  );
 }
 
 GetDouble.getInitialProps = async function (context) {
-  const value = context.query.value
+  const value = context.query.value;
   const response = await axios.get(
-    'http://localhost:1234' + '/api/double?value=' + value
-  )
+    'http://localhost:1234' + '/api/double?value=' + value,
+  );
   return {
     value: response.data.value,
-  }
-}
+  };
+};
 
-export default GetDouble
+export default GetDouble;
 ```
 
 get 주소는 숫자 하나를 보내면 두배로 반환해주는 api 이다.

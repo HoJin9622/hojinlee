@@ -2,7 +2,7 @@
 title: 'ES6 적용하기'
 subtitle: 'ES6 적용하기'
 date: '2020-12-15'
-category: 'Javascript'
+category: 'javascript'
 ---
 
 # ES6 Module 적용

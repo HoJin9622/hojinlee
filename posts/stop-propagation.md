@@ -2,7 +2,7 @@
 title: 'stopPropagation을 이용한 이벤트 전파 제거'
 subtitle: 'stopPropagation 을 이용한 함수 중복 수행 제거'
 date: '2021-03-14'
-category: 'Javascript'
+category: 'javascript'
 coverImage: '/images/stop-propagation.png'
 ---
 
@@ -12,12 +12,12 @@ coverImage: '/images/stop-propagation.png'
 
 ```js
 const outClick = () => {
-  console.log('outClick!')
-}
+  console.log('outClick!');
+};
 
 const innerClick = () => {
-  console.log('innerClick!')
-}
+  console.log('innerClick!');
+};
 
 return (
   <div
@@ -29,7 +29,7 @@ return (
       onClick={innerClick}
     ></div>
   </div>
-)
+);
 ```
 
 코드는 위와 같이 작성하였다.
@@ -40,9 +40,9 @@ return (
 
 ```js
 const innerClick = (e: any) => {
-  e.stopPropagation()
-  console.log('innerClick!')
-}
+  e.stopPropagation();
+  console.log('innerClick!');
+};
 ```
 
 `e.stopPropagation()` 함수를 사용하면 현재 이후의 이벤트 전파를 막을 수 있다.

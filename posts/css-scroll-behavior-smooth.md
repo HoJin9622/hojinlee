@@ -2,7 +2,7 @@
 title: 'scroll behavior smooth로 스크롤 이동 부드럽게 만들기'
 subtitle: 'scroll behavior smooth로 스크롤 이동 부드럽게 만들기'
 date: '2020-12-15'
-category: '잡담'
+category: 'css'
 ---
 
 ## { scroll-behavior: smooth; }

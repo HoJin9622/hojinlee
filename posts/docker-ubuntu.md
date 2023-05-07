@@ -2,7 +2,7 @@
 title: 'Docker Ubuntu16.04 설치'
 subtitle: 'Docker Ubuntu16.04 설치'
 date: '2020-12-15'
-category: 'Docker'
+category: 'docker'
 coverImage: '/images/docker.png'
 ---
 

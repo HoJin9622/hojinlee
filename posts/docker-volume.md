@@ -2,7 +2,7 @@
 title: 'Docker Volume'
 subtitle: 'Docker Volume'
 date: '2022-03-20'
-category: 'Docker'
+category: 'docker'
 coverImage: '/images/docker.png'
 ---
 

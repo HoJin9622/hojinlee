@@ -2,7 +2,7 @@
 title: 'Swift._ArrayBuffer._copyContents 에러 해결'
 subtitle: 'Swift._ArrayBuffer._copyContents 에러 해결법'
 date: '2021-06-04'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/react-native-swift-arraybuffer-copycontents-error.png'
 ---
 

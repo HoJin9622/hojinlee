@@ -2,7 +2,7 @@
 title: 'React Native Realm 적용(Typescript)'
 subtitle: 'React Native에서 Realm를 적용해보자'
 date: '2022-12-04'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/realm.png'
 ---
 

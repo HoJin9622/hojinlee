@@ -2,7 +2,7 @@
 title: 'GraphQL 기본2'
 subtitle: 'GraphQL 기본2'
 date: '2020-12-15'
-category: 'GraphQL'
+category: 'graphql'
 coverImage: '/images/graphql.png'
 ---
 
@@ -11,15 +11,15 @@ coverImage: '/images/graphql.png'
 index.js 파일의 내용은 이전 글과 동일하다.
 
 ```js
-import { people } from './db'
+import { people } from './db';
 
 const resolvers = {
   Query: {
     people: () => people,
   },
-}
+};
 
-export default resolvers
+export default resolvers;
 ```
 
 resolver.js 파일

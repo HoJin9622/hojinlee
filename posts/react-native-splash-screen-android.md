@@ -2,7 +2,7 @@
 title: 'React Native Splash Screen 제작(Android)'
 subtitle: 'React Native Splash Screen 제작(Android)'
 date: '2021-06-09'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/meerkat.png'
 ---
 

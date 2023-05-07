@@ -2,7 +2,7 @@
 title: 'JavaScript 비구조화 할당'
 subtitle: 'JavaScript 비구조화 할당'
 date: '2020-12-15'
-category: 'Javascript'
+category: 'javascript'
 ---
 
 ## 비구조화 할당이란?
@@ -19,16 +19,16 @@ category: 'Javascript'
 Before: ES5
 
 ```js
-const user = ['name', 'age', 'number']
-const name = user[0]
-const age = user[1]
-const number = user[2]
+const user = ['name', 'age', 'number'];
+const name = user[0];
+const age = user[1];
+const number = user[2];
 ```
 
 After: ES6
 
 ```js
-const [name, age, number] = ['name', 'age', 'number']
+const [name, age, number] = ['name', 'age', 'number'];
 ```
 
 ### 객체
@@ -36,15 +36,15 @@ const [name, age, number] = ['name', 'age', 'number']
 Before: ES5
 
 ```js
-const name = req.body.name
-const age = req.body.age
-const number = req.body.number
+const name = req.body.name;
+const age = req.body.age;
+const number = req.body.number;
 ```
 
 After: ES6
 
 ```js
-const { name, age, number } = req.body
+const { name, age, number } = req.body;
 ```
 
 변수의 이름과 같은 객체 key의 값이 대입된다.
@@ -52,8 +52,8 @@ const { name, age, number } = req.body
 ### 스프레드 연산자 활용
 
 ```js
-const user = ['id', 'name', 'age', 'number']
-const [id, ...userInfo] = user
-console.log(id) // id
-console.log(userInfo) // ['name', 'age', 'number']
+const user = ['id', 'name', 'age', 'number'];
+const [id, ...userInfo] = user;
+console.log(id); // id
+console.log(userInfo); // ['name', 'age', 'number']
 ```

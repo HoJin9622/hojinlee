@@ -2,7 +2,7 @@
 title: 'React Native Splash Screen 제작(IOS)'
 subtitle: 'React Native Splash Screen 제작(IOS)'
 date: '2021-06-09'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/meerkat.png'
 ---
 
@@ -74,11 +74,11 @@ LaunchScreen.storyboard로 이동한다.
 실행하면 위와 같이 잘 나오는데 스플래시 스크린이 사라지지를 않는다.
 
 ```js
-import SplashScreen from 'react-native-splash-screen'
+import SplashScreen from 'react-native-splash-screen';
 
 React.useEffect(() => {
-  SplashScreen.hide()
-})
+  SplashScreen.hide();
+});
 ```
 
 App.js 에서 위와같이 작성해주면 스플래시 스크린을 사라지게 할 수 있다.

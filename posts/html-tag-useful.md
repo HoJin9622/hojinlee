@@ -2,7 +2,7 @@
 title: '유용한 HTML 태그 모음'
 subtitle: '유용한 HTML 태그, <details>, <samp>, <kbd>, <bdo>, <abbr>'
 date: '2021-12-22'
-category: 'HTML'
+category: 'html'
 ---
 
 ## abbr

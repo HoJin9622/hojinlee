@@ -2,7 +2,7 @@
 title: 'PM2란'
 subtitle: 'node.js application 프로세스 매니저 pm2에 대해 알아보자'
 date: '2020-12-21'
-category: '잡담'
+category: 'infra'
 ---
 
 pm2는 node.js로 만들어진 앱에 대한 프로세스 관리를 편리하게 해준다.

@@ -2,7 +2,7 @@
 title: 'Typescript 변수 뒤의 느낌표(!) 사용'
 subtitle: 'Typescript 변수 뒤의 느낌표(!) 사용'
 date: '2021-12-22'
-category: 'Typescript'
+category: 'typescript'
 coverImage: '/images/typescript-assertions.png'
 ---
 

@@ -2,7 +2,7 @@
 title: 'redux toolkit 사용하기'
 subtitle: 'redux toolkit 사용하기'
 date: '2020-12-15'
-category: 'React'
+category: 'react'
 ---
 
 ## Redux toolkit
@@ -54,21 +54,21 @@ const reducer = (state = [], action) => {
 기존 작성하였던 위의 코드를
 
 ```js
-import { createAction } from '@reduxjs/toolkit'
+import { createAction } from '@reduxjs/toolkit';
 
-const addToDo = createAction('ADD')
-const deleteToDo = createAction('DELETE')
+const addToDo = createAction('ADD');
+const deleteToDo = createAction('DELETE');
 
 const reducer = (state = [], action) => {
   switch (action.type) {
     case addToDo.type:
-      return [{ text: action.text, id: Date.now() }, ...state]
+      return [{ text: action.text, id: Date.now() }, ...state];
     case deleteToDo.type:
-      return state.filter((toDo) => toDo.id !== action.id)
+      return state.filter((toDo) => toDo.id !== action.id);
     default:
-      return state
+      return state;
   }
-}
+};
 ```
 
 createAction을 사용해 더 짧게 작성 할 수 있다.
@@ -78,19 +78,19 @@ payload의 이름은 redux toolkit이 우리에게 제공하는 것이라서 변
 action으로 보내고 싶은 정보는 payload에 담기게 된다.
 
 ```js
-const addToDo = createAction('ADD')
-const deleteToDo = createAction('DELETE')
+const addToDo = createAction('ADD');
+const deleteToDo = createAction('DELETE');
 
 const reducer = (state = [], action) => {
   switch (action.type) {
     case addToDo.type:
-      return [{ text: action.payload, id: Date.now() }, ...state]
+      return [{ text: action.payload, id: Date.now() }, ...state];
     case deleteToDo.type:
-      return state.filter((toDo) => toDo.id !== action.payload)
+      return state.filter((toDo) => toDo.id !== action.payload);
     default:
-      return state
+      return state;
   }
-}
+};
 ```
 
 그러므로 6번째 줄의 action.text를 action.payload로 바꿔줘야한다.
@@ -99,7 +99,7 @@ payload의 값을 보고 싶으면 `console.log(action)`을 입력하면 된다.
 ## createReducer
 
 ```js
-import { createAction, createReducer } from '@reduxjs/toolkit'
+import { createAction, createReducer } from '@reduxjs/toolkit';
 ```
 
 먼저 createReducer를 import 해준다.
@@ -121,11 +121,11 @@ const reducer = (state = [], action) => {
 ```js
 const reducer = createReducer([], {
   [addToDo]: (state, action) => {
-    state.push({ text: action.payload, id: Date.now() })
+    state.push({ text: action.payload, id: Date.now() });
   },
   [deleteToDo]: (state, action) =>
     state.filter((toDo) => toDo.id !== action.payload),
-})
+});
 ```
 
 위 코드는 createReducer를 사용한 후의 코드이다.
@@ -142,19 +142,19 @@ state를 mutate하고 싶다면 return 하지 않아야한다.
 ## configureStore
 
 ```js
-import { createAction, createReducer, configureStore } from '@reduxjs/toolkit'
+import { createAction, createReducer, configureStore } from '@reduxjs/toolkit';
 ```
 
 configureStore를 import 한 후
 
 ```js
-const store = createStore(reducer)
+const store = createStore(reducer);
 ```
 
 기존의 createStore를
 
 ```js
-const store = configureStore({ reducer })
+const store = configureStore({ reducer });
 ```
 
 아래와 같이 변경하면 구글 크롬의 extension Redux devtools의 불이 들어온다.
@@ -166,51 +166,51 @@ Redux devtools를 사용하기 위해 redux toolkit이 반드시 필요한건 �
 ## createSlice
 
 ```js
-import { createAction, createReducer, configureStore } from '@reduxjs/toolkit'
+import { createAction, createReducer, configureStore } from '@reduxjs/toolkit';
 
-const addToDo = createAction('ADD')
-const deleteToDo = createAction('DELETE')
+const addToDo = createAction('ADD');
+const deleteToDo = createAction('DELETE');
 
 const reducer = createReducer([], {
   [addToDo]: (state, action) => {
-    state.push({ text: action.payload, id: Date.now() })
+    state.push({ text: action.payload, id: Date.now() });
   },
   [deleteToDo]: (state, action) =>
     state.filter((toDo) => toDo.id !== action.payload),
-})
+});
 
-const store = configureStore({ reducer })
+const store = configureStore({ reducer });
 
 export const actionCreators = {
   addToDo,
   deleteToDo,
-}
+};
 
-export default store
+export default store;
 ```
 
 🔺기존 코드
 
 ```js
-import { configureStore, createSlice } from '@reduxjs/toolkit'
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const toDos = createSlice({
   name: 'toDosReducer',
   initialState: [],
   reducers: {
     add: (state, action) => {
-      state.push({ text: action.payload, id: Date.now() })
+      state.push({ text: action.payload, id: Date.now() });
     },
     remove: (state, action) =>
       state.filter((toDo) => toDo.id !== action.payload),
   },
-})
+});
 
-const store = configureStore({ reducer: toDos.reducer })
+const store = configureStore({ reducer: toDos.reducer });
 
-export const { add, remove } = toDos.actions
+export const { add, remove } = toDos.actions;
 
-export default store
+export default store;
 ```
 
 createAction 부분을 없앨 수 있고 코드가 더 많이 줄어든 모습이다.

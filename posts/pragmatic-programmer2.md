@@ -2,7 +2,7 @@
 title: '2장. 실용주의 접근법'
 subtitle: '2장. 실용주의 접근법'
 date: '2022-03-21'
-category: '실용주의 프로그래머'
+category: 'book'
 coverImage: '/images/pragmatic-programmer.jpeg'
 ---
 

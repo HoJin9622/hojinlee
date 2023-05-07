@@ -2,7 +2,7 @@
 title: 'react native node: command not found'
 subtitle: 'react native node: command not found 해결'
 date: '2022-07-20'
-category: 'React Native'
+category: 'react-native'
 ---
 
 [이전 비슷한 에러](https://velog.io/@hojin9622/react-native-0.67-%EB%B2%84%EC%A0%84-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%ED%9B%84-fbreactnativespec-command-phasescriptexecution-failed-with-a-nonzero-exit-code-%EC%97%90%EB%9F%AC)

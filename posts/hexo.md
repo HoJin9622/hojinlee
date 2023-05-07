@@ -2,7 +2,7 @@
 title: 'Hexo로 github.io 블로그 생성'
 subtitle: 'Hexo로 github.io 블로그 생성'
 date: '2020-05-01'
-category: '잡담'
+category: 'javascript'
 ---
 
 > 2020년 5월 1일 작성한 게시글입니다.

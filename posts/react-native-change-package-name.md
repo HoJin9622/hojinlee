@@ -2,7 +2,7 @@
 title: 'react native 패키지명 변경'
 subtitle: 'react native에서 android, ios 패키지명 변경하기'
 date: '2022-12-24'
-category: 'React Native'
+category: 'react-native'
 coverImage: '/images/react-native.png'
 ---
 

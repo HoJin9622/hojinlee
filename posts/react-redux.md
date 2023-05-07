@@ -2,7 +2,7 @@
 title: 'react-redux 사용하기'
 subtitle: 'react-redux 사용하기'
 date: '2020-12-15'
-category: 'React'
+category: 'react'
 ---
 
 ## 설치
@@ -18,39 +18,39 @@ react에서 redux를 사용할때 react-redux를 위 명령어를 사용하여 r
 store.js 에는 js에서 redux를 사용하듯이 작성하면 된다.
 
 ```js
-import { createStore } from 'redux'
+import { createStore } from 'redux';
 
-const ADD = 'ADD'
-const DELETE = 'DELETE'
+const ADD = 'ADD';
+const DELETE = 'DELETE';
 
 export const addToDo = (text) => {
   return {
     type: ADD,
     text,
-  }
-}
+  };
+};
 
 export const deleteToDo = (id) => {
   return {
     type: DELETE,
     id,
-  }
-}
+  };
+};
 
 const reducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [{ text: action.text, id: Date.now() }, ...state]
+      return [{ text: action.text, id: Date.now() }, ...state];
     case DELETE:
-      return state.filter((toDo) => toDo !== action.id)
+      return state.filter((toDo) => toDo !== action.id);
     default:
-      return state
+      return state;
   }
-}
+};
 
-const store = createStore(reducer)
+const store = createStore(reducer);
 
-export default store
+export default store;
 ```
 
 대신 다른곳에서 사용할 수 있게 store를 export를 해주어야한다.
@@ -59,18 +59,18 @@ export default store
 ## Provider
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App'
-import { Provider } from 'react-redux'
-import store from './store'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);
 ```
 
 index.js로 간 후 react-redux의 Provider를 import해준다.
@@ -82,38 +82,38 @@ Provider에는 store={} 값으로 export한 store를 넣어준다.
 connect는 component들을 store에 연결해준다.
 
 ```js
-import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 function Home(props) {
-  console.log(props)
-  const [text, setText] = useState('')
+  console.log(props);
+  const [text, setText] = useState('');
 
   function onChange(e) {
-    setText(e.target.value)
+    setText(e.target.value);
   }
 
   function onSubmit(e) {
-    e.preventDefault()
-    setText('')
+    e.preventDefault();
+    setText('');
   }
 
   return (
     <>
       <h1>To Do</h1>
       <form onSubmit={onSubmit}>
-        <input type='text' value={text} onChange={onChange} />
+        <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
       </form>
     </>
-  )
+  );
 }
 
 function getCurrentState(state, ownProps) {
-  return { sexy: true }
+  return { sexy: true };
 }
 
-export default connect(getCurrentState)(Home)
+export default connect(getCurrentState)(Home);
 ```
 
 connect를 사용하려면 먼저 react-redux에서 connect를 import 해준다.
@@ -127,8 +127,8 @@ mapStateToProps는 반드시 객체를 반환해야한다.
 
 ```js
 function getCurrentState(state, ownProps) {
-  console.log(state)
-  return { potato: true }
+  console.log(state);
+  return { potato: true };
 }
 ```
 
@@ -138,7 +138,7 @@ function 부분은 `return { potato: true}` 를 하게된다면, Home component�
 
 ```js
 function getCurrentState(state, ownProps) {
-  return { state }
+  return { state };
 }
 ```
 
@@ -146,7 +146,7 @@ function getCurrentState(state, ownProps) {
 
 ```js
 function getCurrentState(state) {
-  return { toDos: state }
+  return { toDos: state };
 }
 ```
 
@@ -154,10 +154,10 @@ function getCurrentState(state) {
 
 ```js
 function mapStateToProps(state) {
-  return { toDos: state }
+  return { toDos: state };
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Home);
 ```
 
 그리고 문서에서 function의 이름은 mapStateToProps여야 한다.
@@ -170,7 +170,7 @@ function Home({ toDos }) {
     <>
       <ul>{JSON.stringify(toDos)}</ul>
     </>
-  )
+  );
 }
 ```
 
@@ -184,10 +184,10 @@ dispatch를 react에서 사용하려면 connect를 import한 후 mapDispatchToPr
 
 ```js
 function mapDispatchToProps(dispatch) {
-  return { addToDo: (text) => dispatch(actionCreators.addToDo(text)) }
+  return { addToDo: (text) => dispatch(actionCreators.addToDo(text)) };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
 ```
 
 위 코드는 dispatch 함수를 return 하는 모습
@@ -196,7 +196,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Home)
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     onBtnClick: () => dispatch(actionCreators.deleteToDo(ownProps.id)),
-  }
+  };
 }
 ```
 

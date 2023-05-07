@@ -2,7 +2,7 @@
 title: 'Docker CLI 명령어'
 subtitle: 'Docker CLI 명령어를 알아보자'
 date: '2022-03-17'
-category: 'Docker'
+category: 'docker'
 coverImage: '/images/docker.png'
 ---
 

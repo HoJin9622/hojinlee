@@ -2,7 +2,7 @@
 title: 'Kotlin if문과 when 그리고 Any 타입'
 subtitle: 'is 사용으로 자료형 검사when 사용법Any는 어느 자료형이든 받는다는 kotlin 최상위 자료형'
 date: '2020-12-15'
-category: 'Kotlin'
+category: 'kotlin'
 ---
 
 # if
