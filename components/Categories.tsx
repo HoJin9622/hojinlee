@@ -4,7 +4,11 @@ import { getCategories } from '@/utils/posts';
 
 import Category from './Category';
 
-export default function Categories() {
+type Props = {
+  path: string;
+};
+
+export default function Categories({ path }: Props) {
   const categories = getCategories();
 
   return (
@@ -14,6 +18,7 @@ export default function Categories() {
           key={category}
           category={category}
           count={categories[category]}
+          active={path === category}
         />
       ))}
     </div>

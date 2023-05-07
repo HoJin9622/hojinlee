@@ -16,7 +16,7 @@ export default function Category({ params: { category } }: Props) {
     <div className="px-6">
       <Profile />
 
-      <Categories />
+      <Categories path={category} />
 
       <article className="space-y-1 divide-y">
         {posts.map((post) => (
