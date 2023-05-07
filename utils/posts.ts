@@ -51,6 +51,11 @@ export function getPostMetadata() {
   return sortByDate(posts);
 }
 
+export function getCategoryPostMetadata(category: string) {
+  const posts = getPostMetadata();
+  return posts.filter((post) => post.category === category);
+}
+
 export function getCategories(): { [key: string]: number } {
   const posts = getPostMetadata();
   const categories: { [key: string]: number } = {};
