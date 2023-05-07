@@ -42,7 +42,14 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
       images: post.coverImage,
       siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
       locale: 'ko',
-      type: 'article',
+      type: 'website',
+      url: 'https://devlog.nextlevels.net/',
+    },
+    twitter: {
+      title: post.title,
+      description: post.subtitle,
+      images: post.coverImage,
+      card: 'summary_large_image',
     },
   };
 }

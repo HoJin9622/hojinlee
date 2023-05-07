@@ -11,13 +11,19 @@ export const metadata: Metadata = {
   description:
     "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
   openGraph: {
+    title: "Jin's Tech Blog: 기술적 사고와 경험의 공유", // 사이트의 제목
+    description:
+      "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.", // 사이트 설명
+    siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
+    locale: 'ko', // 사이트의 언어 선택
+    type: 'website', // 사이트의 종류
+    url: 'https://devlog.nextlevels.net/', // 사이트의 대표 url
+  },
+  twitter: {
     title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
     description:
       "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
-    images: '/images/avatar.jpg',
-    siteName: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
-    locale: 'ko',
-    type: 'website',
+    card: 'summary_large_image',
   },
 };
 
