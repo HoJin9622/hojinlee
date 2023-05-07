@@ -51,6 +51,21 @@ export function getPostMetadata() {
   return sortByDate(posts);
 }
 
+export function getCategories(): { [key: string]: number } {
+  const posts = getPostMetadata();
+  const categories: { [key: string]: number } = {};
+  posts.forEach((post) => {
+    if (categories[post.category]) {
+      categories[post.category] += 1;
+    } else {
+      categories[post.category] = 1;
+    }
+  });
+  return Object.entries(categories)
+    .sort(([, a], [, b]) => b - a)
+    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+}
+
 export function getPostContent(slug: string) {
   const file = `${folder}/${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');

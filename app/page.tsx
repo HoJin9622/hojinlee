@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Categories from '@/components/Categories';
 import Post from '@/components/Post';
 import Profile from '@/components/Profile';
 import { getPostMetadata } from '@/utils/posts';
@@ -10,6 +11,8 @@ export default function Home() {
   return (
     <div className="px-6">
       <Profile />
+
+      <Categories />
 
       <article className="space-y-1 divide-y">
         {posts.map((post) => (
