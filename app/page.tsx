@@ -3,6 +3,7 @@ import React from 'react';
 import Categories from '@/components/Categories';
 import Post from '@/components/Post';
 import Profile from '@/components/Profile';
+import categoryUrls from '@/constants/category';
 import { getPostMetadata } from '@/utils/posts';
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
         {posts.map((post) => (
           <Post
             key={post.slug}
-            category={post.category}
+            category={categoryUrls[post.category]}
             date={post.date}
             slug={post.slug}
             title={post.title}
