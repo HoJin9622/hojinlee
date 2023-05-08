@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Categories from '@/components/Categories';
+import CategoryList from '@/components/CategoryList';
 import PostList from '@/components/PostList';
 import Profile from '@/components/Profile';
 import { getPostMetadata } from '@/utils/posts';
@@ -12,7 +12,7 @@ export default function Home() {
     <div className="px-6">
       <Profile />
 
-      <Categories path="/" />
+      <CategoryList path="/" />
 
       <PostList posts={posts} />
     </div>
