@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Categories from '@/components/Categories';
+import CategoryList from '@/components/CategoryList';
 import Profile from '@/components/Profile';
 
 type Props = {
@@ -12,7 +12,7 @@ export default function Layout({ children, params: { category } }: Props) {
   return (
     <div className="px-6">
       <Profile />
-      <Categories path={category} />
+      <CategoryList path={category} />
       {children}
     </div>
   );

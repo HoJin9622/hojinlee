@@ -9,7 +9,7 @@ type Props = {
   path: string;
 };
 
-export default function Categories({ path }: Props) {
+export default function CategoryList({ path }: Props) {
   const categories = getCategories();
 
   const totalCount = Object.values(categories).reduce(

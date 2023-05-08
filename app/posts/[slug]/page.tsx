@@ -2,7 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import type { Metadata } from 'next';
 import React from 'react';
 
-import Comments from '@/components/Comments';
+import CommentList from '@/components/CommentList';
 import { getPostContent, getPostMetadata } from '@/utils/posts';
 
 type Props = {
@@ -21,7 +21,7 @@ export default function PostPage({ params: { slug } }: Props) {
         <Markdown>{post.content}</Markdown>
       </article>
 
-      <Comments />
+      <CommentList />
     </div>
   );
 }
