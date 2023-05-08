@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Post from '@/components/Post';
+import categoryUrls from '@/constants/category';
 import { getCategories, getCategoryPostMetadata } from '@/utils/posts';
 
 type Props = {
@@ -15,7 +16,7 @@ export default function Category({ params: { category } }: Props) {
       {posts.map((post) => (
         <Post
           key={post.slug}
-          category={post.category}
+          category={categoryUrls[post.category]}
           date={post.date}
           slug={post.slug}
           title={post.title}
