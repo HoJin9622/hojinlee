@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-export default function Comments() {
+export default function CommentList() {
   return (
     <section
       ref={(elem) => {
