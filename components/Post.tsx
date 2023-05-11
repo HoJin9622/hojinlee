@@ -7,6 +7,7 @@ type Props = {
   category: string;
   date: string;
   title: string;
+  subtitle: string;
   coverImage?: string;
 };
 
@@ -15,28 +16,32 @@ export default function Post({
   category,
   date,
   title,
+  subtitle,
   coverImage,
 }: Props) {
   return (
     <Link className="block" href={`/posts/${slug}`} key={slug}>
-      <div className="py-4">
-        <p className="text-sm">
-          {category}
-          {' · '}
-          <span className="text-gray-500">{date}</span>
-        </p>
-        <div className="flex gap-6 mt-3 md:gap-14">
-          <h2 className="font-bold text-base flex-1 md:text-xl">{title}</h2>
-          {coverImage && (
-            <Image
-              className="w-20 h-14 object-cover rounded-sm md:w-28 md:h-28"
-              src={coverImage}
-              width={80}
-              height={56}
-              alt="thumbnail"
-            />
-          )}
+      <div className="py-4 flex gap-6">
+        <div className="flex-1">
+          <h2 className="font-bold text-base md:text-xl flex-1 mb-1 leading-snug">
+            {title}
+          </h2>
+          <p className="text-sm md:text-base text-gray-500">{subtitle}</p>
+          <div className="text-xs md:text-sm text-gray-400 mt-3">
+            <span className="text-blue-700">{category}</span>
+            {' · '}
+            {date}
+          </div>
         </div>
+        {coverImage && (
+          <Image
+            className="w-20 h-14 object-cover rounded-sm md:w-28 md:h-28"
+            src={coverImage}
+            width={80}
+            height={56}
+            alt="thumbnail"
+          />
+        )}
       </div>
     </Link>
   );

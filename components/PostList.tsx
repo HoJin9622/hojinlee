@@ -11,7 +11,7 @@ type Props = {
 
 export default function PostList({ posts }: Props) {
   return (
-    <article className="space-y-1 divide-y">
+    <article className="space-y-1 divide-y mt-5">
       {posts.map((post) => (
         <Post
           key={post.slug}
@@ -19,6 +19,7 @@ export default function PostList({ posts }: Props) {
           date={post.date}
           slug={post.slug}
           title={post.title}
+          subtitle={post.subtitle}
           coverImage={post.coverImage}
         />
       ))}
