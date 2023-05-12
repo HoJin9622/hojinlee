@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function CommentList() {
   return (
-    <section
+    <div
       ref={(elem) => {
         if (!elem) {
           return;
