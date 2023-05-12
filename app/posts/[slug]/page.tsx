@@ -14,10 +14,10 @@ export default function PostPage({ params: { slug } }: Props) {
 
   return (
     <div className="px-6 mt-6">
-      <h1 className="text-3xl font-bold">{post.title}</h1>
-      <div className="text-sm text-gray-500">{post.date}</div>
+      <h1 className="font-bold text-2xl md:text-3xl mb-3">{post.title}</h1>
+      <div className="text-sm md:text-base text-gray-500">{post.date}</div>
 
-      <article className="prose mt-10 md:prose-lg">
+      <article className="prose md:prose-lg mt-10">
         <Markdown>{post.content}</Markdown>
       </article>
 
