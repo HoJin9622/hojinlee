@@ -30,25 +30,13 @@ export default function PostPage({ params: { slug } }: Props) {
         <Markdown>{post.content}</Markdown>
       </article>
 
-      <div className="flex justify-between">
-        <div>
-          {prevPost && (
-            <PostButton
-              slug={prevPost.slug}
-              title={prevPost.title}
-              type="이전"
-            />
-          )}
-        </div>
-        <div>
-          {nextPost && (
-            <PostButton
-              slug={nextPost.slug}
-              title={nextPost.title}
-              type="다음"
-            />
-          )}
-        </div>
+      <div className="flex flex-col-reverse gap-2 md:flex-row md: justify-between">
+        {prevPost && (
+          <PostButton slug={prevPost.slug} title={prevPost.title} type="이전" />
+        )}
+        {nextPost && (
+          <PostButton slug={nextPost.slug} title={nextPost.title} type="다음" />
+        )}
       </div>
       <CommentList />
     </div>
