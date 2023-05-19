@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 
 import CommentList from '@/components/CommentList';
+import PostButton from '@/components/PostButton';
 import { getPostContent, getPostMetadata } from '@/utils/posts';
 
 type Props = {
@@ -11,6 +12,14 @@ type Props = {
 
 export default function PostPage({ params: { slug } }: Props) {
   const post = getPostContent(slug);
+  const posts = getPostMetadata();
+
+  const postIndex = posts.findIndex(
+    (postMetadata) => postMetadata.slug === slug,
+  );
+
+  const nextPost = postIndex === 0 ? null : posts[postIndex - 1];
+  const prevPost = postIndex === posts.length - 1 ? null : posts[postIndex + 1];
 
   return (
     <div className="px-6 mt-6">
@@ -21,6 +30,26 @@ export default function PostPage({ params: { slug } }: Props) {
         <Markdown>{post.content}</Markdown>
       </article>
 
+      <div className="flex justify-between">
+        <div>
+          {prevPost && (
+            <PostButton
+              slug={prevPost.slug}
+              title={prevPost.title}
+              type="이전"
+            />
+          )}
+        </div>
+        <div>
+          {nextPost && (
+            <PostButton
+              slug={nextPost.slug}
+              title={nextPost.title}
+              type="다음"
+            />
+          )}
+        </div>
+      </div>
       <CommentList />
     </div>
   );
