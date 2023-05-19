@@ -22,7 +22,7 @@ export default function PostPage({ params: { slug } }: Props) {
   const prevPost = postIndex === posts.length - 1 ? null : posts[postIndex + 1];
 
   return (
-    <div className="px-6 mt-6">
+    <div className="mt-2 max-w-[735.7px] lg:px-0 lg:mt-4 mx-auto px-2">
       <h1 className="font-bold text-2xl md:text-3xl mb-3">{post.title}</h1>
       <div className="text-sm md:text-base text-gray-500">{post.date}</div>
 
