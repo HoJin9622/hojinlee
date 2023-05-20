@@ -11,7 +11,7 @@ export type PostMetadata = {
   coverImage?: string;
 };
 
-const folder = path.join(process.cwd(), 'posts');
+const folder = path.join(process.cwd(), 'src/posts');
 
 function getMarkdownPosts() {
   const files = fs.readdirSync(folder);
