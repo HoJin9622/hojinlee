@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 
-import { getPostMetadata, PostMetadata } from '@/src/utils/posts';
+import { getPostMetadata, PostMetadata } from '@/utils/posts';
 
 const EXTERNAL_DATA_URL = 'https://devlog.nextlevels.net';
 
