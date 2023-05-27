@@ -3,7 +3,7 @@ import RSS, { FeedOptions } from 'rss';
 import { getPostMetadata } from './posts';
 
 export default async function generateRssFeed() {
-  const siteUrl = 'http://localhost:3000';
+  const siteUrl = 'https://devlog.nextlevels.net';
   const posts = getPostMetadata();
   const feedOptions: FeedOptions = {
     title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
@@ -11,7 +11,6 @@ export default async function generateRssFeed() {
       "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
     site_url: siteUrl,
     feed_url: `${siteUrl}/rss.xml`,
-    image_url: `${siteUrl}/logo.png`,
     pubDate: new Date(),
     copyright: `All rights reserved ${new Date().getFullYear()}, Jin`,
   };
@@ -25,5 +24,4 @@ export default async function generateRssFeed() {
     });
   });
   return feed.xml({ indent: true });
-  // fs.writeFileSync('../public/rss.xml', feed.xml({ indent: true }));
 }
