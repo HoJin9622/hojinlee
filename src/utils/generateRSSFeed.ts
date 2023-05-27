@@ -12,6 +12,8 @@ export default async function generateRssFeed() {
     site_url: siteUrl,
     feed_url: `${siteUrl}/rss.xml`,
     pubDate: new Date(),
+    language: 'ko',
+    image_url: '/images/opengraph-image.jpg',
     copyright: `All rights reserved ${new Date().getFullYear()}, Jin`,
   };
   const feed = new RSS(feedOptions);
@@ -21,6 +23,8 @@ export default async function generateRssFeed() {
       description: post.subtitle,
       url: `${siteUrl}/posts/${post.slug}`,
       date: post.date,
+      categories: [post.category],
+      author: 'Jin',
     });
   });
   return feed.xml({ indent: true });
