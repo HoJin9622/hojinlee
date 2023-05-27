@@ -13,7 +13,7 @@ export default async function generateRssFeed() {
     feed_url: `${siteUrl}/rss.xml`,
     pubDate: new Date(),
     language: 'ko',
-    image_url: '/images/opengraph-image.jpg',
+    image_url: `${siteUrl}/images/opengraph-image.jpg`,
     copyright: `All rights reserved ${new Date().getFullYear()}, Jin`,
   };
   const feed = new RSS(feedOptions);
