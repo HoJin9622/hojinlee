@@ -1,14 +1,12 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { remark } from 'remark';
-import html from 'remark-html';
 
 const folder = path.join(process.cwd(), 'src/posts');
 
 function getMarkdownPosts() {
   const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith('.md'));
+  const markdownPosts = files.filter((file) => file.endsWith('.mdx'));
   return markdownPosts;
 }
 
@@ -28,7 +26,7 @@ function sortByDate(posts: Post[]) {
  * 게시물 목록을 불러옵니다.
  * @returns
  */
-export function getPostMetadata() {
+export function getPosts() {
   const markdownPosts = getMarkdownPosts();
   const posts = markdownPosts
     .map((fileName) => {
@@ -38,7 +36,7 @@ export function getPostMetadata() {
         date: matterResult.data.date,
         subtitle: matterResult.data.subtitle,
         category: matterResult.data.category,
-        slug: fileName.replace('.md', ''),
+        slug: fileName.replace('.mdx', ''),
         coverImage: matterResult.data.coverImage,
         draft: matterResult.data.draft,
       };
@@ -49,7 +47,7 @@ export function getPostMetadata() {
 }
 
 export function getCategoryPostMetadata(category: string) {
-  const posts = getPostMetadata();
+  const posts = getPosts();
   return posts.filter((post) => post.category === category);
 }
 
@@ -58,7 +56,7 @@ export function getCategoryPostMetadata(category: string) {
  * @returns
  */
 export function getCategories(): { [key: string]: number } {
-  const posts = getPostMetadata();
+  const posts = getPosts();
   const categories: { [key: string]: number } = {};
   posts.forEach((post) => {
     if (categories[post.category]) {
@@ -77,17 +75,13 @@ export function getCategories(): { [key: string]: number } {
  * @param slug
  * @returns
  */
-export async function getPostContent(slug: string) {
-  const file = `${folder}/${slug}.md`;
+export function getPost(slug: string) {
+  const file = `${folder}/${slug}.mdx`;
   const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
 
   return {
     ...(matterResult.data as Post),
-    content: contentHtml,
+    content: matterResult.content,
   };
 }

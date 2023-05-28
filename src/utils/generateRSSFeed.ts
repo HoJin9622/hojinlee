@@ -1,10 +1,10 @@
 import RSS, { FeedOptions } from 'rss';
 
-import { getPostMetadata } from './posts';
+import { getPosts } from './posts';
 
 export default async function generateRssFeed() {
   const siteUrl = 'https://devlog.nextlevels.net';
-  const posts = getPostMetadata();
+  const posts = getPosts();
   const feedOptions: FeedOptions = {
     title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
     description:

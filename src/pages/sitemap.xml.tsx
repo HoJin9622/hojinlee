@@ -1,12 +1,12 @@
 import { GetServerSideProps } from 'next';
 
 import generateSitemap from '@/utils/generateSitemap';
-import { getPostMetadata } from '@/utils/posts';
+import { getPosts } from '@/utils/posts';
 
 function SiteMap() {}
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const posts = getPostMetadata();
+  const posts = getPosts();
 
   const sitemap = generateSitemap(posts);
 
