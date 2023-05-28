@@ -1,6 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 const folder = path.join(process.cwd(), 'src/posts');
 
@@ -75,12 +77,17 @@ export function getCategories(): { [key: string]: number } {
  * @param slug
  * @returns
  */
-export function getPostContent(slug: string) {
+export async function getPostContent(slug: string) {
   const file = `${folder}/${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
   return {
     ...(matterResult.data as Post),
-    content: matterResult.content,
+    content: contentHtml,
   };
 }

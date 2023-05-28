@@ -1,4 +1,3 @@
-import Markdown from 'markdown-to-jsx';
 import type { Metadata } from 'next';
 import React from 'react';
 
@@ -10,8 +9,8 @@ type Props = {
   params: { slug: string };
 };
 
-export default function PostPage({ params: { slug } }: Props) {
-  const post = getPostContent(slug);
+export default async function PostPage({ params: { slug } }: Props) {
+  const post = await getPostContent(slug);
   const posts = getPostMetadata();
 
   const postIndex = posts.findIndex(
@@ -26,9 +25,10 @@ export default function PostPage({ params: { slug } }: Props) {
       <h1 className="font-bold text-2xl md:text-3xl mb-3">{post.title}</h1>
       <div className="text-sm md:text-base text-gray-500">{post.date}</div>
 
-      <article className="prose md:prose-lg mt-10">
-        <Markdown>{post.content}</Markdown>
-      </article>
+      <article
+        className="prose md:prose-lg mt-10"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
 
       <div className="flex flex-col-reverse gap-2 md:flex-row md: justify-between">
         {prevPost && (
@@ -48,8 +48,10 @@ export const generateStaticParams = async () => {
   return posts.map((post) => ({ slug: post.slug }));
 };
 
-export function generateMetadata({ params: { slug } }: Props): Metadata {
-  const post = getPostContent(slug);
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const post = await getPostContent(slug);
   return {
     title: post.title,
     description: post.subtitle,
