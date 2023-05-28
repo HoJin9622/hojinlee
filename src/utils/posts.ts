@@ -2,15 +2,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-export type PostMetadata = {
-  title: string;
-  date: string;
-  subtitle: string;
-  category: string;
-  slug: string;
-  coverImage?: string;
-};
-
 const folder = path.join(process.cwd(), 'src/posts');
 
 function getMarkdownPosts() {
@@ -25,12 +16,16 @@ function getFileMatterResult(fileName: string) {
   return matterResult;
 }
 
-function sortByDate(posts: PostMetadata[]) {
+function sortByDate(posts: Post[]) {
   return [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 
+/**
+ * 게시물 목록을 불러옵니다.
+ * @returns
+ */
 export function getPostMetadata() {
   const markdownPosts = getMarkdownPosts();
   const posts = markdownPosts
@@ -56,6 +51,10 @@ export function getCategoryPostMetadata(category: string) {
   return posts.filter((post) => post.category === category);
 }
 
+/**
+ * 카테고리 목록을 불러옵니다.
+ * @returns
+ */
 export function getCategories(): { [key: string]: number } {
   const posts = getPostMetadata();
   const categories: { [key: string]: number } = {};
@@ -71,12 +70,17 @@ export function getCategories(): { [key: string]: number } {
     .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
 }
 
+/**
+ * 게시물 내용을 가져옵니다.
+ * @param slug
+ * @returns
+ */
 export function getPostContent(slug: string) {
   const file = `${folder}/${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
   return {
-    ...(matterResult.data as PostMetadata),
+    ...(matterResult.data as Post),
     content: matterResult.content,
   };
 }
