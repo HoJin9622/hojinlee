@@ -1,17 +1,23 @@
 import type { Metadata } from 'next';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import React from 'react';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrism from 'rehype-prism-plus';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import remarkToc from 'remark-toc';
 
 import CommentList from '@/components/CommentList';
 import PostButton from '@/components/PostButton';
-import { getPostContent, getPostMetadata } from '@/utils/posts';
+import { getPost, getPosts } from '@/utils/posts';
 
 type Props = {
   params: { slug: string };
 };
 
 export default async function PostPage({ params: { slug } }: Props) {
-  const post = await getPostContent(slug);
-  const posts = getPostMetadata();
+  const post = await getPost(slug);
+  const posts = getPosts();
 
   const postIndex = posts.findIndex(
     (postMetadata) => postMetadata.slug === slug,
@@ -25,10 +31,29 @@ export default async function PostPage({ params: { slug } }: Props) {
       <h1 className="font-bold text-2xl md:text-3xl mb-3">{post.title}</h1>
       <div className="text-sm md:text-base text-gray-500">{post.date}</div>
 
-      <article
-        className="prose md:prose-lg mt-10"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      <article className="prose md:prose-lg mt-10">
+        {/* @ts-expect-error RSC */}
+        <MDXRemote
+          source={post.content}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm, remarkToc],
+              rehypePlugins: [
+                rehypePrism,
+                rehypeSlug,
+                [
+                  rehypeAutolinkHeadings,
+                  {
+                    properties: {
+                      className: ['anchor'],
+                    },
+                  },
+                ],
+              ],
+            },
+          }}
+        />
+      </article>
 
       <div className="flex flex-col-reverse gap-2 md:flex-row md: justify-between">
         {prevPost && (
@@ -44,14 +69,12 @@ export default async function PostPage({ params: { slug } }: Props) {
 }
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = getPosts();
   return posts.map((post) => ({ slug: post.slug }));
 };
 
-export async function generateMetadata({
-  params: { slug },
-}: Props): Promise<Metadata> {
-  const post = await getPostContent(slug);
+export function generateMetadata({ params: { slug } }: Props): Metadata {
+  const post = getPost(slug);
   return {
     title: post.title,
     description: post.subtitle,
