@@ -7,13 +7,13 @@ category: 'git'
 
 구글에 한글로 검색하면 local 기록까지 모두 삭제하여 --force로 원격저장소 커밋까지 삭제하는 방법밖에 나오지 않았다.
 
-```ssh
+```bash
 git reset --soft HEAD^
 ```
 
 위 명령어를 사용하여 로컬 상태를 푸쉬하기 전으로 되돌린다.
 
-```ssh
+```bash
 git push origin +branchName --force
 ```
 

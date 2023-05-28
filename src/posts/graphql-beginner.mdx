@@ -32,7 +32,7 @@ GraphQL의 spec은 2015년 오픈소스로 공개되었으며, 현재 페이스�
 
 ### over-fetching
 
-```json
+```txt
 movie {
     id: 11,
     title: "SpiderMan",
@@ -64,7 +64,7 @@ GraphQL을 사용하면 API에 GraphQL 쿼리를 보내고 필요한 것만 정�
 
 Apollo 서버는 Apollo 클라이언트를 포함한 모든 GraphQL 클라이언트와 호환되는 사양 준수의 오픈 소스 GraphQL 서버입니다. 모든 소스의 데이터를 사용할 수 있는 자체 문서화 가능한 production-ready GraphQL API를 구축하는 가장 좋은 방법입니다.
 
-```zsh
+```bash
 npm i apollo-server graphql
 ```
 
@@ -167,7 +167,7 @@ Resolver의 첫번째 매개변수는 root, 두번째 매개변수는 args로 ar
 
 > - parent: The return value of the resolver for this field's parent (i.e., the previous resolver in the resolver chain).<br/>For resolvers of top-level fields with no parent (such as fields of Query), this value is obtained from the rootValue function passed to Apollo Server's constructor.
 >
-> - args: An object that contains all GraphQL arguments provided for this field.<br/>For example, when executing query{ user(id: "4") }, the args object passed to the user resolver is { "id": "4" }.
+> - args: An object that contains all GraphQL arguments provided for this field.<br/>For example, when executing query\{ user(id: "4") }, the args object passed to the user resolver is \{ "id": "4" }.
 >
 > - context: An object shared across all resolvers that are executing for a particular operation. Use this to share per-operation state, including authentication information, dataloader instances, and anything else to track across resolvers.
 >
@@ -177,7 +177,7 @@ Resolver의 첫번째 매개변수는 root, 두번째 매개변수는 args로 ar
 
 type, field, argument에 대한 설명을 제공합니다. Docstrings는 자동으로 많은 일반적인 GraphQL tools에 나타납니다.
 
-```js
+```txt
 """
 Description for the User
 """

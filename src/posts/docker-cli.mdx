@@ -8,7 +8,7 @@ coverImage: '/images/docker.png'
 
 # create
 
-```zsh
+```bash
 docker create {image name}
 ```
 
@@ -17,7 +17,7 @@ docker 컨테이너를 생성한다.
 
 # start
 
-```zsh
+```bash
 docker start {container id}
 ```
 
@@ -27,7 +27,7 @@ container를 실행하고 container id를 반환하게 된다.
 
 ### -a
 
-```zsh
+```bash
 docker start -a {container id}
 ```
 
@@ -35,14 +35,14 @@ docker start -a {container id}
 
 # run
 
-```zsh
+```bash
 docker run {image name}
 ```
 
 도커 이미지를 실행한다.
 `docker create`와 `docker start` 명령어가 합쳐진 것이다.
 
-```zsh
+```bash
 docker run {image name} ls
 ```
 
@@ -54,7 +54,7 @@ docker run {image name} ls
 
 ### -p
 
-```zsh
+```bash
 docker run -p {local port}:{container port} {image name}
 ```
 
@@ -63,7 +63,7 @@ port를 매핑해줄 수 있다.
 
 ### -d
 
-```zsh
+```bash
 docker run -d -p 5000:8080 {image name}
 ```
 
@@ -71,7 +71,7 @@ detach 의 줄임말 컨테이너를 실행한 후 터미널에서 바로 빠져
 
 # exec
 
-```zsh
+```bash
 docker exec {container id} {command}
 ```
 
@@ -82,7 +82,7 @@ docker exec {container id} {command}
 
 ### -it
 
-```zsh
+```bash
 docker exec -it {container id} {command}
 ```
 
@@ -90,7 +90,7 @@ docker exec -it {container id} {command}
 `-it` 옵션은 interactive terminal 의 약자로 명령어를 실행 후 계속 명령어를 적을 수 있다.
 `-i` 옵션과 `-t` 옵션을 붙힌것이다.
 
-```zsh
+```bash
 docker exec -it {container id} {sh, bash, zsh, powershell}
 ```
 
@@ -100,7 +100,7 @@ Control + D로 쉘에서 빠져나올 수 있다.
 
 # stop
 
-```zsh
+```bash
 docker stop {container id}
 ```
 
@@ -109,7 +109,7 @@ docker stop {container id}
 
 # kill
 
-```zsh
+```bash
 docker kill {container id}
 ```
 
@@ -117,7 +117,7 @@ docker kill {container id}
 
 # ps
 
-```zsh
+```bash
 docker ps
 ```
 
@@ -127,7 +127,7 @@ docker ps
 
 ### --format
 
-```zsh
+```bash
 docker ps --format 'table{{.Names}}'
 ```
 
@@ -135,7 +135,7 @@ docker ps --format 'table{{.Names}}'
 
 ### -a
 
-```zsh
+```bash
 docker ps -a
 ```
 
@@ -143,14 +143,14 @@ docker ps -a
 
 # rm
 
-```zsh
+```bash
 docker rm {container id}
 ```
 
 컨테이너를 제거한다.
 종료된 컨테이너만 제거할 수 있다.
 
-```zsh
+```bash
 docker rm `docker ps -a -q`
 ```
 
@@ -158,7 +158,7 @@ docker rm `docker ps -a -q`
 
 # rmi
 
-```zsh
+```bash
 docker rmi {image id}
 ```
 
@@ -166,7 +166,7 @@ docker rmi {image id}
 
 # system prune
 
-```zsh
+```bash
 docker system prune
 ```
 

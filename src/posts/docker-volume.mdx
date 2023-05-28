@@ -13,7 +13,7 @@ coverImage: '/images/docker.png'
 Docker Volume 을 사용하면 파일의 변경이 있을때마다 Dockerfile를 새롭게 빌드할 필요가 없어진다.
 도커 컨테이너에서 local 파일들을 맵핑하여 변경이 있을때마다 바로 반영되게 할 수 있다.
 
-```zsh
+```bash
 docker run -p 5000:8080 -v /usr/src/app/node_modules -v $(pwd):/usr/src/app {image id}
 ```
 

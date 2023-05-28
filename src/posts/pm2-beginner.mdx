@@ -9,7 +9,7 @@ pm2는 node.js로 만들어진 앱에 대한 프로세스 관리를 편리하게
 
 ## 설치
 
-```zsh
+```bash
 $ npm install pm2 -g
 ```
 
@@ -22,7 +22,7 @@ $ npm install pm2 -g
 
 ## PM2 명령어 목록 확인
 
-```zsh
+```bash
 $ pm2 examples
 ```
 
@@ -30,7 +30,7 @@ $ pm2 examples
 
 ## pm2 start
 
-```zsh
+```bash
 $ pm2 start app.js
 ```
 
@@ -40,7 +40,7 @@ node.js 앱을 실행, 프로세스가 만들어진다.
 
 ## pm2 ls
 
-```zsh
+```bash
 $ pm2 ls
 ```
 
@@ -50,7 +50,7 @@ $ pm2 ls
 
 ## pm2 stop
 
-```zsh
+```bash
 $ pm2 stop id|name|namespace|all|json|stdin
 ```
 
@@ -60,7 +60,7 @@ $ pm2 stop id|name|namespace|all|json|stdin
 
 ## pm2 delete
 
-```zsh
+```bash
 $ pm2 delete 0
 ```
 
@@ -70,7 +70,7 @@ pm2가 감시하고 있는 프로세스를 제거
 
 ## pm2 --watch option
 
-```zsh
+```bash
 $ pm2 start app.js --watch
 ```
 
@@ -80,7 +80,7 @@ $ pm2 start app.js --watch
 
 ## pm2 log
 
-```zsh
+```bash
 $ pm2 log
 ```
 
@@ -90,7 +90,7 @@ $ pm2 log
 
 ## pm2-dev
 
-```zsh
+```bash
 $ pm2-dev app.js
 ```
 
@@ -100,7 +100,7 @@ app.js 프로그램을 watch하면서 log도 찍어준다
 
 ## pm2 start [name] -i max
 
-```zsh
+```bash
 $ pm2 start app.js -i max
 ```
 
@@ -110,7 +110,7 @@ $ pm2 start app.js -i max
 
 ## 운영체제 재시작 자동실행 명령어
 
-```zsh
+```bash
 $ pm2 start app.js
 $ pm2 save
 $ pm2 startup
@@ -118,7 +118,7 @@ $ pm2 startup
 
 운영체제마다 컴퓨터가 재시작되었을 때 저장된 프로세스들을 자동실행 할 수 있는 명령어를 알려준다.
 
-```zsh
+```bash
 $ pm2 unstartup systemd
 또는
 $ pm2 unstartup launchd
