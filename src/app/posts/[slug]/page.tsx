@@ -1,3 +1,7 @@
+import './code-highlight.css';
+import './anchor.css';
+import './utterances.css';
+
 import type { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import React from 'react';
@@ -15,8 +19,8 @@ type Props = {
   params: { slug: string };
 };
 
-export default async function PostPage({ params: { slug } }: Props) {
-  const post = await getPost(slug);
+export default function PostPage({ params: { slug } }: Props) {
+  const post = getPost(slug);
   const posts = getPosts();
 
   const postIndex = posts.findIndex(
