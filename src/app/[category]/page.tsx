@@ -1,14 +1,19 @@
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 import PostList from '@/components/PostList';
-import { getCategories, getCategoryPostMetadata } from '@/utils/posts';
+import { getCategories, getPostFilteredByCategory } from '@/utils/posts';
 
 type Props = {
   params: { category: string };
 };
 
 export default function Category({ params: { category } }: Props) {
-  const posts = getCategoryPostMetadata(category);
+  const posts = getPostFilteredByCategory(category);
+
+  if (!posts.length) {
+    redirect('/');
+  }
 
   return <PostList posts={posts} />;
 }
