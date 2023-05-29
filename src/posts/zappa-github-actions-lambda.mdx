@@ -30,72 +30,72 @@ S3와 RDS는 이미 연결된 상태로 시작합니다.
 AWS IAM 유저를 새로 생성 한 후 다음 정책을 추가해줍니다.
 생성한 유저의 ACCESS KEY ID와 SECRET ACCESS KEY를 잘 보관해둡니다.
 
-```
+```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "iam:GetAccountPasswordPolicy",
-                "iam:ListServerCertificates",
-                "iam:GenerateServiceLastAccessedDetails",
-                "cloudformation:DescribeStackResource",
-                "iam:ListVirtualMFADevices",
-                "iam:SetSecurityTokenServicePreferences",
-                "apigateway:UpdateRestApiPolicy",
-                "iam:SimulateCustomPolicy",
-                "events:ListRuleNamesByTarget",
-                "iam:CreateAccountAlias",
-                "cloudformation:UpdateStack",
-                "events:ListRules",
-                "events:RemoveTargets",
-                "logs:FilterLogEvents",
-                "apigateway:GET",
-                "iam:GetAccountAuthorizationDetails",
-                "iam:GetCredentialReport",
-                "events:ListTargetsByRule",
-                "cloudformation:ListStackResources",
-                "iam:ListPolicies",
-                "events:DescribeRule",
-                "iam:ListSAMLProviders",
-                "apigateway:*",
-                "cloudformation:DescribeStacks",
-                "iam:*",
-                "iam:UpdateAccountPasswordPolicy",
-                "cloudformation:DeleteStack",
-                "ec2:*",
-                "apigateway:POST",
-                "iam:GetAccountSummary",
-                "iam:GenerateCredentialReport",
-                "logs:DescribeLogStreams",
-                "iam:GetServiceLastAccessedDetailsWithEntities",
-                "events:PutRule",
-                "iam:ListPoliciesGrantingServiceAccess",
-                "iam:GetServiceLastAccessedDetails",
-                "iam:GetOrganizationsAccessReport",
-                "apigateway:DELETE",
-                "apigateway:PATCH",
-                "iam:DeleteAccountAlias",
-                "iam:DeleteAccountPasswordPolicy",
-                "apigateway:PUT",
-                "logs:DeleteLogGroup",
-                "s3:*",
-                "iam:ListRoles",
-                "iam:GetContextKeysForCustomPolicy",
-                "events:DeleteRule",
-                "events:PutTargets",
-                "iam:ListOpenIDConnectProviders",
-                "cloudformation:CreateStack",
-                "lambda:*",
-                "iam:ListAccountAliases",
-                "iam:ListUsers",
-                "iam:ListGroups"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetAccountPasswordPolicy",
+        "iam:ListServerCertificates",
+        "iam:GenerateServiceLastAccessedDetails",
+        "cloudformation:DescribeStackResource",
+        "iam:ListVirtualMFADevices",
+        "iam:SetSecurityTokenServicePreferences",
+        "apigateway:UpdateRestApiPolicy",
+        "iam:SimulateCustomPolicy",
+        "events:ListRuleNamesByTarget",
+        "iam:CreateAccountAlias",
+        "cloudformation:UpdateStack",
+        "events:ListRules",
+        "events:RemoveTargets",
+        "logs:FilterLogEvents",
+        "apigateway:GET",
+        "iam:GetAccountAuthorizationDetails",
+        "iam:GetCredentialReport",
+        "events:ListTargetsByRule",
+        "cloudformation:ListStackResources",
+        "iam:ListPolicies",
+        "events:DescribeRule",
+        "iam:ListSAMLProviders",
+        "apigateway:*",
+        "cloudformation:DescribeStacks",
+        "iam:*",
+        "iam:UpdateAccountPasswordPolicy",
+        "cloudformation:DeleteStack",
+        "ec2:*",
+        "apigateway:POST",
+        "iam:GetAccountSummary",
+        "iam:GenerateCredentialReport",
+        "logs:DescribeLogStreams",
+        "iam:GetServiceLastAccessedDetailsWithEntities",
+        "events:PutRule",
+        "iam:ListPoliciesGrantingServiceAccess",
+        "iam:GetServiceLastAccessedDetails",
+        "iam:GetOrganizationsAccessReport",
+        "apigateway:DELETE",
+        "apigateway:PATCH",
+        "iam:DeleteAccountAlias",
+        "iam:DeleteAccountPasswordPolicy",
+        "apigateway:PUT",
+        "logs:DeleteLogGroup",
+        "s3:*",
+        "iam:ListRoles",
+        "iam:GetContextKeysForCustomPolicy",
+        "events:DeleteRule",
+        "events:PutTargets",
+        "iam:ListOpenIDConnectProviders",
+        "cloudformation:CreateStack",
+        "lambda:*",
+        "iam:ListAccountAliases",
+        "iam:ListUsers",
+        "iam:ListGroups"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -103,21 +103,21 @@ AWS IAM 유저를 새로 생성 한 후 다음 정책을 추가해줍니다.
 
 이제 Zappa를 설치해줍니다.
 
-```zsh
+```bash
 pipenv install zappa
 ```
 
 그 후 환경변수에 AWS KEY를 임시로 저장합니다.
 최종적으로 Github Action을 이용할 것이기 때문에 임시로 저장하였습니다.
 
-```zsh
+```bash
 export AWS_ACCESS_KEY_ID={저장한 IAM USER ID}
 export AWS_SECRET_ACCESS_KEY={저장한 IAM USER SECRET}
 ```
 
 이제 zappa init 명령어를 이용하여 zappa_settings.json 파일을 생성해줍니다.
 
-```zsh
+```bash
 zappa init
 
 ███████╗ █████╗ ██████╗ ██████╗  █████╗
@@ -205,17 +205,17 @@ aws_region을 추가해주었다면 이제 `zappa deploy dev`로 lambda에 올�
 
 ### 환경변수
 
-프로젝트에 환경변수를 사용중이라면 Lambda > 함수 > {test_project} > 구성 > 환경 변수에서 입력이 가능합니다.
+프로젝트에 환경변수를 사용중이라면 Lambda > 함수 > \{test_project} > 구성 > 환경 변수에서 입력이 가능합니다.
 ![](https://velog.velcdn.com/images/hojin9622/post/2732679c-531e-41dc-9170-5f2334968e6c/image.png)
 
 ### ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg.\_psycopg'
 
 `zappa update dev`로 lambda에 올리려고 했으나 계속 마지막 부분에서 실패 메시지가 발생했습니다.
-`zappa update dev`로 실패 이유와 에러메시지는 콘솔에 나타나지 않아서 Lambda > 함수 > {test_project} > 모니터링 > 로그에서 가장 최근 로그를 확인하여 에러를 발견하였습니다.
+`zappa update dev`로 실패 이유와 에러메시지는 콘솔에 나타나지 않아서 Lambda > 함수 > \{test_project} > 모니터링 > 로그에서 가장 최근 로그를 확인하여 에러를 발견하였습니다.
 `zappa tail` 명령어로도 확인이 가능합니다!
 ![](https://velog.velcdn.com/images/hojin9622/post/468de406-ee9a-4597-84ee-bd85accf2532/image.png)
 
-```txt
+```bash
 [ERROR] ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
 Traceback (most recent call last):
   File "/var/task/handler.py", line 655, in lambda_handler

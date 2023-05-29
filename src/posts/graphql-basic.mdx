@@ -19,7 +19,7 @@ graphql-yoga는 graphql을 더 쉽게 다룰 수 있는 라이브러리이다.
 
 https://github.com/prisma-labs/graphql-yoga
 
-```ssh
+```bash
 yarn add graphql-yoga
 ```
 
@@ -61,7 +61,7 @@ graphql/resolvers.js 내용
 playground는 graphql-yoga에만 있는 것이며, postman과 비슷하다.
 localhost:4000 으로 접속하면 playground를 이용할 수 있다.
 
-```query
+```js
 query {
   name
 }
@@ -69,7 +69,7 @@ query {
 
 playground에서 위 쿼리문을 playground로 보내면
 
-```
+```json
 {
   "data": {
     "name": "hojin"

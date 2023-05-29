@@ -3,10 +3,10 @@ import React from 'react';
 import CategoryList from '@/components/CategoryList';
 import PostList from '@/components/PostList';
 import Profile from '@/components/Profile';
-import { getPostMetadata } from '@/utils/posts';
+import { getPosts } from '@/utils/posts';
 
 export default function Home() {
-  const posts = getPostMetadata();
+  const posts = getPosts();
 
   return (
     <div className="px-6">

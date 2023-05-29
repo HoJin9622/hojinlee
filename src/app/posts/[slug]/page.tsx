@@ -1,18 +1,28 @@
-import Markdown from 'markdown-to-jsx';
+import './code-highlight.css';
+import './anchor.css';
+import './utterances.css';
+
 import type { Metadata } from 'next';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import React from 'react';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import remarkToc from 'remark-toc';
 
 import CommentList from '@/components/CommentList';
 import PostButton from '@/components/PostButton';
-import { getPostContent, getPostMetadata } from '@/utils/posts';
+import { getPost, getPosts } from '@/utils/posts';
 
 type Props = {
   params: { slug: string };
 };
 
 export default function PostPage({ params: { slug } }: Props) {
-  const post = getPostContent(slug);
-  const posts = getPostMetadata();
+  const post = getPost(slug);
+  const posts = getPosts();
 
   const postIndex = posts.findIndex(
     (postMetadata) => postMetadata.slug === slug,
@@ -27,7 +37,28 @@ export default function PostPage({ params: { slug } }: Props) {
       <div className="text-sm md:text-base text-gray-500">{post.date}</div>
 
       <article className="prose md:prose-lg mt-10">
-        <Markdown>{post.content}</Markdown>
+        {/* @ts-expect-error RSC */}
+        <MDXRemote
+          source={post.content}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm, remarkToc],
+              rehypePlugins: [
+                rehypeSlug,
+                rehypeCodeTitles,
+                rehypePrism,
+                [
+                  rehypeAutolinkHeadings,
+                  {
+                    properties: {
+                      className: ['anchor'],
+                    },
+                  },
+                ],
+              ],
+            },
+          }}
+        />
       </article>
 
       <div className="flex flex-col-reverse gap-2 md:flex-row md: justify-between">
@@ -44,12 +75,12 @@ export default function PostPage({ params: { slug } }: Props) {
 }
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = getPosts();
   return posts.map((post) => ({ slug: post.slug }));
 };
 
 export function generateMetadata({ params: { slug } }: Props): Metadata {
-  const post = getPostContent(slug);
+  const post = getPost(slug);
   return {
     title: post.title,
     description: post.subtitle,
