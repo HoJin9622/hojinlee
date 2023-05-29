@@ -12,7 +12,7 @@ coverImage: '/images/nextjs.png'
 
 전체 페이지에 대해서 metadata를 생성하려면 app/layout.tsx 파일에서 설정할 수 있습니다.
 
-```diff-typescript {1} showLineNumbers
+```tsx:app/layout.tsx
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ typescript를 사용하신다면 Metadata 타입을 import해서 사용하시면
 
 게시물 상세페이지와 같이 동적으로 Metadata를 생성해야한다면 generate Metadata function을 사용할 수 있습니다.
 
-```typescript
+```ts:app/posts/page.tsx
 export function generateMetadata({ params: { slug } }: Props): Metadata {
   const post = getPostContent(slug);
   return {
