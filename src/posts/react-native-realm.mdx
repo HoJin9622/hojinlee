@@ -12,7 +12,7 @@ coverImage: '/images/realm.png'
 
 ## 설치
 
-```
+```bash
 yarn add realm @realm/react react-native-get-random-values
 yarn add -D @realm/babel-plugin @babel/plugin-proposal-decorators
 ```
@@ -23,7 +23,7 @@ yarn add -D @realm/babel-plugin @babel/plugin-proposal-decorators
 
 **ts.config.json**
 
-```
+```json
 // prettier-ignore
 {
   "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
@@ -41,7 +41,7 @@ yarn add -D @realm/babel-plugin @babel/plugin-proposal-decorators
 
 **babel.config.json**
 
-```
+```json
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
@@ -55,11 +55,11 @@ module.exports = {
 
 **index.js**
 
-```
+```jsx
 import 'react-native-get-random-values'; // 해당 라인 추가
-import {AppRegistry} from 'react-native';
+import { AppRegistry } from 'react-native';
 import App from './src/App';
-import {name as appName} from './app.json';
+import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
 ```
@@ -72,8 +72,8 @@ react-native-get-random-values를 import 해주세요.
 
 **models/gift.ts**
 
-```
-import {Realm} from '@realm/react';
+```tsx
+import { Realm } from '@realm/react';
 
 export class Gift extends Realm.Object<Gift> {
   _id: Realm.BSON.ObjectId = new Realm.BSON.ObjectID();
@@ -89,7 +89,7 @@ export class Gift extends Realm.Object<Gift> {
     peopleId: Realm.BSON.ObjectId,
     price?: number,
   ) {
-    super(realm, {name, peopleId, price});
+    super(realm, { name, peopleId, price });
   }
 }
 ```
@@ -105,9 +105,9 @@ constructor에서 name과 peopleId는 required니 필수로 받아주고 price�
 
 **models/index.ts**
 
-```
-import {createRealmContext} from '@realm/react';
-import {Gift} from './gift';
+```ts
+import { createRealmContext } from '@realm/react';
+import { Gift } from './gift';
 
 export const RealmContext = createRealmContext({
   schema: [Gift],
@@ -119,15 +119,15 @@ context를 생성해줍니다.
 
 **App.tsx**
 
-```
+```tsx
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import RootStack from './routers/RootStack';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import {RealmContext} from './models';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { RealmContext } from './models';
 
 const App = () => {
-  const {RealmProvider} = RealmContext;
+  const { RealmProvider } = RealmContext;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
 
 ### read
 
-```
+```tsx
 import React, {useEffect, useMemo} from 'react';
 import {RealmContext} from '../models';
 import {People} from '../models/people';
@@ -176,11 +176,11 @@ RealmContext에서 useQuery를 가져와 Gift를 넘기면 Gift 목록을 확인
 
 ### filter
 
-```
-  const gifts = useMemo(
-    () => result.filtered('peopleId == $0', _id),
-    [result, _id],
-  );
+```ts
+const gifts = useMemo(
+  () => result.filtered('peopleId == $0', _id),
+  [result, _id],
+);
 ```
 
 해당 결과를 filter하고 싶다면 `filtered`를 사용합니다.  
@@ -189,7 +189,7 @@ RealmContext에서 useQuery를 가져와 Gift를 넘기면 Gift 목록을 확인
 
 ### create
 
-```
+```tsx
 import React from 'react';
 import {useForm, Controller} from 'react-hook-form';
 import {RealmContext} from '../models';
@@ -227,8 +227,8 @@ react-hook-form을 사용하였으며 realm.write 내에서 new Gift의 생성�
 
 ### get
 
-```
-const {useObject} = RealmContext;
+```tsx
+const { useObject } = RealmContext;
 
 const gift = useObject(Gift, _id);
 ```

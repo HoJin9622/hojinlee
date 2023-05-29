@@ -29,7 +29,7 @@ services:
     - image: 컨테이너에서 사용하는 이미지
   - node-app: 컨테이너 이름
     - build: 현 디렉토리에 있는 Dockerfile 사용
-    - ports: 포트 맵핑 <로컬 포트:컨테이너포트>
+    - ports: 포트 맵핑 &lt;로컬 포트:컨테이너포트&gt;
 
 ```yml
 version: '3'
@@ -59,7 +59,7 @@ services:
 - stdin_open: 리액트 앱을 끌때 필요
 - command: 테스트 컨테이너 시작할때 실행 되는 명령어
 
-```zsh
+```bash
 docer-compose up
 docer-compose up --build
 docker-compose down

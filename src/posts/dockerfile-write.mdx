@@ -36,9 +36,9 @@ COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 - FROM
   베이스 이미지를 명시해준다.
   이미지 생성시 기반이 되는 이미지 레이어
-  <이미지 이름>:<태그> 형식으로 작성
+  &#60;이미지 이름&#62;:&#60;태그&#62; 형식으로 작성
   태그를 안붙이면 자동적으로 가장 최신것으로 다운 받음
-  ex) ubuntu:14.04
+  ex&#41; ubuntu:14.04
 
 - WORKDIR
   WORKDIR을 설정해주지 않으면 root에 모든 파일이 생성된다.
@@ -62,7 +62,7 @@ COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 
 # build
 
-```zsh
+```bash
 docker build .
 docker build ./
 ```
@@ -73,7 +73,7 @@ docker build ./
 
 ### -t
 
-```zsh
+```bash
 docker build -t kiss0104040/hello:latest
 ```
 
@@ -82,7 +82,7 @@ docker build -t kiss0104040/hello:latest
 
 ### -f
 
-```zsh
+```bash
 docker build -f Dockerfile.dev .
 ```
 
