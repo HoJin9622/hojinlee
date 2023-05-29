@@ -32,7 +32,12 @@ coverImage: '/images/monster.png'
 디자이너분께 백오피스 개선에 어떤 기능이 들어갔으면 좋겠냐고 물어보니 상품을 복제한 후 수정을 할 수 있는 기능이 꼭 들어갔으면 좋겠다고 얘기했습니다.
 ~~해당 기능이 들어가면 하루에 상품 10개도 올릴 수 있다고 덧붙이면서...~~
 
-<p><img src="https://velog.velcdn.com/images/hojin9622/post/ff159e00-056d-4ef2-a1ce-615384625e00/image.png" width="50%" /></p>
+<p>
+  <img
+    src="https://velog.velcdn.com/images/hojin9622/post/ff159e00-056d-4ef2-a1ce-615384625e00/image.png"
+    width="50%"
+  />
+</p>
 
 1. 기존의 백오피스 추가개발
 2. Django로 서버 변경
@@ -49,7 +54,7 @@ Django 을 선택하게 된다면 기존 존재하였던 API를 모두 제작하
 
 기존 존재하던 로그인, 댓글 작성, 찜 등의 기능은 아직 미구현이지만 상품 App을 만든 후 기본 제공되는 관리자페이지에서 별도의 시간 소요 없이 상품 등록, 수정, 삭제, 필터, 상품 복제 후 수정 기능이 완성되었습니다.
 
-```py
+```python
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
 	...
