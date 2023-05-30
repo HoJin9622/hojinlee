@@ -4,5 +4,6 @@ type Post = {
   subtitle: string;
   category: string;
   slug: string;
+  content: string;
   coverImage?: string;
 };

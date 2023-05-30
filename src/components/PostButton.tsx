@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 type Props = {
   slug: string;
@@ -11,12 +12,11 @@ export default function PostButton({ slug, title, type }: Props) {
   return (
     <Link
       href={`/posts/${slug}`}
-      className={`flex flex-col items-end border-2 rounded-md border-blue-700 p-1 hover:bg-gray-100 md:w-2/5 ${
-        type === '다음' ? 'text-right' : 'text-left'
-      }`}
+      className="text-sm p-2 rounded-md font-medium flex items-center gap-1 hover:bg-gray-100 md:text-lg"
     >
-      <span className="w-full text-sm">{type}포스트</span>
-      <span className="w-full text-lg truncate font-bold">{title}</span>
+      {type === '이전' && <FiChevronLeft />}
+      {title}
+      {type === '다음' && <FiChevronRight />}
     </Link>
   );
 }

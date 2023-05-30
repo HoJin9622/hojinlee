@@ -1,17 +1,17 @@
 import fs from 'fs';
+import { sync } from 'glob';
 import matter from 'gray-matter';
 import path from 'path';
 
-const folder = path.join(process.cwd(), 'src/posts');
+const FOLDER = path.join(process.cwd(), 'src/posts');
 
-function getMarkdownPosts() {
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith('.mdx'));
-  return markdownPosts;
+function getAllPostPaths() {
+  const postPaths = sync(`${FOLDER}/**/*.mdx`);
+  return postPaths;
 }
 
-function getFileMatterResult(fileName: string) {
-  const fileContents = fs.readFileSync(`${folder}/${fileName}`);
+function getFileMatterResult(postPath: string) {
+  const fileContents = fs.readFileSync(postPath);
   const matterResult = matter(fileContents);
   return matterResult;
 }
@@ -27,18 +27,24 @@ function sortByDate(posts: Post[]) {
  * @returns
  */
 export function getPosts() {
-  const markdownPosts = getMarkdownPosts();
-  const posts = markdownPosts
-    .map((fileName) => {
-      const matterResult = getFileMatterResult(fileName);
+  const postPaths = getAllPostPaths();
+  const posts = postPaths
+    .map((postPath) => {
+      const {
+        data: { title, date, subtitle, category, coverImage, draft },
+        content,
+      } = getFileMatterResult(postPath);
       return {
-        title: matterResult.data.title,
-        date: matterResult.data.date,
-        subtitle: matterResult.data.subtitle,
-        category: matterResult.data.category,
-        slug: fileName.replace('.mdx', ''),
-        coverImage: matterResult.data.coverImage,
-        draft: matterResult.data.draft,
+        title,
+        date,
+        subtitle,
+        category,
+        slug: postPath
+          .substring(postPath.lastIndexOf('/') + 1)
+          .replace('.mdx', ''),
+        coverImage,
+        draft,
+        content,
       };
     })
     .filter((post) => !post.draft);
@@ -46,7 +52,12 @@ export function getPosts() {
   return sortByDate(posts);
 }
 
-export function getCategoryPostMetadata(category: string) {
+/**
+ * 카테고리에 맞는 게시글 목록을 불러옵니다.
+ * @param category
+ * @returns
+ */
+export function getPostFilteredByCategory(category: string) {
   const posts = getPosts();
   return posts.filter((post) => post.category === category);
 }
@@ -56,14 +67,15 @@ export function getCategoryPostMetadata(category: string) {
  * @returns
  */
 export function getCategories(): { [key: string]: number } {
-  const posts = getPosts();
+  const files = fs.readdirSync(FOLDER);
+  const directoris = files.filter((file) => {
+    const filePath = `${FOLDER}/${file}`;
+    return fs.statSync(filePath).isDirectory();
+  });
   const categories: { [key: string]: number } = {};
-  posts.forEach((post) => {
-    if (categories[post.category]) {
-      categories[post.category] += 1;
-    } else {
-      categories[post.category] = 1;
-    }
+  directoris.forEach((directory) => {
+    const categoryFiles = fs.readdirSync(`${FOLDER}/${directory}`);
+    categories[directory] = categoryFiles.length;
   });
   return Object.entries(categories)
     .sort(([, a], [, b]) => b - a)
@@ -76,12 +88,6 @@ export function getCategories(): { [key: string]: number } {
  * @returns
  */
 export function getPost(slug: string) {
-  const file = `${folder}/${slug}.mdx`;
-  const content = fs.readFileSync(file, 'utf8');
-  const matterResult = matter(content);
-
-  return {
-    ...(matterResult.data as Post),
-    content: matterResult.content,
-  };
+  const posts = getPosts();
+  return posts.find((post) => post.slug === slug);
 }

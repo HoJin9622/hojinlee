@@ -7,6 +7,7 @@ import React from 'react';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://devlog.nextlevels.net/'),
   title: "Jin's Tech Blog: 기술적 사고와 경험의 공유",
   description:
     "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
     description:
       "Jin's Tech Blog는 코드와 기술을 통해 생각하는 방법과 기술적인 사고를 공유하는 블로그입니다.",
     card: 'summary_large_image',
+  },
+  robots: {
+    index: true,
   },
 };
 
