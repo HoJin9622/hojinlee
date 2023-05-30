@@ -67,14 +67,14 @@ export default function PostPage({ params: { slug } }: Props) {
         />
       </article>
 
-      <div className="flex flex-col-reverse gap-2 md:flex-row md: justify-between">
+      <nav className="py-8 flex justify-between">
         {prevPost && (
           <PostButton slug={prevPost.slug} title={prevPost.title} type="이전" />
         )}
         {nextPost && (
           <PostButton slug={nextPost.slug} title={nextPost.title} type="다음" />
         )}
-      </div>
+      </nav>
       <CommentList />
     </div>
   );
