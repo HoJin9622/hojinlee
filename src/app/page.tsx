@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { getPosts } from '@/utils/post'
+
+import Post from './components/Post'
 
 export default function Home() {
   const posts = getPosts()
@@ -9,11 +8,13 @@ export default function Home() {
     <main>
       <h3>Latest Posts</h3>
       {posts.map((post) => (
-        <Link href={`/posts/${post.slug}`} key={post.slug}>
-          <Image src={post.coverImage} width={150} height={150} alt='' />
-          <h4>{post.title}</h4>
-          <div>{post.subtitle}</div>
-        </Link>
+        <Post
+          key={post.slug}
+          coverImage={post.coverImage}
+          slug={post.slug}
+          subtitle={post.subtitle}
+          title={post.title}
+        />
       ))}
     </main>
   )
