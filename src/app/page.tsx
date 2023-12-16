@@ -1,3 +1,7 @@
 export default function Home() {
-  return <main></main>
+  return (
+    <main>
+      <h3>Latest Posts</h3>
+    </main>
+  )
 }
