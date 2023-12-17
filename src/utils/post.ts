@@ -33,3 +33,9 @@ export const getPosts = () => {
   })
   return posts
 }
+
+export const getCategories = () => {
+  const posts = getPosts()
+  const categories = posts.map((post) => post.category)
+  return [...new Set(categories)]
+}
