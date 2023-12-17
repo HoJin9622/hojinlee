@@ -15,7 +15,7 @@ const getFileMatterResult = (fileName: string) => {
   return matterResult
 }
 
-export const getPosts = () => {
+export const getPosts = (category?: string) => {
   const names = getAllFileNames()
   const posts = names.map((name) => {
     const {
@@ -31,6 +31,9 @@ export const getPosts = () => {
       slug: name.replace('.mdx', ''),
     }
   })
+  if (category) {
+    return posts.filter((post) => post.category === category)
+  }
   return posts
 }
 
