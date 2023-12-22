@@ -20,6 +20,7 @@ export const getPosts = (category?: string) => {
   const posts = names.map((name) => {
     const {
       data: { title, subtitle, date, category, coverImage, draft },
+      content,
     } = getFileMatterResult(name)
     return {
       title,
@@ -29,6 +30,7 @@ export const getPosts = (category?: string) => {
       coverImage,
       draft,
       slug: name.replace('.mdx', ''),
+      content,
     }
   })
   if (category) {
@@ -41,4 +43,9 @@ export const getCategories = () => {
   const posts = getPosts()
   const categories = posts.map((post) => post.category)
   return [...new Set(categories)]
+}
+
+export const getPost = (slug: string) => {
+  const posts = getPosts()
+  return posts.find((post) => post.slug === slug)
 }
