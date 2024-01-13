@@ -38,6 +38,7 @@ ogImage: "../assets/images/monster.png"
   <img
     src="https://velog.velcdn.com/images/hojin9622/post/ff159e00-056d-4ef2-a1ce-615384625e00/image.png"
     width="50%"
+    alt=""
   />
 </p>
 
