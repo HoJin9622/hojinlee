@@ -8,6 +8,9 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
+User-agent: Yeti
+Allow: /
+
 Sitemap: ${new URL("sitemap-index.xml", SITE.website).href}
 `.trim();
 
