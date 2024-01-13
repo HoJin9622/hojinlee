@@ -2,7 +2,6 @@
 author: Jin
 pubDatetime: 2022-05-10
 title: "Cloudflare Images"
-featured: true
 tags:
   - infra
 description: Cloudflare Images 란 무엇인가?

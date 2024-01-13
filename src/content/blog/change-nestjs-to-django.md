@@ -3,7 +3,6 @@ author: Jin
 pubDatetime: 2022-11-18
 title: "먼스터 NestJS에서 Django로 서버전환"
 slug: "change-nestjs-to-django"
-featured: true
 tags:
   - review
 description: "😆 서버 전환에 성공한 회고"

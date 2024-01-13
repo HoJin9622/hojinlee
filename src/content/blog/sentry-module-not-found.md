@@ -3,6 +3,7 @@ pubDatetime: 2023-06-12
 title: "Sentry Module not found: Can't resolve '@sentry/utils/esm/buildPolyfills'"
 tags:
   - "infra"
+featured: true
 description: "NextJS13 Sentry 적용 중 생긴 에러"
 # coverImage: '/images/sentry-logo.png'
 ---

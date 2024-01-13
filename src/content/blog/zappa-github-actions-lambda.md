@@ -2,7 +2,6 @@
 author: Jin
 pubDatetime: 2022-05-22
 title: "Zappa, Github Actions, AWS Lambda를 이용한 Serverless CI/CD 구축"
-featured: true
 tags:
   - django
 description: "serverless 애플리케이션을 만들어보자"
