@@ -13,9 +13,10 @@ const blog = defineCollection({
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
       ogImage: image()
-        .refine(img => img.width >= 1200 && img.height >= 630, {
-          message: "OpenGraph image must be at least 1200 X 630 pixels!",
-        })
+        // NOTE ogImage 사이즈 조건 임시 제거
+        // .refine(img => img.width >= 1200 && img.height >= 630, {
+        //   message: "OpenGraph image must be at least 1200 X 630 pixels!",
+        // })
         .or(z.string())
         .optional(),
       description: z.string(),

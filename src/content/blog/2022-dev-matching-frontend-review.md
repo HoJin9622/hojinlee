@@ -5,7 +5,7 @@ title: "2022 Dev-Matching: 웹 프론트엔드 개발자(하반기)-1 후기"
 tags:
   - review
 description: vanilla js...
-ogImage: "../../assets/images/2022-dev-matching-frontend-review.png"
+ogImage: ../../assets/images/2022-dev-matching-frontend-review.jpg
 ---
 
 ![](https://velog.velcdn.com/images/hojin9622/post/63d4a5a6-78af-4d91-bf69-eeca97bd6b57/image.jpg)
