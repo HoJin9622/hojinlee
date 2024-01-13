@@ -8,7 +8,7 @@ description: vanilla js...
 ogImage: "../assets/images/2022-dev-matching-frontend-review.png"
 ---
 
-![](https://velog.velcdn.com/images/hojin9622/post/63d4a5a6-78af-4d91-bf69-eeca97bd6b57/image.png)
+![](https://velog.velcdn.com/images/hojin9622/post/63d4a5a6-78af-4d91-bf69-eeca97bd6b57/image.jpg)
 
 과제테스트였고 js만으로 요구사항을 구현하는 과제였다.
 평소 vanilla js로는 웹사이트를 구현해본 경험이 없어 구글링을 열심히 한다고 시간이 모자랐다 ㅠ...

@@ -4,7 +4,7 @@ title: "2장. 실용주의 접근법"
 tags:
   - "book"
 description: "2장. 실용주의 접근법"
-ogImage: "../assets/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpg"
 ---
 
 ## 오늘 TIL 3줄 요약

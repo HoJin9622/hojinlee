@@ -4,7 +4,7 @@ title: "4장. 실용주의 편집증"
 tags:
   - "book"
 description: "4장. 실용주의 편집증"
-ogImage: "../assets/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpg"
 ---
 
 ## 오늘 TIL 3줄 요약

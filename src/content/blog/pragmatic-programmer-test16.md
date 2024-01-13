@@ -4,7 +4,7 @@ description: "연습문제 16 풀이"
 pubDatetime: 2022-03-27
 tags:
   - "book"
-ogImage: "../assets/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpg"
 ---
 
 **연습문제 16.**

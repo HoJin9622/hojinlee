@@ -4,7 +4,7 @@ description: "서문 ~ 1장. 실용주의 철학"
 pubDatetime: 2022-03-19
 tags:
   - "book"
-ogImage: "../assets/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpg"
 ---
 
 ## 오늘 TIL 3줄 요약

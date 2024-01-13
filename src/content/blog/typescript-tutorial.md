@@ -4,7 +4,7 @@ title: "TypeScript 튜토리얼"
 tags:
   - typescript
 description: "TypeScript 튜토리얼"
-ogImage: "../assets/images/typescript.jpeg"
+ogImage: "../assets/images/typescript.jpg"
 ---
 
 ## Setting
