@@ -4,7 +4,7 @@ description: "여기저기 흩어진 적금/예금 특판 정보 먼스터! 개�
 pubDatetime: 2022-02-16
 tags:
   - "review"
-coverImage: "/images/monster.png"
+ogImage: "../assets/images/monster.png"
 ---
 
 ## Liked

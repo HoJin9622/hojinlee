@@ -4,7 +4,7 @@ description: "Next.js Title 변경"
 pubDatetime: 2020-12-15
 tags:
   - "nextjs"
-coverImage: "/images/nextjs.png"
+ogImage: "../assets/images/nextjs.png"
 ---
 
 # Title 변경

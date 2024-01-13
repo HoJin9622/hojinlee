@@ -5,7 +5,7 @@ title: "Zappa, Github Actions, AWS Lambda를 이용한 Serverless CI/CD 구축"
 tags:
   - django
 description: "serverless 애플리케이션을 만들어보자"
-# coverImage: '/images/lambda.png'
+ogImage: "../assets/images/lambda.png"
 ---
 
 ## 환경

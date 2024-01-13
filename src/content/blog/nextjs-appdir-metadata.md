@@ -4,7 +4,7 @@ description: "새롭게 바뀐 App directory에서 SEO를 위한 metadata 생성
 pubDatetime: 2023-05-28
 tags:
   - "nextjs"
-coverImage: "/images/nextjs.png"
+ogImage: "../assets/images/nextjs.png"
 ---
 
 ## Table Of Contents

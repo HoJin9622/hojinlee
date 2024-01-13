@@ -4,7 +4,7 @@ title: "React Native Realm 적용(Typescript)"
 tags:
   - "react-native"
 description: "React Native에서 Realm를 적용해보자"
-coverImage: "/images/realm.png"
+ogImage: "../assets/images/realm.png"
 ---
 
 내가 다른 사람들에게서 받은 선물을 기록하고 저장하는 앱을 React Native로 개발하려고 합니다.

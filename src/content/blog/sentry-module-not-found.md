@@ -5,7 +5,7 @@ tags:
   - "infra"
 featured: true
 description: "NextJS13 Sentry 적용 중 생긴 에러"
-# coverImage: '/images/sentry-logo.png'
+ogImage: "../assets/images/sentry-logo.png"
 ---
 
 ## 배경

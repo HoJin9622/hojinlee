@@ -4,7 +4,7 @@ title: "@react-native-admob/admob 을 사용한 앱 광고"
 tags:
   - "react-native"
 description: "react native AdMob 광고 삽입 방법"
-coverImage: "/images/admob.jpg"
+ogImage: "../assets/images/admob.jpg"
 ---
 
 ### 사용 라이브러리

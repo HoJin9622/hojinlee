@@ -4,7 +4,7 @@ description: "Docker Ubuntu16.04 설치"
 pubDatetime: 2020-12-15
 tags:
   - "docker"
-coverImage: "/images/docker.png"
+ogImage: "../assets/images/docker.png"
 ---
 
 ```

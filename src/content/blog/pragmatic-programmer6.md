@@ -4,7 +4,7 @@ title: "6장. 동시성"
 tags:
   - "book"
 description: "6장. 동시성"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 오늘 TIL 3줄 요약

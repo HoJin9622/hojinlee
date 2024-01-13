@@ -4,7 +4,7 @@ title: "9장. 실용주의 프로젝트"
 tags:
   - "book"
 description: "9장. 실용주의 프로젝트"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 오늘 TIL 3줄 요약

@@ -4,7 +4,7 @@ description: "GraphQL 기본"
 pubDatetime: 2020-12-15
 tags:
   - "graphql"
-coverImage: "/images/graphql.png"
+ogImage: "../assets/images/graphql.png"
 ---
 
 ## graphql

@@ -4,7 +4,7 @@ description: "Next.js Pages와 Routing"
 pubDatetime: 2020-12-15
 tags:
   - "nextjs"
-coverImage: "/images/nextjs.png"
+ogImage: "../assets/images/nextjs.png"
 ---
 
 # Pages 폴더

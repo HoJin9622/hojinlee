@@ -4,7 +4,7 @@ description: "연습문제 33 풀이"
 pubDatetime: 2022-04-04
 tags:
   - "book"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 📌 연습문제 33

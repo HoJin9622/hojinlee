@@ -4,7 +4,7 @@ title: "5장. 구부러지거나 부러지거나"
 tags:
   - "book"
 description: "5장. 구부러지거나 부러지거나"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 오늘 TIL 3줄 요약

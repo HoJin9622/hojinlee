@@ -2,11 +2,10 @@
 author: Jin
 pubDatetime: 2022-09-06
 title: "2022 Dev-Matching: 웹 프론트엔드 개발자(하반기)-1 후기"
-# ogImage: ../../assets/images/AstroPaper-v4.png
 tags:
   - review
 description: vanilla js...
-# coverImage: '/images/2022-dev-matching-frontend-review.png'
+ogImage: "../assets/images/2022-dev-matching-frontend-review.png"
 ---
 
 ![](https://velog.velcdn.com/images/hojin9622/post/63d4a5a6-78af-4d91-bf69-eeca97bd6b57/image.png)

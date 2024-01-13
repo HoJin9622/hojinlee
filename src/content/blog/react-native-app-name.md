@@ -4,7 +4,7 @@ title: 'react native 앱 이름 변경'
 tags: 
 	- 'react-native'
 description: 'react native 앱 이름 변경'
-coverImage: '/images/react-native.png'
+ogImage: '../assets/images/react-native.png'
 ---
 
 ## React Native 앱 이름 변경

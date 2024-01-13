@@ -4,7 +4,7 @@ description: "GraphQL 기본2"
 pubDatetime: 2020-12-15
 tags:
   - "graphql"
-coverImage: "/images/graphql.png"
+ogImage: "../assets/images/graphql.png"
 ---
 
 ## 배열

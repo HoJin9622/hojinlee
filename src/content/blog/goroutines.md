@@ -4,7 +4,7 @@ description: 'Goroutines을 알아보자'
 pubDatetime: 2022-01-23
 tags: 
 	- 'golang'
-coverImage: '/images/go.png'
+ogImage: '../assets/images/go.png'
 ---
 
 ### Goroutines

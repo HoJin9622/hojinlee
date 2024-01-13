@@ -4,7 +4,7 @@ title: "Route53 도메인 등록"
 tags:
   - "infra"
 description: "Route53 도메인 등록"
-# coverImage: '/images/route53.png'
+ogImage: "../assets/images/route53.png"
 ---
 
 ### 도메인 등록

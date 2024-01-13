@@ -4,7 +4,7 @@ description: "나의 최애 북틸"
 pubDatetime: 2022-03-22
 tags:
   - "book"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 나의 최대 북틸 3명

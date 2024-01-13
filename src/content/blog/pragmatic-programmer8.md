@@ -4,7 +4,7 @@ title: "8장. 프로젝트 전에"
 tags:
   - "book"
 description: "8장. 프로젝트 전에"
-coverImage: "/images/pragmatic-programmer.jpeg"
+ogImage: "../assets/images/pragmatic-programmer.jpeg"
 ---
 
 ## 오늘 TIL 3줄 요약

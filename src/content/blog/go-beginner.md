@@ -4,7 +4,7 @@ description: 'Go의 변수 선언과 타입 및 함수에 대해 알아보자'
 pubDatetime: 2022-01-13
 tags: 
 	- 'golang'
-coverImage: '/images/go.png'
+ogImage: '../assets/images/go.png'
 ---
 
 ## 변수 선언

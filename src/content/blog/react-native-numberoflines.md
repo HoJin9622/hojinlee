@@ -4,7 +4,7 @@ title: "numberOfLines를 이용한 텍스트 생략"
 tags:
   - "react-native"
 description: "numberOfLines를 이용한 텍스트 ... 으로 생략"
-coverImage: "/images/number-of-lines.png"
+ogImage: "../assets/images/number-of-lines.png"
 ---
 
 Text 컴포넌트의 ellipsizeMode와 numberOfLines를 설정하여 텍스트를 자연스럽게 생략할 수 있다.

@@ -4,7 +4,7 @@ title: "react native에 svg 파일 표시하기"
 tags:
   - "react-native"
 description: "react native에 svg 파일 표시하기"
-# coverImage: '/images/react-native.png'
+ogImage: "../assets/images/react-native.png"
 ---
 
 react native는 react처럼 svg 파일을 표시할 수 없습니다.

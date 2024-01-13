@@ -4,7 +4,7 @@ title: "TypeScript 기본"
 tags:
   - "typescript"
 description: "TypeScript에 대해 알아보자"
-# coverImage: '/images/typescript.jpeg'
+ogImage: "../assets/images/typescript.jpeg"
 ---
 
 ## 📝 Table of Contents
