@@ -4,7 +4,7 @@ description: "GraphQL이란 무엇인가?"
 pubDatetime: 2022-06-08
 tags:
   - "graphql"
-ogImage: "../assets/images/graphql.png"
+ogImage: "../../assets/images/graphql.png"
 ---
 
 ## 🏗 GraphQL로 영화 API 만들기

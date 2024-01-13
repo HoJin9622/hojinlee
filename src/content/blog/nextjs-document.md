@@ -4,7 +4,7 @@ description: "Next.js _document.js"
 pubDatetime: 2020-12-15
 tags:
   - "nextjs"
-ogImage: "../assets/images/nextjs.png"
+ogImage: "../../assets/images/nextjs.png"
 ---
 
 # \_document.js

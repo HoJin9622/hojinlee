@@ -4,7 +4,7 @@ title: "Render에서 Supabase로 데이터베이스 마이그레이션"
 tags:
   - "infra"
 description: "Render postgresql DB에서 Supabase DB로의 전환!"
-ogImage: "../assets/images/supabase.jpg"
+ogImage: "../../assets/images/supabase.jpg"
 ---
 
 ## 배경

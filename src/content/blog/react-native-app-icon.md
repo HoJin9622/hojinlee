@@ -4,7 +4,7 @@ title: "React Native에서 앱 아이콘을 변경하자"
 tags:
   - "react-native"
 description: "React Native에서 앱 아이콘을 변경하자"
-ogImage: "../assets/images/appicon.jpg"
+ogImage: "../../assets/images/appicon.jpg"
 ---
 
 ## IOS

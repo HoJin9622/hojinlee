@@ -5,7 +5,7 @@ featured: true
 tags:
   - "react-native"
 description: "React Native Splash Screen 제작(Android)"
-ogImage: "../assets/images/meerkat.png"
+ogImage: "../../assets/images/meerkat.png"
 ---
 
 https://velog.io/@hojin9622/React-Native-Splash-Screen-%EC%A0%9C%EC%9E%91IOS

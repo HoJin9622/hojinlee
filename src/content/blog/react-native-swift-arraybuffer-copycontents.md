@@ -4,7 +4,7 @@ title: "Swift._ArrayBuffer._copyContents 에러 해결"
 tags:
   - "react-native"
 description: "Swift._ArrayBuffer._copyContents 에러 해결법"
-ogImage: "../assets/images/react-native-swift-arraybuffer-copycontents-error.png"
+ogImage: "../../assets/images/react-native-swift-arraybuffer-copycontents-error.png"
 ---
 
 ![](https://images.velog.io/images/hojin9622/post/e55183a6-e81d-47f1-967e-ff86645fc07b/Screen%20Shot%202021-06-04%20at%205.20.00%20PM.png)

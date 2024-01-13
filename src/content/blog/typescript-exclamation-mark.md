@@ -4,7 +4,7 @@ title: "Typescript 변수 뒤의 느낌표(!) 사용"
 tags:
   - "typescript"
 description: "Typescript 변수 뒤의 느낌표(!) 사용"
-ogImage: "../assets/images/typescript-assertions.png"
+ogImage: "../../assets/images/typescript-assertions.png"
 ---
 
 ### Definite Assignment Assertions

@@ -4,7 +4,7 @@ title: "stopPropagation을 이용한 이벤트 전파 제거"
 tags:
   - "javascript"
 description: "stopPropagation 을 이용한 함수 중복 수행 제거"
-ogImage: "../assets/images/stop-propagation.png"
+ogImage: "../../assets/images/stop-propagation.png"
 ---
 
 ![](https://images.velog.io/images/hojin9622/post/b34cca9f-8c27-4542-aa8e-1aa69a4db2d4/Screen%20Shot%202021-03-14%20at%209.30.36%20PM.png)

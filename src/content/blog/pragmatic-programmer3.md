@@ -4,7 +4,7 @@ title: "3장. 기본 도구"
 tags:
   - "book"
 description: "3장. 기본 도구"
-ogImage: "../assets/images/pragmatic-programmer.jpg"
+ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---
 
 ## 오늘 TIL 3줄 요약

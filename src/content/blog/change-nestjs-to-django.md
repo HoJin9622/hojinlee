@@ -5,7 +5,7 @@ title: "먼스터 NestJS에서 Django로 서버전환"
 tags:
   - review
 description: "😆 서버 전환에 성공한 회고"
-ogImage: "../assets/images/monster.png"
+ogImage: "../../assets/images/monster.png"
 ---
 
 ![](https://velog.velcdn.com/images/hojin9622/post/a2abd994-7b35-48d9-a054-ae8a19c5624f/image.png)

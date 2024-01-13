@@ -4,7 +4,7 @@ description: "Django 기본 파일들의 역할"
 pubDatetime: 2020-12-15
 tags:
   - "django"
-ogImage: "../assets/images/python-django.png"
+ogImage: "../../assets/images/python-django.png"
 ---
 
 ## MVC & MTV

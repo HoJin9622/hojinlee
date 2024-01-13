@@ -4,7 +4,7 @@ description: "Next.js를 쓰는 이유"
 pubDatetime: 2020-12-15
 tags:
   - "nextjs"
-ogImage: "../assets/images/nextjs.png"
+ogImage: "../../assets/images/nextjs.png"
 ---
 
 # Next.js가 필요한 이유

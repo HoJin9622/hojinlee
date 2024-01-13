@@ -5,7 +5,7 @@ featured: true
 tags:
   - "react-native"
 description: "React Native Splash Screen 제작(IOS)"
-ogImage: "../assets/images/meerkat.png"
+ogImage: "../../assets/images/meerkat.png"
 ---
 
 https://github.com/crazycodeboy/react-native-splash-screen

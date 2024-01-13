@@ -4,7 +4,7 @@ description: "Next.js 실행 포트 변경 방법"
 pubDatetime: 2020-12-15
 tags:
   - "nextjs"
-ogImage: "../assets/images/nextjs.png"
+ogImage: "../../assets/images/nextjs.png"
 ---
 
 # 직접 지정

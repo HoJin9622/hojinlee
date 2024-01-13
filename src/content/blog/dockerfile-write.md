@@ -4,7 +4,7 @@ description: "Dockerfile 작성"
 pubDatetime: 2022-03-20
 tags:
   - "docker"
-ogImage: "../assets/images/docker.png"
+ogImage: "../../assets/images/docker.png"
 ---
 
 # Dockerfile

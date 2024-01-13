@@ -4,7 +4,7 @@ title: "react native 패키지명 변경"
 tags:
   - "react-native"
 description: "react native에서 android, ios 패키지명 변경하기"
-ogImage: "../assets/images/react-native.png"
+ogImage: "../../assets/images/react-native.png"
 ---
 
 ```bash

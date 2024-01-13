@@ -5,7 +5,7 @@ title: "Cloudflare Images"
 tags:
   - infra
 description: Cloudflare Images 란 무엇인가?
-ogImage: "../assets/images/cloudflare.jpg"
+ogImage: "../../assets/images/cloudflare.jpg"
 ---
 
 ## 📝 Table of Contents
