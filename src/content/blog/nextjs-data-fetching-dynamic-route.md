@@ -105,8 +105,6 @@ get 주소는 숫자 하나를 보내면 두배로 반환해주는 api 이다.
 
 그 후 `localhost:1234/get-double/30` 으로 접속을하면 두배가 된 60의 값을 볼 수 있다.
 
-![](./images/dynamic_route.png)
-
 \[value]가 아닌 \[number]라고 작성하면 `context.query.number` 로 값을 불러오면 된다.
 
 ## Dynamic Route에 대한 Link

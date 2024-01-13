@@ -71,7 +71,7 @@ export default App;
 
 정상적으로 작동이 되었다면 그림 1과 같이 선물상자를 확인할 수 있습니다.
 
-![example](/images/react-native-svg-1.png)
+![example](@assets/images/react-native-svg-1.png)
 
 ### Uri 로 불러오기
 
