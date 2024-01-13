@@ -2,7 +2,6 @@
 author: Jin
 pubDatetime: 2022-09-06
 title: "2022 Dev-Matching: 웹 프론트엔드 개발자(하반기)-1 후기"
-slug: 2022-dev-matching-frontend-review
 # ogImage: ../../assets/images/AstroPaper-v4.png
 tags:
   - review
