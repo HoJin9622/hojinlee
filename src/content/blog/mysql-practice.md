@@ -3,7 +3,7 @@ title: "생활코딩 mysql 연습"
 description: "생활코딩 mysql 연습"
 pubDatetime: 2021-09-28
 tags:
-  - "infra"
+  - mysql
 ---
 
 # mysql

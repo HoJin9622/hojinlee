@@ -3,7 +3,7 @@ title: "Docker Volume"
 description: "Docker Volume"
 pubDatetime: 2022-03-20
 tags:
-  - "docker"
+  - docker
 ogImage: "../../assets/images/docker.png"
 ---
 

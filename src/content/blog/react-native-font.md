@@ -2,7 +2,7 @@
 pubDatetime: 2020-12-15
 title: "ReactNative에 폰트 적용하기"
 tags:
-  - "react-native"
+  - react-native
 description: "ReactNative에 폰트 적용하기"
 ---
 

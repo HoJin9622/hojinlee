@@ -3,7 +3,7 @@ title: "Django REST API 튜토리얼"
 description: "Django REST API 튜토리얼"
 pubDatetime: 2020-12-15
 tags:
-  - "django"
+  - django
 ogImage: "../../assets/images/python-django.png"
 ---
 

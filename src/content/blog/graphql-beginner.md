@@ -3,7 +3,7 @@ title: "GraphQL 기초"
 description: "GraphQL이란 무엇인가?"
 pubDatetime: 2022-06-08
 tags:
-  - "graphql"
+  - graphql
 ogImage: "../../assets/images/graphql.png"
 ---
 

@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-03-27
 title: "5장. 구부러지거나 부러지거나"
-tags:
-  - "book"
 description: "5장. 구부러지거나 부러지거나"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

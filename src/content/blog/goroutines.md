@@ -3,7 +3,7 @@ title: 'Goroutines'
 description: 'Goroutines을 알아보자'
 pubDatetime: 2022-01-23
 tags: 
-	- 'golang'
+	- golang
 ogImage: '../assets/images/go.png'
 ---
 

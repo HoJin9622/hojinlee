@@ -3,7 +3,7 @@ title: "Django Model, Serializer, View"
 description: "Django Model, Serializer, View"
 pubDatetime: 2020-12-15
 tags:
-  - "django"
+  - django
 ogImage: "../../assets/images/python-django.png"
 ---
 

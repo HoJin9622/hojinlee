@@ -2,7 +2,7 @@
 pubDatetime: 2022-01-27
 title: "Route53 도메인 등록"
 tags:
-  - "infra"
+  - aws
 description: "Route53 도메인 등록"
 ogImage: "../../assets/images/route53.png"
 ---

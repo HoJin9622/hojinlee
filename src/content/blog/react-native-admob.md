@@ -2,7 +2,7 @@
 pubDatetime: 2022-01-18
 title: "@react-native-admob/admob 을 사용한 앱 광고"
 tags:
-  - "react-native"
+  - react-native
 description: "react native AdMob 광고 삽입 방법"
 ogImage: "../../assets/images/admob.jpg"
 ---

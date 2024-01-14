@@ -3,7 +3,7 @@ title: "Hexo로 github.io 블로그 생성"
 description: "Hexo로 github.io 블로그 생성"
 pubDatetime: 2020-05-01
 tags:
-  - "javascript"
+  - javascript
 ---
 
 > 2020년 5월 1일 작성한 게시글입니다.

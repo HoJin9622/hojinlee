@@ -2,7 +2,7 @@
 pubDatetime: 2022-12-25
 title: 'react native 앱 이름 변경'
 tags: 
-	- 'react-native'
+	- react-native
 description: 'react native 앱 이름 변경'
 ogImage: '../assets/images/react-native.png'
 ---

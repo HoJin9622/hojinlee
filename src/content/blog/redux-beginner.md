@@ -3,6 +3,7 @@ pubDatetime: 2020-12-15
 title: "Redux 기본 사용법"
 tags:
   - "react"
+  - redux
 description: "Redux 기본 사용법"
 ---
 

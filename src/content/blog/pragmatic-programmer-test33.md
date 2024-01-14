@@ -2,8 +2,6 @@
 title: "연습문제 33 풀이"
 description: "연습문제 33 풀이"
 pubDatetime: 2022-04-04
-tags:
-  - "book"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---
 

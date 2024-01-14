@@ -2,7 +2,7 @@
 pubDatetime: 2021-02-16
 title: "Use of undeclared identifier 'CodePush' 에러 해결"
 tags:
-  - "react-native"
+  - react-native
 description: "Use of undeclared identifier 'CodePush' 에러 해결"
 ---
 

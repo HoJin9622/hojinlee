@@ -3,7 +3,7 @@ title: "유용한 HTML 태그 모음"
 description: "유용한 HTML 태그, details, samp, kbd, bdo, abbr"
 pubDatetime: 2021-12-22
 tags:
-  - "html"
+  - html
 ---
 
 ## abbr

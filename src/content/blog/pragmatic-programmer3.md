@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-03-24
 title: "3장. 기본 도구"
-tags:
-  - "book"
 description: "3장. 기본 도구"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

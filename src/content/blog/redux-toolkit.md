@@ -3,6 +3,7 @@ pubDatetime: 2020-12-15
 title: "redux toolkit 사용하기"
 tags:
   - "react"
+  - redux
 description: "redux toolkit 사용하기"
 ---
 

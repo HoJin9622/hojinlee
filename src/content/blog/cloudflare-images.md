@@ -3,7 +3,7 @@ author: Jin
 pubDatetime: 2022-05-10
 title: "Cloudflare Images"
 tags:
-  - infra
+  - cloudflare
 description: Cloudflare Images 란 무엇인가?
 ogImage: "../../assets/images/cloudflare.jpg"
 ---

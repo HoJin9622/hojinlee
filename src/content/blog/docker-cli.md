@@ -3,7 +3,7 @@ title: "Docker CLI 명령어"
 description: "Docker CLI 명령어를 알아보자"
 pubDatetime: 2022-03-17
 tags:
-  - "docker"
+  - docker
 ogImage: "../../assets/images/docker.png"
 ---
 

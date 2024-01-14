@@ -3,7 +3,7 @@ title: "MongoDB Create/Read/Delete"
 description: "MongoDB Create/Read/Delete"
 pubDatetime: 2020-12-15
 tags:
-  - "infra"
+  - mongodb
 ---
 
 # Database 생성

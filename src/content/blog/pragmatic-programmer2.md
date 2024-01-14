@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-03-21
 title: "2장. 실용주의 접근법"
-tags:
-  - "book"
 description: "2장. 실용주의 접근법"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

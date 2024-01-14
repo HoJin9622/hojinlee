@@ -3,7 +3,7 @@ title: "JavaScript 비구조화 할당"
 description: "JavaScript 비구조화 할당"
 pubDatetime: 2020-12-15
 tags:
-  - "javascript"
+  - javascript
 ---
 
 ## 비구조화 할당이란?

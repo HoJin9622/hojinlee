@@ -3,7 +3,7 @@ title: "react native 0.67 버전 업그레이드 후 fbreactnativespec command p
 description: "react-native 0.67 업그레이드 후 에러 해결"
 pubDatetime: 2022-02-15
 tags:
-  - "react-native"
+  - react-native
 ---
 
 react-native 버전을 0.67 버전으로 업데이트 후 command phasescriptexecution failed with a nonzero exit code가 나오면서 IOS 애플리케이션이 실행되지 않았다.

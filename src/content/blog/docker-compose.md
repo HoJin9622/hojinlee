@@ -3,7 +3,7 @@ title: "Docker Compose"
 description: "Docker Compose 란 다중 컨테이너 도커 애플리케이션을 정의하고 실행하기 위한 도구"
 pubDatetime: 2022-03-20
 tags:
-  - "docker"
+  - docker
 ogImage: "../../assets/images/docker.png"
 ---
 

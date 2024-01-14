@@ -3,7 +3,7 @@ title: "Django 기본 파일들의 역할"
 description: "Django 기본 파일들의 역할"
 pubDatetime: 2020-12-15
 tags:
-  - "django"
+  - django
 ogImage: "../../assets/images/python-django.png"
 ---
 

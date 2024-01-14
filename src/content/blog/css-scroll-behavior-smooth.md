@@ -3,7 +3,7 @@ title: "scroll behavior smooth로 스크롤 이동 부드럽게 만들기"
 description: "scroll behavior smooth로 스크롤 이동 부드럽게 만들기"
 pubDatetime: 2020-12-15
 tags:
-  - "css"
+  - css
 ---
 
 ## \{ scroll-behavior: smooth; \}

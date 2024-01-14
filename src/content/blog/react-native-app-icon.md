@@ -2,7 +2,7 @@
 pubDatetime: 2021-06-09
 title: "React Native에서 앱 아이콘을 변경하자"
 tags:
-  - "react-native"
+  - react-native
 description: "React Native에서 앱 아이콘을 변경하자"
 ogImage: "../../assets/images/appicon.jpg"
 ---

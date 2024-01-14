@@ -2,7 +2,7 @@
 pubDatetime: 2021-03-14
 title: "stopPropagation을 이용한 이벤트 전파 제거"
 tags:
-  - "javascript"
+  - javascript
 description: "stopPropagation 을 이용한 함수 중복 수행 제거"
 ogImage: "../../assets/images/stop-propagation.png"
 ---

@@ -3,7 +3,7 @@ title: "github 원격저장소 최근 커밋 1개 제거"
 description: "github 원격저장소 최근 커밋 1개 제거"
 pubDatetime: 2021-08-16
 tags:
-  - "git"
+  - git
 ---
 
 구글에 한글로 검색하면 local 기록까지 모두 삭제하여 --force로 원격저장소 커밋까지 삭제하는 방법밖에 나오지 않았다.

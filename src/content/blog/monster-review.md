@@ -2,8 +2,6 @@
 title: "먼스터 개발 회고록"
 description: "여기저기 흩어진 적금/예금 특판 정보 먼스터! 개발 회고록"
 pubDatetime: 2022-02-16
-tags:
-  - "review"
 ogImage: "../../assets/images/monster.png"
 ---
 

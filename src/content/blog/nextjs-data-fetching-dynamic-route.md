@@ -3,7 +3,7 @@ title: "Next.js Data Fetching & Dynamic Route"
 description: "Next.js Data Fetching & Dynamic Route"
 pubDatetime: 2020-12-15
 tags:
-  - "nextjs"
+  - nextjs
 ogImage: "../../assets/images/nextjs.png"
 ---
 

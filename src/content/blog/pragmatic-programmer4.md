@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-03-24
 title: "4장. 실용주의 편집증"
-tags:
-  - "book"
 description: "4장. 실용주의 편집증"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

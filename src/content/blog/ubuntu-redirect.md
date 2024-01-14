@@ -2,7 +2,7 @@
 pubDatetime: 2021-02-23
 title: "Ubuntu 80번 포트에서 다른 포트로 redirect"
 tags:
-  - "infra"
+  - ubuntu
 description: "Ubuntu 80번 포트에서 다른 포트로 redirect"
 ---
 

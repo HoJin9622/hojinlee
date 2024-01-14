@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-04-06
 title: "9장. 실용주의 프로젝트"
-tags:
-  - "book"
 description: "9장. 실용주의 프로젝트"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-11-02
 title: "원티드 프리온보딩 백엔드 2~6일차"
-tags:
-  - review
 description: "원티드 프리온보딩 백엔드 2~6일차 회고록"
 ---
 

@@ -3,7 +3,7 @@ title: "pip & virtualenv를 이용한 python 가상환경 세팅"
 description: "pip & virtualenv를 이용한 python 가상환경 세팅"
 pubDatetime: 2020-12-15
 tags:
-  - "django"
+  - django
 ---
 
 ## pip & virtualenv 란?

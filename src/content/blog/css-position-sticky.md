@@ -3,7 +3,7 @@ title: "position sticky로 스크롤 따라 내려오는 Navbar 생성"
 description: "position sticky로 스크롤 따라 내려오는 Navbar 생성"
 pubDatetime: 2020-12-15
 tags:
-  - "css"
+  - css
 ---
 
 ## \{ position: sticky; \}

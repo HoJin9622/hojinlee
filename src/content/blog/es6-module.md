@@ -3,7 +3,7 @@ title: "ES6 적용하기"
 description: "ES6 적용하기"
 pubDatetime: 2020-12-15
 tags:
-  - "javascript"
+  - javascript
 ---
 
 # ES6 Module 적용

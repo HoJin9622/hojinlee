@@ -1,8 +1,6 @@
 ---
 pubDatetime: 2022-03-30
 title: "6장. 동시성"
-tags:
-  - "book"
 description: "6장. 동시성"
 ogImage: "../../assets/images/pragmatic-programmer.jpg"
 ---

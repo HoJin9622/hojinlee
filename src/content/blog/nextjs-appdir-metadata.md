@@ -3,7 +3,7 @@ title: "NextJS App Dir metadata 생성"
 description: "새롭게 바뀐 App directory에서 SEO를 위한 metadata 생성법을 알아보자"
 pubDatetime: 2023-05-28
 tags:
-  - "nextjs"
+  - nextjs
 ogImage: "../../assets/images/nextjs.png"
 ---
 

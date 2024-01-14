@@ -3,7 +3,7 @@ title: "GraphQL 기본"
 description: "GraphQL 기본"
 pubDatetime: 2020-12-15
 tags:
-  - "graphql"
+  - graphql
 ogImage: "../../assets/images/graphql.png"
 ---
 
