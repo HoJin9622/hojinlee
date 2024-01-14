@@ -8,13 +8,13 @@ description: "React Native Splash Screen 제작(IOS)"
 ogImage: "../../assets/images/meerkat.png"
 ---
 
-https://github.com/crazycodeboy/react-native-splash-screen
+<https://github.com/crazycodeboy/react-native-splash-screen>
 
 사용할 라이브러리이다.
 
 먼저 `yarn add react-native-splash-screen` 로 받아준 후 `npx pod-install ios` 까지 해준다.
 
-https://appicon.co/#image-sets
+<https://appicon.co/#image-sets>
 
 ![](https://images.velog.io/images/hojin9622/post/28315dab-a670-4dce-93c8-ac76d87e4438/Screen%20Shot%202021-06-09%20at%2010.04.53%20AM.png)
 
@@ -88,5 +88,5 @@ setTimeout이나 데이터를 불러와준 후 사라지게 만들면된다.
 
 ## 참고자료
 
-https://blog.logrocket.com/building-a-splash-screen-in-react-native/
-https://dev-yakuza.posstree.com/ko/react-native/react-native-splash-screen/
+<https://blog.logrocket.com/building-a-splash-screen-in-react-native/>
+<https://dev-yakuza.posstree.com/ko/react-native/react-native-splash-screen/>

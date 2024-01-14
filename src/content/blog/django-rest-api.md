@@ -10,28 +10,28 @@ ogImage: "../../assets/images/python-django.png"
 ## 개발환경
 
 ```bash
-$ pip3 install pipenv
+pip3 install pipenv
 ```
 
 ```bash
-$ pipenv shell
+pipenv shell
 ```
 
 프로젝트 폴더에서 실행
 
 ```bash
-$ pipenv install django djangorestframework django-rest-knox
+pipenv install django djangorestframework django-rest-knox
 ```
 
 ```bash
-$ django-admin startproject leadmanager
+django-admin startproject leadmanager
 ```
 
 ## leads 생성 model 정의
 
 ```bash
-$ cd leadmanager
-$ python manage.py startapp leads
+cd leadmanager
+python manage.py startapp leads
 ```
 
 ```python
@@ -63,11 +63,11 @@ class Lead(models.Model):
 leadmanager > leads > models.py
 
 ```bash
-$ python manage.py makemigrations leads
+python manage.py makemigrations leads
 ```
 
 ```bash
-$ python manage.py migrate
+python manage.py migrate
 ```
 
 ## Serializers
@@ -127,5 +127,5 @@ leadmanager > leads > urls.py 생성
 ## 실행
 
 ```bash
-$ python manage.py runserver
+python manage.py runserver
 ```

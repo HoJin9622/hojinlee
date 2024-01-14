@@ -6,7 +6,7 @@ tags:
 description: "원티드 프리온보딩 백엔드 1일차 회고록"
 ---
 
-### 1️⃣ 할당된 업무에 대한 진행상황 공유.
+### 1️⃣ 할당된 업무에 대한 진행상황 공유
 
 - 수행한 업무
   - Product 모델 모델링
@@ -15,7 +15,7 @@ description: "원티드 프리온보딩 백엔드 1일차 회고록"
 - 잔여 업무
   - POST /api/v1/products/ 에 photos를 업로드할 수 있게 수정
 
-### 2️⃣ 진행한 작업에 대한 리뷰진행.
+### 2️⃣ 진행한 작업에 대한 리뷰진행
 
 Product 모델 구조
 
@@ -70,5 +70,5 @@ product = models.ForeignKey(
 
 ### 참고자료
 
-- https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b
-- https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#trade-offs-between-views-vs-viewsets
+- <https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b>
+- <https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#trade-offs-between-views-vs-viewsets>

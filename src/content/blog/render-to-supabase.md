@@ -47,7 +47,7 @@ Supabase는 PostgreSQL 데이터베이스를 기반으로하여 적합하다고 
 
 그 후 Supabase에서 새로운 프로젝트를 생성하고 데이터베이스 비밀번호를 메모해둡니다. 생성된 프로젝트에서 Project Settings > Database에서 Supabase HOST를 복사 후 메모해둡니다.
 
-https://colab.research.google.com/github/mansueli/Supa-Migrate/blob/main/Migrate_Postgres_Supabase.ipynb
+<https://colab.research.google.com/github/mansueli/Supa-Migrate/blob/main/Migrate_Postgres_Supabase.ipynb>
 
 그 후 해당 링크에서 제공되는 파일에 메모해둔 PSQL_COMMAND, SUPABASE_HOST, SUPABASE_PASSWORD을 작성한 후 차례대로 실행버튼을 누른다면 완료됩니다.
 

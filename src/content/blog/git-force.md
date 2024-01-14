@@ -20,4 +20,4 @@ git push origin +branchName --force
 
 그 후 그 상태를 --force를 사용해 그대로 푸쉬한다.
 
-참조 : https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github
+참조 : <https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github>

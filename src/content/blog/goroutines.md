@@ -13,13 +13,13 @@ Goroutines은 golang에서 동시성을 가능하게해준다.
 
 ```go
 func main() {
-	sexyCount("a")
-    	sexycount("b")
+ sexyCount("a")
+     sexycount("b")
 }
 
 func sexyCount(person string) {
-	for i:=0;i<10;i++ {
-    	fmt.Println(person, "is sexy", i)
+ for i:=0;i<10;i++ {
+     fmt.Println(person, "is sexy", i)
         time.Sleep(time.Second)
     }
 }
@@ -31,13 +31,13 @@ func sexyCount(person string) {
 
 ```go
 func main() {
-	go sexyCount("a")
-    	sexycount("b")
+ go sexyCount("a")
+     sexycount("b")
 }
 
 func sexyCount(person string) {
-	for i:=0;i<10;i++ {
-    	fmt.Println(person, "is sexy", i)
+ for i:=0;i<10;i++ {
+     fmt.Println(person, "is sexy", i)
         time.Sleep(time.Second)
     }
 }
@@ -49,13 +49,13 @@ func sexyCount(person string) {
 
 ```go
 func main() {
-	go sexyCount("a")
-    	go sexycount("b")
+ go sexyCount("a")
+     go sexycount("b")
 }
 
 func sexyCount(person string) {
-	for i:=0;i<10;i++ {
-    	fmt.Println(person, "is sexy", i)
+ for i:=0;i<10;i++ {
+     fmt.Println(person, "is sexy", i)
         time.Sleep(time.Second)
     }
 }
@@ -64,4 +64,4 @@ func sexyCount(person string) {
 그러나 위와 같이 두 함수 모두에 `go` 키워드를 붙히게되면 main 함수가 바로 종료되기 때문에 두 함수 모두 실행되지 않는다.
 Gorountines은 main 함수가 실행되고 있을 경우에만 유효하다.
 
-노마드코더, https://nomadcoders.co/go-for-beginners
+노마드코더, <https://nomadcoders.co/go-for-beginners>

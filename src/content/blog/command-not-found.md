@@ -12,7 +12,7 @@ tags:
 mac m1으로 장비를 교체하면서 `brew install node`를 사용하지 않고 nvm으로 node를 관리할 수 있게 세팅하였다.
 iTerm에서 `npx react-native start`하면 정상 실행되지만 xCode에서 실행하면 `node: command not found` 에러가 발생한다.
 
-https://github.com/realm/realm-js/issues/1448#issuecomment-340757479
+<https://github.com/realm/realm-js/issues/1448#issuecomment-340757479>
 
 위 링크에서 해결 방법을 발견하였다.
 

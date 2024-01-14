@@ -37,10 +37,10 @@ Hexo의 설치에는 두가지 요구사항이 있다.
 컴퓨터에 이것들이 설치되었다면, npm을 이용하여 Hexo를 설치 할 수 있다.
 
 ```
-$ npm install hexo-cli -g
-$ hexo init <name>
-$ cd <name>
-$ npm install
+npm install hexo-cli -g
+hexo init <name>
+cd <name>
+npm install
 ```
 
 #### \_config.yml
@@ -82,20 +82,20 @@ message: [message]
 먼저 git에 deploy하기 위한 라이브러리를 설치해준다.
 
 ```
-$ npm install hexo-deployer-git --save
+npm install hexo-deployer-git --save
 ```
 
 아래는 Deploy를 하기위한 명령어다. generate는 정적파일을 생성하고 deploy는 정적 생성한 파일을 github master branch로 push 해준다.
 
 ```
-$ hexo generate
-$ hexo deploy
+hexo generate
+hexo deploy
 ```
 
 한꺼번에 하기위해선 아래와 같이 가능하다.
 
 ```
-$ hexo deploy --generate
+hexo deploy --generate
 ```
 
 #### 포스트 작성
@@ -103,7 +103,7 @@ $ hexo deploy --generate
 아래 명령어로 새 글을 작성할 수 있다.
 
 ```
-$ hexo new post [file_title]
+hexo new post [file_title]
 ```
 
 생성된 글은 아래 경로에 생성된다.

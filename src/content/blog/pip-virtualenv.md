@@ -20,7 +20,7 @@ npm으로 따지면 node_module 폴더와 비슷하다.
 ### virtualenv 설치
 
 ```sh
-$ pip install virtualenv
+pip install virtualenv
 ```
 
 위 명령어를 사용하여 virtualenv를 글로벌하게 설치한다.
@@ -29,7 +29,7 @@ pip는 python을 설치할때 선택적으로 설치할 수 있으며 설치되�
 ### 가상환경 생성
 
 ```sh
-$ virtualenv venv
+virtualenv venv
 ```
 
 원하는 프로젝트 폴더로 이동 후 위 명령어를 실행하면 venv 라는 폴더가 생성된다.
@@ -40,14 +40,14 @@ $ virtualenv venv
 ### 가상환경 사용
 
 ```sh
-$ call venv/scripts/activate
+call venv/scripts/activate
 ```
 
 window 기준이며 위 명령어를 사용하면 venv/scripts 폴더에 패키지들을 설치하겠다는 뜻이다.
 위 명령어를 실행 후 콘솔창 앞에 (venv) 라는 글자가 붙게된다.
 
 ```sh
-$ pip install <packagename>
+pip install <packagename>
 ```
 
 그 후 `pip install <package name>`을 사용하면 글로벌하게 설치되는 것이 아닌 가상환경에 라이브러리를 설치하게된다.
@@ -57,13 +57,13 @@ $ pip install <packagename>
 requirements.txt 는 이 프로젝트에 설치된 패키지를 나열해준다.
 
 ```sh
-$ pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 
 위 명령어를 사용하면 설치된 패키지와 버전이 정리되어 저장된다.
 
 ```sh
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 requirements.txt 에 있는 패키지를 다운받으려면 위 명령어를 실행하면 된다.

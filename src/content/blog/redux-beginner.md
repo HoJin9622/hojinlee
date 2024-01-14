@@ -14,13 +14,13 @@ redux는 애플리케이션의 여러 곳에서 공유되는 데이터를 관리
 ## install
 
 ```sh
-$ yarn add redux
+yarn add redux
 ```
 
 위 명령어로 redux 사용이 가능하다.
 
 ```sh
-$ npm install redux
+npm install redux
 ```
 
 npm을 사용한다면 위 명령어를 사용할 수 있다.

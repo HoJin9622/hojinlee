@@ -60,7 +60,7 @@ Django 을 선택하게 된다면 기존 존재하였던 API를 모두 제작하
 ```python
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-	...
+    ...
     save_as = True
     filter_horizontal = ("join_types",)
     list_filter = ("kind", "interest_type", "bank", "max_contract_period")

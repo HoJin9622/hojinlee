@@ -18,4 +18,4 @@ ogImage: "../../assets/images/typescript-assertions.png"
 하지만 변수 x 의 값이 있다는걸 확신할 수 있다면
 변수 뒤에 느낌표(!)를 붙여주게 되면 에러가 발생하지 않는다.
 
-타입스크립트 핸드북 : https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#definite-assignment-assertions
+타입스크립트 핸드북 : <https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#definite-assignment-assertions>

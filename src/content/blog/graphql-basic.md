@@ -18,7 +18,7 @@ GraphQL로 해결할 수 있는 두가지 문제
 
 graphql-yoga는 graphql을 더 쉽게 다룰 수 있는 라이브러리이다.
 
-https://github.com/prisma-labs/graphql-yoga
+<https://github.com/prisma-labs/graphql-yoga>
 
 ```bash
 yarn add graphql-yoga

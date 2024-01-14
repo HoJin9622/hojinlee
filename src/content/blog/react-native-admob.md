@@ -9,7 +9,7 @@ ogImage: "../../assets/images/admob.jpg"
 
 ### 사용 라이브러리
 
-https://react-native-admob.github.io/admob/docs/installation
+<https://react-native-admob.github.io/admob/docs/installation>
 
 ### 설치
 
@@ -36,7 +36,7 @@ Admob 홈페이지에서 새 앱을 추가 해준다.
 
 ### IOS 추가 설정
 
-https://developers.google.com/admob/ios/quick-start#update_your_infoplist
+<https://developers.google.com/admob/ios/quick-start#update_your_infoplist>
 위 링크에서 나와있는대로 Info.plist를 수정해줘야한다.
 
 ```txt
@@ -54,7 +54,7 @@ https://developers.google.com/admob/ios/quick-start#update_your_infoplist
 `GADApplicationIdentifier`에는 앱을 생성할 때 복사해둔 앱ID를 입력한다.
 `SKAdNetworkItems`에는 추가 구매자 리스트를 넣으면 되는데 기본으로 Google 식별자를 사용할 예정이어서 `cstr6suwn9.skadnetwork`를 넣으면 된다.
 식별자 리스트는 하단 링크 참조
-https://developers.google.com/admob/ios/3p-skadnetworks
+<https://developers.google.com/admob/ios/3p-skadnetworks>
 
 ### 앱 코드
 

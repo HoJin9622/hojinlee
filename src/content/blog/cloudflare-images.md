@@ -39,7 +39,7 @@ AWS의 S3 서비스처럼 모든 종류의 파일을 저장은 할 수 없지만
 
 ## <a name="2"></a>🧾 Cloudflare 가입
 
-https://www.cloudflare.com/ko-kr/
+<https://www.cloudflare.com/ko-kr/>
 ![](https://velog.velcdn.com/images/hojin9622/post/3d1b2fdb-3498-4892-8e48-db6755f3f239/image.png)
 
 cloudflare 홈페이지에서 가입을 클릭 후 이메일과 패스워드를 입력하면 쉽게 가입할 수 있다.

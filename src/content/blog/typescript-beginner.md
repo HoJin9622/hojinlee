@@ -196,6 +196,6 @@ Typescript에 대해 더 배우고 싶다면 [Typescript Handbook🚀](https://w
 
 ## <a name="reference"></a>🏭 Reference
 
-https://nomadcoders.co/typescript-for-beginners
+<https://nomadcoders.co/typescript-for-beginners>
 
-https://sddev.tistory.com/91
+<https://sddev.tistory.com/91>

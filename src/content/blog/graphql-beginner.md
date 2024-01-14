@@ -192,20 +192,20 @@ type User {
 
 ## <a name="reference"></a>Reference
 
-https://nomadcoders.co/graphql-for-beginners
+<https://nomadcoders.co/graphql-for-beginners>
 
-https://graphql.org/
+<https://graphql.org/>
 
-https://graphql.org/users
+<https://graphql.org/users>
 
-https://www.apollographql.com/docs/apollo-server/
+<https://www.apollographql.com/docs/apollo-server/>
 
-https://graphql.org/learn/schema/#scalar-types
+<https://graphql.org/learn/schema/#scalar-types>
 
-https://graphql.org/learn/queries/#mutations
+<https://graphql.org/learn/queries/#mutations>
 
-https://graphql.org/learn/schema/#lists-and-non-null
+<https://graphql.org/learn/schema/#lists-and-non-null>
 
-https://www.apollographql.com/docs/apollo-server/data/resolvers#resolver-arguments
+<https://www.apollographql.com/docs/apollo-server/data/resolvers#resolver-arguments>
 
-https://www.apollographql.com/docs/resources/graphql-glossary/#docstring
+<https://www.apollographql.com/docs/resources/graphql-glossary/#docstring>

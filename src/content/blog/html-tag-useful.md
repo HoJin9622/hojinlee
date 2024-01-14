@@ -31,4 +31,4 @@ tags:
 열림 상태일때 내부 정보를 보여주는 위젯을 생성한다.
 !codepen[hojin9622/embed/jOGLZoB?default-tab=html%2Cresult&editable=true]
 
-출처 : https://youtu.be/9lP8TcVJv-I?list=LL
+출처 : <https://youtu.be/9lP8TcVJv-I?list=LL>

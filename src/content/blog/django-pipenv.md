@@ -82,7 +82,7 @@ django-admin startapp rooms
 
 ### Reference
 
-https://nomadcoders.co/airbnb-clone
-https://medium.com/@erish/python-pipenv-%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-961b00d4f42f
-https://pipenv.pypa.io/en/latest/
-https://docs.djangoproject.com/en/4.0/
+<https://nomadcoders.co/airbnb-clone>
+<https://medium.com/@erish/python-pipenv-%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-961b00d4f42f>
+<https://pipenv.pypa.io/en/latest/>
+<https://docs.djangoproject.com/en/4.0/>

@@ -8,7 +8,7 @@ description: "React Native Splash Screen 제작(Android)"
 ogImage: "../../assets/images/meerkat.png"
 ---
 
-https://velog.io/@hojin9622/React-Native-Splash-Screen-%EC%A0%9C%EC%9E%91IOS
+<https://velog.io/@hojin9622/React-Native-Splash-Screen-%EC%A0%9C%EC%9E%91IOS>
 
 Splash 이미지 파일을 뽑는법은 IOS에 기록하였습니다.
 

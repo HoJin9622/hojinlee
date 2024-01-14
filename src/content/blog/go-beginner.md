@@ -50,7 +50,7 @@ append 함수로 요소를 추가할 수 있으며 원본을 건드리지않고 
 ```go
 hojin := map[string]string{"name": "hojin", "age": "50"}
 for key, value := range hojin {
-	fmt.Println(key, value)
+ fmt.Println(key, value)
 }
 ```
 
@@ -62,13 +62,13 @@ for문으로 loop가 가능하며 key와 value를 반환한다.
 
 ```go
 type person struct {
-	name string
-    	age int
-    	favFood []string
+ name string
+     age int
+     favFood []string
 }
 func main() {
-	favFood := []string{"kimchi": "ramen"}
-	hojin := person{name: "hojin", age: 18, favFood: favFood}
+ favFood := []string{"kimchi": "ramen"}
+ hojin := person{name: "hojin", age: 18, favFood: favFood}
 }
 ```
 
@@ -79,11 +79,11 @@ Map 타입은 value에 지정된 타입만 사용할 수 있는 반면 Strcut는
 
 ```go
 func repeatMe(words ...string) {
-	fmt.Println(words)
+ fmt.Println(words)
 }
 
 func main() {
-	repeatMe("Hi", "Bye", "Hello")
+ repeatMe("Hi", "Bye", "Hello")
 }
 ```
 
@@ -93,12 +93,12 @@ go에서 함수에 매개변수를 여러개 받고싶다면 타입 앞에 ...�
 
 ```go
 func lenAndUpper(name string) (length int, uppercase string) {
-	length = len(name)
-    	uppercase = strings.ToUpper(name)
-    	return
+ length = len(name)
+     uppercase = strings.ToUpper(name)
+     return
 }
 func main() {
-	totalLength, up := lenAndUpper("hojin")
+ totalLength, up := lenAndUpper("hojin")
 }
 ```
 
@@ -110,10 +110,10 @@ length와 uppercase를 함수명 뒤에 미리 선언을 해주면 return 할 �
 
 ```go
 func lenAndUpper(name string) (length int, uppercase string) {
-	defer fmt.Println("I'm done")
-	length = len(name)
-    	uppercase = strings.ToUpper(name)
-    	return
+ defer fmt.Println("I'm done")
+ length = len(name)
+     uppercase = strings.ToUpper(name)
+     return
 }
 ```
 
@@ -122,4 +122,4 @@ go에서 defer로 함수를 선언하면 해당 함수가 종료되면 defer로 
 
 ---
 
-노마드코더, https://nomadcoders.co/go-for-beginners
+노마드코더, <https://nomadcoders.co/go-for-beginners>

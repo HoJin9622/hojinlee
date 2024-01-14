@@ -270,7 +270,7 @@ module>
     raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
 ```
 
-https://stackoverflow.com/questions/44855531/no-module-named-psycopg2-psycopg-modulenotfounderror-in-aws-lambda
+<https://stackoverflow.com/questions/44855531/no-module-named-psycopg2-psycopg-modulenotfounderror-in-aws-lambda>
 
 해당 글을 참조하여 `psycopg2-binary`를 설치하여 해결하였습니다.
 
@@ -363,9 +363,9 @@ AWS ACCESS KEY와 SECRET KEY는 Github 저장소의 Settings > Secrets > Actions
 
 ## Reference
 
-https://kangraemin.github.io/django/2020/10/03/django-zappa-serverless/
-https://tech.junhabaek.net/zappa%EC%99%80-github-action%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-django-application-aws-%EB%B0%B0%ED%8F%AC-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-15604ed6bbcc
-https://nerogarret.tistory.com/45?category=800142
-https://github.com/zappa/Zappa
-https://gist.github.com/alukach/6f3a371e9af600e417aca1b36806ad72
-https://stackoverflow.com/questions/44855531/no-module-named-psycopg2-psycopg-modulenotfounderror-in-aws-lambda
+<https://kangraemin.github.io/django/2020/10/03/django-zappa-serverless/>
+<https://tech.junhabaek.net/zappa%EC%99%80-github-action%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-django-application-aws-%EB%B0%B0%ED%8F%AC-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-15604ed6bbcc>
+<https://nerogarret.tistory.com/45?category=800142>
+<https://github.com/zappa/Zappa>
+<https://gist.github.com/alukach/6f3a371e9af600e417aca1b36806ad72>
+<https://stackoverflow.com/questions/44855531/no-module-named-psycopg2-psycopg-modulenotfounderror-in-aws-lambda>

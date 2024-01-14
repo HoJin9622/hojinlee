@@ -11,7 +11,7 @@ pm2는 node.js로 만들어진 앱에 대한 프로세스 관리를 편리하게
 ## 설치
 
 ```bash
-$ npm install pm2 -g
+npm install pm2 -g
 ```
 
 위 명령으로 설치 가능하다.
@@ -24,7 +24,7 @@ $ npm install pm2 -g
 ## PM2 명령어 목록 확인
 
 ```bash
-$ pm2 examples
+pm2 examples
 ```
 
 ![](https://images.velog.io/images/hojin9622/post/afdc25c5-6ddb-42fc-a7c6-5e8c01796793/Screen%20Shot%202020-12-25%20at%209.49.08%20PM.png)
@@ -32,7 +32,7 @@ $ pm2 examples
 ## pm2 start
 
 ```bash
-$ pm2 start app.js
+pm2 start app.js
 ```
 
 node.js 앱을 실행, 프로세스가 만들어진다.
@@ -42,7 +42,7 @@ node.js 앱을 실행, 프로세스가 만들어진다.
 ## pm2 ls
 
 ```bash
-$ pm2 ls
+pm2 ls
 ```
 
 현재 pm2가 감시하고 있는 프로세스 목록
@@ -52,7 +52,7 @@ $ pm2 ls
 ## pm2 stop
 
 ```bash
-$ pm2 stop id|name|namespace|all|json|stdin
+pm2 stop id|name|namespace|all|json|stdin
 ```
 
 실행되고 있는 프로세스를 종료
@@ -62,7 +62,7 @@ $ pm2 stop id|name|namespace|all|json|stdin
 ## pm2 delete
 
 ```bash
-$ pm2 delete 0
+pm2 delete 0
 ```
 
 pm2가 감시하고 있는 프로세스를 제거
@@ -72,7 +72,7 @@ pm2가 감시하고 있는 프로세스를 제거
 ## pm2 --watch option
 
 ```bash
-$ pm2 start app.js --watch
+pm2 start app.js --watch
 ```
 
 코드가 변경되면 프로세스를 재시작
@@ -82,7 +82,7 @@ $ pm2 start app.js --watch
 ## pm2 log
 
 ```bash
-$ pm2 log
+pm2 log
 ```
 
 현재 실행중인 프로세스들의 로그를 하나의 화면에서 보여준다
@@ -92,7 +92,7 @@ $ pm2 log
 ## pm2-dev
 
 ```bash
-$ pm2-dev app.js
+pm2-dev app.js
 ```
 
 app.js 프로그램을 watch하면서 log도 찍어준다
@@ -102,7 +102,7 @@ app.js 프로그램을 watch하면서 log도 찍어준다
 ## pm2 start [name] -i max
 
 ```bash
-$ pm2 start app.js -i max
+pm2 start app.js -i max
 ```
 
 프로세스를 실행시킬때 쓰레드의 숫자만큼 프로세스를 실행시킨다.
@@ -112,9 +112,9 @@ $ pm2 start app.js -i max
 ## 운영체제 재시작 자동실행 명령어
 
 ```bash
-$ pm2 start app.js
-$ pm2 save
-$ pm2 startup
+pm2 start app.js
+pm2 save
+pm2 startup
 ```
 
 운영체제마다 컴퓨터가 재시작되었을 때 저장된 프로세스들을 자동실행 할 수 있는 명령어를 알려준다.

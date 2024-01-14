@@ -9,7 +9,7 @@ ogImage: "../../assets/images/appicon.jpg"
 
 ## IOS
 
-https://appicon.co/
+<https://appicon.co/>
 먼저 위 사이트에서 1024x1024 크기의 이미지를 넣어서 추출해줍니다.
 
 ![](https://images.velog.io/images/hojin9622/post/3ecedb2a-330b-4889-9d11-b16437453ed0/Screen%20Shot%202021-06-09%20at%209.20.02%20AM.png)
@@ -26,7 +26,7 @@ Xcode를 실행한 후 프로젝트를 열고, Images.xcassets를 클릭한다.
 
 ## Android
 
-http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(255%2C%20255%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher
+<http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(255%2C%20255%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher>
 
 ![](https://images.velog.io/images/hojin9622/post/e2c15672-257b-4246-be97-78731edc4381/Screen%20Shot%202021-06-09%20at%209.40.01%20AM.png)
 
@@ -42,4 +42,4 @@ http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.ty
 
 ## 참고
 
-https://velog.io/@dody_/React-Native-%EC%95%B1-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B0%94%EA%BE%B8%EA%B8%B0
+<https://velog.io/@dody_/React-Native-%EC%95%B1-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B0%94%EA%BE%B8%EA%B8%B0>

@@ -63,11 +63,11 @@ html 파일이다.
 프로젝트 생성
 
 ```bash
-$ django-admin startproject {project_name}
+django-admin startproject {project_name}
 ```
 
 app 생성
 
 ```bash
-$ python manage.py startapp {app_name}
+python manage.py startapp {app_name}
 ```
