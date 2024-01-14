@@ -4,11 +4,11 @@ pubDatetime: 2022-11-18
 title: "먼스터 NestJS에서 Django로 서버전환"
 tags:
   - review
-description: "😆 서버 전환에 성공한 회고"
+description: "서버 전환을 통한 생산성 개선"
 ogImage: "../../assets/images/monster.png"
 ---
 
-![](https://velog.velcdn.com/images/hojin9622/post/a2abd994-7b35-48d9-a054-ae8a19c5624f/image.png)
+![기존 어드민](https://velog.velcdn.com/images/hojin9622/post/a2abd994-7b35-48d9-a054-ae8a19c5624f/image.png)
 
 먼스터 서비스는 소비자들에게 예금/적금 특판 상품 정보를 쉽게 전달하기 위해 개발되었습니다.
 성공적으로 출시 후 별다른 에러 없이 앱을 운영하고 있었습니다. 초기 출시 후 DAU는 대략 30명 정도로 생각지도 못하게 높게 나와서 만족스러운 상황이었습니다.
@@ -53,7 +53,7 @@ Django 을 선택하게 된다면 기존 존재하였던 API를 모두 제작하
 
 ## After
 
-![](https://velog.velcdn.com/images/hojin9622/post/f05fcfaf-f8f2-437d-9513-27a6644c82c7/image.png)
+![Django Admin](https://velog.velcdn.com/images/hojin9622/post/f05fcfaf-f8f2-437d-9513-27a6644c82c7/image.png)
 
 기존 존재하던 로그인, 댓글 작성, 찜 등의 기능은 아직 미구현이지만 상품 App을 만든 후 기본 제공되는 관리자페이지에서 별도의 시간 소요 없이 상품 등록, 수정, 삭제, 필터, 상품 복제 후 수정 기능이 완성되었습니다.
 
@@ -69,7 +69,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 상품 복제 후 수정 기능은 Model Admin에서 `save_as`를 `True`로 설정하는 것으로 매우 간단하게 구현이 되었습니다. 이 기능을 NestJS와 React로 일일이 구현해야 한다고 생각하면 시간을 많이 할당해야 할 텐데 이러한 부분에서 Django 의 도움을 받고 있다고 많이 느끼게 되었습니다.
 
-![](https://velog.velcdn.com/images/hojin9622/post/48bc3c5e-9b22-49d1-a755-f0679e7e8bf2/image.png)
+![DAU](https://velog.velcdn.com/images/hojin9622/post/48bc3c5e-9b22-49d1-a755-f0679e7e8bf2/image.png)
 
 관리자페이지가 개선된 후 상품을 올리기 수월해져 많은 상품을 올리게 되었습니다. 그 후 DAU를 측정해보니 100~200 정도로 측정되었습니다.
 최근 예/적금 상품의 금리 상승으로 인한 방문자 증가인지 꾸준한 상품의 업로드 영향인지는 모르겠으나 DAU가 300% 상승하였습니다.
