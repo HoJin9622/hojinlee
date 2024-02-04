@@ -9,19 +9,21 @@ tags:
 
 ## 개요
 
-진행중인 여러개의 사이드프로젝트가 있는데 기존에는 cloudtype에서 무료로 서버를 실행하였지만, cloudtype의 정책변경으로 하루 한번 서버가 shutdown 상태가 되어 직접 재시작을 했습니다.
+여러개의 사이드 프로젝트를 진행 중이며, 이전에는 클라우드타입(CloudType)에서 무료로 서버를 실행했습니다.
+그러나 클라우드타입의 정책 변경으로 인해 서버가 매일 한 번 중지되는 문제가 발생했습니다.
+이에 대응하기 위해 저렴한 비용으로 여러 프로젝트의 서버를 한 대의 EC2 인스턴스에 구축하기로 결정했습니다.
 
-서버가 종료되는 시점도 랜덤이고 직접 재시작을 해주기전까지는 프로젝트에 문제가 생겨 저렴하게 EC2 인스턴스 한대에 여러 프로젝트의 서버를 구동을 선택했습니다.
-
-여러대의 EC2 인스턴스에 ALB로 구성하면 더 좋겠지만 ALB도 시간당 비용이 발생해 EC2 인스턴스 한대에서 모든것을 해결하기로 결정했습니다.
+여러 대의 EC2 인스턴스에 ALB(Application Load Balancer)를 사용하여 구성하는 것이 더 효율적일 수 있지만,
+ALB도 시간당 비용이 발생하기 때문에 모든 것을 한 대의 EC2 인스턴스에서 처리하기로 결정했습니다.
 
 ## 아키텍처
 
 ![architecture](@assets/images/aws-docker-nginx-architecture.png)
 
-가장 저렴하게 구성하기 위해 EC2 인스턴스 한대에 nginx로 여러 장고앱을 리버스프록시하기로 했고, 여러앱을 편하게 구동하기위해 docker-compose를 사용하였습니다.
+가장 경제적인 방법으로 구성하기 위해 단일 EC2 인스턴스에 Nginx를 사용하여 여러 Django 앱을 리버스 프록시하기로 결정했으며,
+여러 앱을 편리하게 관리하기 위해 Docker Compose를 사용했습니다.
 
-## nginx conf 작성
+## Nginx 설정
 
 ```plaintext
 upstream app1 {
@@ -70,17 +72,15 @@ server {
 }
 ```
 
-리버스 프록시 역할을 위해 80번 포트로 요청이 들어왔을 때 도메인에 따라서 app1과 app2로 분기를 해주었습니다.
-
-app1.example.com으로 요청이 오면 app1 server로 app2.example.com으로 요청이 오면 app2 server로 요청을 보내줍니다.
-
-또한 SSL 인증서 발급을 위해 ./well-known/acme-challenge/ 경로에 대한 내용도 작성해줍니다.
+80번 포트로 들어오는 요청을 도메인에 따라 app1과 app2로 분기하도록 구성했습니다.
+app1.example.com으로의 요청은 app1 서버로 보내고, app2.example.com으로의 요청은 app2 서버로 보냅니다.
+또한 SSL 인증서를 발급하기 위해 `/.well-known/acme-challenge/` 경로에 대한 설정도 추가했습니다.
 
 > SSL 인증서 발급을 위해서는 소유하고있는 도메인이 필요합니다.
 > EC2 인스턴스의 Public IP가 있고 해당 아이피와 연결된 소유 도메인이 있다면, .well-known 경로에 특정 키 파일을 생성하고 SSL 인증 서버에서 생성한 경로로 직접 접근해 해당 키파일에 접근 가능한지 확인합니다.
 > 이때는 서비스가 80번 포트로 동작하고 있어야합니다.
 
-## docker-compose.yaml 작성
+## Docker Compose 설정
 
 ```yaml
 version: "3.9"
@@ -118,19 +118,19 @@ services:
       - "8000"
 ```
 
-위에서 작성한 nginx.conf 파일을 conf 폴더로 위치시켜 volumes를 연결한다.
-또한 인증서를 설치할 수 있게 certbot 이미지도 사용한다.
+Nginx 설정 파일을 `conf` 폴더에 위치시키고, 인증서를 저장하기 위한 `certbot` 컨테이너를 설정했습니다.
 
 > certbot이란? (by ChatGPT)
 > Certbot은 Let's Encrypt를 사용하여 웹 서버에 SSL/TLS 인증서를 쉽게 설치, 설정 및 관리할 수 있도록 도와주는 오픈 소스 도구입니다. Certbot은 Let's Encrypt의 ACME 프로토콜을 구현하여 인증서 발급 및 갱신을 자동화합니다. 이를 통해 웹 사이트 운영자는 복잡한 과정 없이도 무료 SSL/TLS 인증서를 획득하고 사용할 수 있습니다.
 > Certbot은 다양한 웹 서버 플랫폼을 지원하며, Apache, Nginx 등과 같은 인기 있는 웹 서버와 함께 사용할 수 있습니다. 또한, Certbot은 다양한 운영 체제에서 사용할 수 있으며, 사용자 편의를 위해 명령 줄 인터페이스를 제공합니다.
 > Certbot을 사용하면 SSL/TLS 인증서의 발급, 설치, 갱신을 자동화하여 웹 서버 보안을 강화하고 HTTPS를 통한 안전한 통신을 쉽게 설정할 수 있습니다.
 
-docker-compose 파일을 작성 후 `docker-compose up -d` 명령으로 실행시켜준다.
+docker-compose 파일을 작성 후 `docker-compose up -d` 명령으로 실행시켜줍니다.
 
 ## 인증서 발급 스크립트
 
-다음으로 인증서 발급 스크립트를 다운로드한다.
+아래는 SSL/TLS 인증서 발급을 자동화하는 스크립트입니다.
+이 스크립트를 사용하면 Let's Encrypt에서 SSL/TLS 인증서를 발급받을 수 있습니다.
 
 ```bash
 # 인증서 발급 스크립트 다운로드
@@ -140,11 +140,8 @@ curl -L https://raw.githubusercontent.com/wmnnd/nginx-certbot/master/init-letsen
 chmod +x init-letsencrypt.sh
 ```
 
-해당 스크립트는 인증서 발급을 간편하게 할 수 있게 github에 게시된 스크립트이다.
-
-해당 스크립트의 도메인, 경로, 이메일을 수정해주어야한다.
-
-`vi init-letsencrypt.sh` 명령으로 스크립트 내용을 수정해준다.
+사용하기전에 스크립트 내의 도메인, 경로, 이메일을 수정해야 합니다.
+`vi init-letsencrypt.sh` 명령으로 스크립트 내용을 수정하였습니다.
 
 ```sh
 #!/bin/bash
@@ -229,11 +226,9 @@ echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
 ```
 
-상단의 domains, data_path, email만 수정해주면 된다.
+위의 스크립트 내에서 domains, data_path, email 등을 수정한 후 `sudo ./init-letsencrypt.sh` 명령으로 스크립트를 실행하면 SSL/TLS 인증서가 발급됩니다.
 
-그 후 `sudo ./init-letsencrypt.sh` 명령으로 스크립트를 실행해주면 인증서 발급이 완료된다.
-
-## HTTPS 적용
+## HTTPS 설정
 
 ```plaintext
 upstream app1 {
@@ -296,12 +291,16 @@ server {
 }
 ```
 
-app1에 대해서만 인증서를 발급받았으므로 app1의 80번 포트로 들어오는 요청에 대해서는 443번 포트로 redirect 해준다.
-또한 발급받은 인증서 정보를 입력해주고 경로는 발급받은 도메인으로 설정한다.
+app1에 대해서만 인증서를 발급받았으므로 app1의 80번 포트로 들어오는 요청에 대해서는 443번 포트로 redirect 합니다.
+또한 발급받은 인증서 정보를 입력해주고 경로는 발급받은 도메인으로 설정합니다.
 
-app2에 대해서도 위 과정을 반복하면 인증서를 하나 더 발급 받을 수 있다.
+app2에 대해서도 위 과정을 반복하면 인증서를 하나 더 발급 받아줍니다.
 
 ## 인증서 자동 갱신
+
+마지막으로, SSL/TLS 인증서의 자동 갱신을 위해 Docker Compose를 사용하여 환경을 설정합니다.
+
+다음은 Docker Compose 파일의 예시입니다:
 
 ```yaml
 version: "3.9"
@@ -341,8 +340,13 @@ services:
       - "8000"
 ```
 
-인증서 자동 갱신을 위해 컨테이너 명령을 추가해준다.
+위 설정에서는 Nginx 컨테이너가 6시간마다 자동으로 재시작하여 SSL/TLS 인증서를 갱신하고,
+Certbot 컨테이너가 12시간마다 SSL/TLS 인증서를 자동으로 갱신합니다.
 
-nginx에 설정한 커맨드는 6시간 대기 후 nginx를 다시 reload 후 설정을 다시 불러오게 만든다.
+이를 통해 SSL/TLS 인증서의 유효성을 유지하고 보안을 유지할 수 있습니다.
 
-certbot에 설정한 entrypoint는 12시간동안 대기한 후 다시 Certbot을 실행하고 SSL/TLS 인증서를 주기적으로 갱신하게 해준다.
+## 참고글
+
+<https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71>
+<https://velog.io/@wksmstkfka12/%EB%96%A0%EB%A8%B9%EC%97%AC%EC%A3%BC%EB%8A%94-Nginx-Docker%EC%97%90-%EB%AC%B4%EB%A3%8C-SSL-%EC%A0%81%EC%9A%A9>
+<https://node-js.tistory.com/32>
