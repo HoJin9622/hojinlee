@@ -1,10 +1,10 @@
 ---
-title: 'Go 문법, 타입, 함수'
-description: 'Go의 변수 선언과 타입 및 함수에 대해 알아보자'
+title: "Go 문법, 타입, 함수"
+description: "Go의 변수 선언과 타입 및 함수에 대해 알아보자"
 pubDatetime: 2022-01-13
-tags: 
-	- golang
-ogImage: '../assets/images/go.png'
+tags:
+  - golang
+ogImage: "../../assets/images/go.png"
 ---
 
 ## 변수 선언
