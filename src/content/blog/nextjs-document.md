@@ -7,7 +7,7 @@ tags:
 ogImage: "../../assets/images/nextjs.png"
 ---
 
-# \_document.js
+## \_document.js
 
 [next.js document 문서](https://nextjs.org/docs/advanced-features/custom-document)
 

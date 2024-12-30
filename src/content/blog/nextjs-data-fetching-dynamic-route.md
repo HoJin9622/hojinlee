@@ -7,7 +7,7 @@ tags:
 ogImage: "../../assets/images/nextjs.png"
 ---
 
-# Data Fetching
+## Data Fetching
 
 cra로 프로젝트를 만들어 데이터를 가져오는 방식
 
@@ -17,7 +17,7 @@ useEffect를 사용하고 axios를 이용하여 get을 한 후 데이터를 가�
 
 이러한 부분 때문에 그 데이터가 검색엔진에 노출되어야 한다, 서버사이드로 동작해야한다면 다른 방식으로 구현해야한다.
 
-# getInitialProps
+## getInitialProps
 
 ```js
 import Link from "next/link";
@@ -60,7 +60,7 @@ getInitialProps는 프론트단에서 render 되기전에 동작하게 된다.(�
 
 getInitialProps는 pages 폴더 밑에서만 동작한다.(사용자가 생성한 component 폴더에서는 불가)
 
-# queryString
+### queryString
 
 ```js
 import { Button } from "antd";
@@ -99,7 +99,7 @@ get 주소는 숫자 하나를 보내면 두배로 반환해주는 api 이다.
 
 `{ value: '100' }` context.query의 console.log 내용이며 value는 querystring에 정의해준대로이다.
 
-# Dynamic Route
+## Dynamic Route
 
 기존 작성하였던 파일을 get-double이라는 폴더를 만들고 get-double.js 파일의 이름을 `[value]`로 변경하고 get-double 폴더로 옮긴다.
 
@@ -107,7 +107,7 @@ get 주소는 숫자 하나를 보내면 두배로 반환해주는 api 이다.
 
 \[value]가 아닌 \[number]라고 작성하면 `context.query.number` 로 값을 불러오면 된다.
 
-## Dynamic Route에 대한 Link
+### Dynamic Route에 대한 Link
 
 ```js
 <Link href="/get-double/[value]" as="/get-double/11">

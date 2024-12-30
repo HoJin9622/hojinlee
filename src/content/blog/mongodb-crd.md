@@ -6,9 +6,9 @@ tags:
   - mongodb
 ---
 
-# Database 생성
+## Database 생성
 
-```
+```sql
 > use test_db
 switched to db test_db
 ```
@@ -16,9 +16,9 @@ switched to db test_db
 데이터베이스를 생성한다.
 데이터베이스가 이미 존재하는 경우 그 데이터베이스를 사용한다.
 
-# 데이터베이스 목록 확인
+## 데이터베이스 목록 확인
 
-```
+```sql
 > show dbs
 admin   0.000GB
 config  0.000GB
@@ -28,18 +28,18 @@ local   0.000GB
 데이터베이스 목록을 확인한다.
 데이터베이스에 데이터가 없으면 표시되지 않는다.
 
-# Database 제거
+## Database 제거
 
-```
+```sql
 > use test_db
 switched to db test_db
 > db.dropDatabase()
 { "dropped" : "test_db", "ok" : 1 }
 ```
 
-# Collection 생성
+## Collection 생성
 
-```
+```sql
 > use test_db
 switched to db test_db
 > db.createCollection("author")
@@ -61,9 +61,9 @@ switched to db test_db
 
 5. noPadding(boolean): MMAPv1 저장 엔진에만 사용가능하다. collection을 생성할 때 사용자가 collection별로 storage engine에 대한 구성요소를 지정할 수 있도록 허용한다.
 
-# Collection 목록 확인
+## Collection 목록 확인
 
-```
+```sql
 > use test_db
 switched to db test_db
 > show collections
@@ -72,9 +72,9 @@ author
 
 `show collections`
 
-# Collection 제거
+## Collection 제거
 
-```
+```sql
 > use test_db
 switched to db test_db
 > show collections
@@ -85,27 +85,27 @@ true
 
 `db.name.drop()`은 Collection을 제거한다.
 
-# Document 추가
+## Document 추가
 
-```
+```sql
 > db.author.insert({"name": "Sherlock"})
 WriteResult({ "nInserted" : 1 })
 ```
 
 `db.collection.insert()` 사용 시 document를 추가할 수 있다.
 
-# Document 확인
+## Document 확인
 
-```
+```sql
 > db.author.find({})
 { "_id" : ObjectId("5f073ee88b0f1db92014e8a3"), "name" : "Sherlock" }
 ```
 
 `db.collection.find()` 사용 시 documents를 확인할 수 있다.
 
-# Document 제거
+## Document 제거
 
-```
+```sql
 > db.author.remove({"name": "Sherlock"})
 WriteResult({ "nRemoved" : 1 })
 ```

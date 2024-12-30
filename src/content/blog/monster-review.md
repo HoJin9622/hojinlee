@@ -13,19 +13,19 @@ ogImage: "../../assets/images/monster.png"
 
 프로젝트에 사용한 기술들은 다음과 같다.
 
-#### FrontEnd
+### FrontEnd
 
 - React Native
 - React
 - Apollo Client
 
-#### BackEnd
+### BackEnd
 
 - NestJS
 - GraphQL
 - TypeORM
 
-#### DevOps
+### DevOps
 
 - Heroku
 - Netlify

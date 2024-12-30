@@ -6,7 +6,7 @@ tags:
   - "kotlin"
 ---
 
-# 배열
+## 배열
 
 배열 선언과 사용
 
@@ -20,7 +20,7 @@ fun main() {
 }
 ```
 
-# 함수 선언
+## 함수 선언
 
 return 타입과 매개변수 타입을 명시해줘야한다.
 
@@ -30,7 +30,7 @@ fun add(a: Int, b: Int, c: Int): Int {
 }
 ```
 
-# 단일표현식 함수
+## 단일표현식 함수
 
 반환값을 생략할 수 있다.
 
@@ -38,7 +38,7 @@ fun add(a: Int, b: Int, c: Int): Int {
 fun add(a: Int, b: Int, c:Int) = a + b + c
 ```
 
-# 형변환 함수
+## 형변환 함수
 
 ```java
 toByte()

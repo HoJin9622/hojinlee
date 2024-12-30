@@ -7,7 +7,7 @@ tags:
 ogImage: "../../assets/images/docker.png"
 ---
 
-```
+```bash
 docker run ubuntu:16.04
 ```
 
@@ -16,7 +16,7 @@ ubuntu 16.04 컨테이너를 생성한다.
 위 명령어는 뭘 하라고 다른 명령어를 전달하지 않았기 때문에 컨테이너는 생성되마자 종료된다.
 컨테이너는 프로세스이기 때문에 실행중인 프로세스가 없으면 컨테이너는 종료된다.
 
-```
+```bash
 docker run --rm -it ubuntu:16.04 /bin/bash
 ```
 
@@ -26,7 +26,7 @@ docker run --rm -it ubuntu:16.04 /bin/bash
 - -it : 키보드 입력을 위해 -it 옵션을 준다.
   `cat /etc/issue`와 `ls`를 실행해보면 ubuntu 리눅스인걸 확인할 수 있다.
 
-```
+```bash
 exit
 ```
 

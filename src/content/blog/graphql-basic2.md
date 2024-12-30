@@ -27,7 +27,7 @@ resolver.js 파일
 
 people은 배열로 여러사람의 정보를 객체로 저장 중이다.
 
-```
+```ts
 type Person {
   id: Int!
   name: String!
@@ -44,7 +44,7 @@ schema.graphql 파일
 
 Person을 정의해주고 Query에서 Person은 배열이므로 []로 감싸준다.
 
-```
+```ts
 query {
   people {
     id
@@ -56,7 +56,7 @@ query {
 
 playground의 query문
 
-```
+```json
 {
   "data": {
     "people": [

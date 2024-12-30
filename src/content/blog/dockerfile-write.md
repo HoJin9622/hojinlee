@@ -7,7 +7,7 @@ tags:
 ogImage: "../../assets/images/docker.png"
 ---
 
-# Dockerfile
+## Dockerfile
 
 ```Dockerfile
 FROM node:10
@@ -61,7 +61,7 @@ COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 - EXPOSE
   컨테이너에 맵핑을 할 네트워크 포트
 
-# build
+## build
 
 ```bash
 docker build .
@@ -70,9 +70,9 @@ docker build ./
 
 도커 파일에 입력된것들을 도커 클라이언트에 전달한다.
 
-## options
+### options
 
-### -t
+#### -t
 
 ```bash
 docker build -t kiss0104040/hello:latest
@@ -81,7 +81,7 @@ docker build -t kiss0104040/hello:latest
 도커 이미지에 이름을 부여한다.
 이름의 규칙은 `{나의 도커 아이디}/{저장소 또는 프로젝트 이름}:{버전}` 의 규칙으로 작성된다.
 
-### -f
+#### -f
 
 ```bash
 docker build -f Dockerfile.dev .
@@ -91,7 +91,7 @@ docker build -f Dockerfile.dev .
 Dockerfile의 이름을 Dockerfile.dev 로 설정하고 기존과 같이 빌드를 하게되면 Dockerfile을 찾지 못한다는 에러가 발생하게 된다.
 build 할때 `-f` 옵션을 주어 Dockerfile의 이름을 주게되면 명시한 도커파일로 빌드를 시작한다.
 
-## Reference
+### Reference
 
 ---
 

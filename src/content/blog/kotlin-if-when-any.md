@@ -6,7 +6,7 @@ tags:
   - "kotlin"
 ---
 
-# if
+## if
 
 ```java
     var a = 7
@@ -24,7 +24,7 @@ is 사용으로 자료형 검사
 if(a is Int) println("a는 Int형이다")
 ```
 
-# when
+## when
 
 when 사용법
 

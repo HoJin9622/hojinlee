@@ -7,7 +7,7 @@ tags:
 ogImage: "../../assets/images/docker.png"
 ---
 
-# create
+## create
 
 ```bash
 docker create {image name}
@@ -16,7 +16,7 @@ docker create {image name}
 docker 컨테이너를 생성한다.
 컨테이너 아이디를 받게된다.
 
-# start
+## start
 
 ```bash
 docker start {container id}
@@ -24,9 +24,9 @@ docker start {container id}
 
 container를 실행하고 container id를 반환하게 된다.
 
-## options
+### options
 
-### -a
+#### -a
 
 ```bash
 docker start -a {container id}
@@ -34,7 +34,7 @@ docker start -a {container id}
 
 `-a` 옵션은 docker container 가 실행될 때 output을 출력해준다.
 
-# run
+## run
 
 ```bash
 docker run {image name}
@@ -51,9 +51,9 @@ docker run {image name} ls
 이미지가 `ls` 명령어를 사용할 수 없으면 에러를 출력한다.
 `docker run alpine ping localhost` 처럼 이미지에서 사용할 수 있는 다른 명령어를 사용할 수 도 있다.
 
-## options
+### options
 
-### -p
+#### -p
 
 ```bash
 docker run -p {local port}:{container port} {image name}
@@ -62,7 +62,7 @@ docker run -p {local port}:{container port} {image name}
 port를 매핑해줄 수 있다.
 예를들어 `docker run -p 5000:8000 {image name}`으로 작성해주었다면 localhost:5000 으로 접속하면 도커 컨테이너의 8000번 포트로 접속이 가능하다.
 
-### -d
+#### -d
 
 ```bash
 docker run -d -p 5000:8080 {image name}
@@ -70,7 +70,7 @@ docker run -d -p 5000:8080 {image name}
 
 detach 의 줄임말 컨테이너를 실행한 후 터미널에서 바로 빠져나오게 해준다.
 
-# exec
+## exec
 
 ```bash
 docker exec {container id} {command}
@@ -79,9 +79,9 @@ docker exec {container id} {command}
 이미 실행중인 컨테이너에 명령어를 전달한다.
 `docker exec {container id} ls`를 전달하면 디렉토리를 볼 수 있다.
 
-## options
+### options
 
-### -it
+#### -it
 
 ```bash
 docker exec -it {container id} {command}
@@ -99,7 +99,7 @@ docker exec -it {container id} {sh, bash, zsh, powershell}
 보편적으로 사용가능한 `sh`가 많이 사용된다.
 Control + D로 쉘에서 빠져나올 수 있다.
 
-# stop
+## stop
 
 ```bash
 docker stop {container id}
@@ -108,7 +108,7 @@ docker stop {container id}
 도커 컨테이너를 중지시킨다.
 진행중이던 작업을 완료한 후 중지시킨다.
 
-# kill
+## kill
 
 ```bash
 docker kill {container id}
@@ -116,7 +116,7 @@ docker kill {container id}
 
 도커 컨테이너를 즉시 중지시킨다.
 
-# ps
+## ps
 
 ```bash
 docker ps
@@ -124,9 +124,9 @@ docker ps
 
 현재 실행중인 도커 컨테이너를 확인할 수 있다.
 
-## options
+### options
 
-### --format
+#### --format
 
 ```bash
 docker ps --format 'table{{.Names}}'
@@ -134,7 +134,7 @@ docker ps --format 'table{{.Names}}'
 
 현재 실행중인 도커 컨테이너 목록에서 `Names` Column만 가져온다.
 
-### -a
+#### -a
 
 ```bash
 docker ps -a
@@ -142,7 +142,7 @@ docker ps -a
 
 `-a` 옵션을 넣으면 꺼져있는 컨테이너도 확인할 수 있다.
 
-# rm
+## rm
 
 ```bash
 docker rm {container id}
@@ -157,7 +157,7 @@ docker rm `docker ps -a -q`
 
 `ps` 명령어를 활용하여 모든 도커 컨테이너를 제거한다.
 
-# rmi
+## rmi
 
 ```bash
 docker rmi {image id}
@@ -165,7 +165,7 @@ docker rmi {image id}
 
 도커 이미지를 삭제한다.
 
-# system prune
+## system prune
 
 ```bash
 docker system prune
@@ -174,7 +174,7 @@ docker system prune
 한번에 컨테이너, 이미지, 네트워크를 모두 삭제한다.
 실행중인 컨테이너에는 영향을 주지 않는다.
 
-# Reference
+## Reference
 
 ---
 

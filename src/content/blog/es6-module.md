@@ -6,7 +6,7 @@ tags:
   - javascript
 ---
 
-# ES6 Module 적용
+## ES6 Module 적용
 
 먼저 node.js version이 14 이상이어야한다.
 
