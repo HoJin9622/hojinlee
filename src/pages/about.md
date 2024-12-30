@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-React & React Native / Django 기반의 3년차 웹 개발자입니다.
+React & React Native / Django 기반의 5년차 웹 개발자입니다.
 
 어니언팜에서는 React Native 위주의 크로스 플랫폼 앱을 제작과 Django를 이용한 서버 개발을 주로 해왔으며,
 현재 카카오모빌리티에서는 모바일 앱 웹뷰의 프론트엔드 개발을 담당하고 있습니다.
@@ -18,8 +18,11 @@ React & React Native / Django 기반의 3년차 웹 개발자입니다.
 
 공통플랫폼 개발팀 웹프론트파트(2023.03 ~ 현재)
 
-- 사내 어드민 웹 개발
-- Docker 이미지 최적화
+- 세차/자동차검사 웹뷰 개발
+- 제휴사 어드민 웹 개발
+- 사내 공통 라이브러리 개발
+- Docker 빌드/배포 개선
+- 접근성 개선
 
 ### (주)어니언팜
 
