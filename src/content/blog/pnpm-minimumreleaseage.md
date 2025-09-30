@@ -22,9 +22,9 @@ description: "pnpm의 minimumReleaseAge 옵션으로 새로 배포된 패키지 
 
 ## 설정 방법
 
-`.npmrc` 파일에 다음과 같이 설정할 수 있습니다:
+`pnpm-workspace.yaml` 파일에 다음과 같이 설정할 수 있습니다:
 
-```bash
+```yaml
 # 1일(1440분) 이상 된 패키지만 설치
 minimumReleaseAge: 1440
 ```
@@ -35,16 +35,29 @@ minimumReleaseAge: 1440
 
 특정 패키지는 항상 최신 버전을 바로 설치하고 싶다면 `minimumReleaseAgeExclude`를 사용할 수 있습니다:
 
-```bash
+```yaml
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-- webpack
-- react
+  - webpack
+  - react
 ```
 
 위 설정은 webpack과 react 패키지는 지연 없이 바로 설치하도록 합니다.
+
+### 패턴 지원 (v10.17.0+)
+
+v10.17.0부터는 `minimumReleaseAgeExclude`에서 와일드카드 패턴을 지원합니다. 특정 스코프의 모든 패키지를 예외 처리할 수 있습니다:
+
+```yaml
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - "@eslint/*"
+```
+
+위 설정은 `@eslint` 스코프의 모든 패키지를 예외 처리합니다.
 
 ## 참고 문서
 
 - [pnpm Settings - minimumReleaseAge](https://pnpm.io/settings#minimumreleaseage)
 - [pnpm 10.16 Release Notes](https://pnpm.io/blog/releases/10.16)
+- [pnpm 10.17 Release Notes](https://pnpm.io/blog/releases/10.17)
