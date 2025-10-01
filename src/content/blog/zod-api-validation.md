@@ -1,7 +1,6 @@
 ---
-pubDatetime: 2024-06-08 02:21:00
+pubDatetime: 2024-06-08
 title: "Zod와 Sentry를 이용한 API 응답 유효성 검사"
-featured: true
 description: "Zod를 사용하여 API Response 값을 검증하고 Sentry에 올리기"
 tags: ["javascript", "react", "sentry", "zod"]
 ogImage: ../../assets/images/zod.png

@@ -1,7 +1,6 @@
 ---
-pubDatetime: 2024-06-06 21:42:00
+pubDatetime: 2024-06-06
 title: "Zod를 사용한 nextjs 환경변수 검증"
-featured: true
 description: "Zod를 사용하여 nextjs에서 환경변수를 검증하는 방법"
 tags: ["nextjs", "javascript", "react", "zod"]
 ogImage: ../../assets/images/zod.png

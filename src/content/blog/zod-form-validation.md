@@ -1,7 +1,6 @@
 ---
-pubDatetime: 2024-06-16 22:41:00
+pubDatetime: 2024-06-16
 title: "Zod와 react-hook-form을 사용한 form validation"
-featured: true
 description: "Form Validation 방법"
 tags: ["javascript", "react", "zod", "react-hook-form"]
 ogImage: ../../assets/images/zod.png

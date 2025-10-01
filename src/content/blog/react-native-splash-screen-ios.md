@@ -1,7 +1,6 @@
 ---
 pubDatetime: 2021-06-09
 title: "React Native Splash Screen 제작(IOS)"
-featured: true
 tags:
   - "react-native"
 description: "React Native Splash Screen 제작(IOS)"

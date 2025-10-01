@@ -1,11 +1,10 @@
 ---
 title: "Docker chown -R 사용 시 이미지 용량 문제"
 description: "Docker chown -R 을 사용했을 때 발생하는 문제와 해결방법"
-pubDatetime: 2024-01-14T13:44:57.374Z
+pubDatetime: 2024-01-14
 tags:
   - docker
   - nextjs
-featured: true
 ---
 
 ## 문제점
