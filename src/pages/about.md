@@ -3,10 +3,9 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-React & React Native / Django 기반의 5년차 웹 개발자입니다.
+"서비스 비즈니스 로직 구현부터 배포 파이프라인 최적화까지, 주도적으로 문제를 해결하는 엔지니어"
 
-어니언팜에서는 React Native 위주의 크로스 플랫폼 앱을 제작과 Django를 이용한 서버 개발을 주로 해왔으며,
-현재 카카오모빌리티에서는 모바일 앱 웹뷰의 프론트엔드 개발을 담당하고 있습니다.
+카카오모빌리티와 스타트업을 거치며 대규모 트래픽 환경의 웹뷰 서비스 개발부터 초기 스타트업의 서비스 구축까지 폭 넓은 경험을 쌓았습니다. Next.js 기반의 서비스 개발뿐만 아니라, Docker 최적화 및 CI/CD 개선을 통해 빌드 시간을 44.3% 단축하는 등 개발 효율성을 높이는 데 강점이 있습니다. 단순 구현을 넘어 사내 라이브러리 개발과 문서화를 통해 동료 개발자의 생산성을 높이는 일에 보람을 느낍니다.
 
 <div>
   <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
@@ -14,77 +13,37 @@ React & React Native / Django 기반의 5년차 웹 개발자입니다.
 
 ## Work Experience
 
-### [카카오모빌리티](https://www.kakaomobility.com/)
+### [카카오모빌리티](https://www.kakaomobility.com/) | 2023.03 - 현재
 
-공통플랫폼 개발팀 웹프론트파트(2023.03 ~ 현재)
+#### 카카오T / 카카오내비 앱 내 신규 O2O 서비스 개발 및 운영 도구 개발
 
-- 세차/자동차검사 웹뷰 개발
-- 제휴사 어드민 웹 개발
-- 사내 공통 라이브러리 개발
-- Docker 빌드/배포 개선
-- 접근성 개선
+##### 카카오T/내비 앱 내 "방문 세차" 및 "내차 관리" 신규 피쳐 개발
 
-### (주)어니언팜
+- Next.js 기반의 인앱 웹뷰(In-App Webview) 환경에서 방문 세차 및 자동차 검사 대행 서비스의 UI/UX 및 비즈니스 로직 개발
+- 제휴사 어드민 페이지 개발 및 운영, BFF 계층에서 KafkaJS를 활용하여 개인정보 조회 로그 시스템 구축
+- 스크린 리더 및 키보드 사용성을 고려한 웹 접근성(A11y) 개선 작업에 참여하여 다양한 사용자 환경 지원
 
-Developer(2020.09 ~ 2022.09)
+##### 배포 파이프라인 최적화 및 인프라 개선
 
-#### 그래가캠핑(2022.07 ~ 2022.09)
+- 빌드 시간 44.3% 단축, 도커 이미지 크기 82% 감소, 배포 소요 시간 20% 단축
+- Next.js 프로젝트의 Dockerfile을 Multi-stage Build 및 Standalone 모드로 리팩토링하여 컨테이너 이미지 경량화
+- 빌드 플랫폼 이관 및 빌더 교체를 통한 CI/CD 효율 극대화: 기존 Kaniko 기반의 사내 Docker 빌드 플랫폼에서 Docker Native 빌드 방식을 지원하는 사내 신규 CI 플랫폼으로 빌드 파이프라인 이관
+- 빌더 교체를 통해 레이어 캐싱 효율을 증대시키고 빌드 속도를 개선
 
-- Next.js 프로젝트 세팅
-- 사진 업로드 및 미리보기 구현
-- Django 관리자페이지 CK Editor 적용
-- Let's Encrypt를 이용한 SSL 등록
-- AWS Route53을 사용한 도메인 적용
-- AWS EC2 인스턴스에 Nginx와 Gunicorn을 사용한 Django 앱 배포
+##### 사내 공용 NPM 라이브러리 개발 및 문서화
 
-#### 차박가자(2022.06 ~ 2022.08)
+- 사내 정적 스토리지 SDK 개발: AWS SDK와 유사한 인터페이스로 사내 S3 호환 스토리지에 파일을 쉽게 업로드/관리할 수 있는 랩핑 라이브러리 개발
+- 빌드 타임 에셋 업로드 개발: Webpack/Rollup/Next.js 빌드 시 생성된 정적 파일(Static Assets)을 자동으로 CDN에 업로드하고 Prefix를 설정해주는 플러그인 개발
+- Monorepo 환경 구축을 통해 공통 로직을 효율적으로 모듈화
+- VitePress를 도입하여 라이브러리 설치부터 활용법까지 상세한 API 문서(Documentation) 사이트를 구축, 사내 개발자들의 사용성 및 편의성 증대
 
-- Recoil로 클라이언트 상태 관리
-- react-native-maps를 사용한 지도 UI 구현
-- 좋아요 기능에 Optimistic UI 적용
-- kakao, apple 로그인 적용
-- CRUD API 구현
-- Docker 환경에 Django, Nginx 환경 구성 후 docker-compose 통합 후 EC2 배포
+### (주)어니언팜 | 2020.09 - 2022.10
 
-#### 운샘(2022.04 ~ 2022.08)
+#### SI/외주 프로젝트 풀사이클 개발 및 AWS 인프라 구축
 
-- react-native-agora 솔루션을 사용한 화상 통화 구현
-- 아임포트를 사용한 PG 연동 및 결제 기능 구현
-- react-native-background-actions를 사용해 안드로이드 상담 요청 알림 구현
-- django-ninja를 사용한 REST API 구성
-- [AWS Lambda와 Zapaa를 사용하여 Serverless 환경 구축](https://www.hojinlee.dev/posts/zappa-github-actions-lambda)
-- Naver Cloud Platform의 SMS 서비스를 사용한 문자 인증 구현
-
-#### 캠핑모아(2021.11 ~ 2022.06)
-
-- Firebase 인앱메시지를 사용한 알림 서비스 구현
-- Firebase Dynamic Links와 Deep Link를 사용해 캠핑 상품 공유 기능 구현
-- Sentry를 사용한 에러 추적 환경 구성
-- Firebase Cloud Messaging을 사용해 푸시 알림 적용
-- redux로 구성된 서버 상태 관리를 react-query로 변경해 캐싱을 통한 유저 경험 향상
-
-#### 라이프인부산(2021.08 ~ 2021.11)
-
-- CodePUsh를 사용한 앱 동적 업데이트
-- Javascript 프로젝트를 Typescript로 마이그레이션
-- i18n을 사용한 다국어 적용
-- socket.io와 express를 사용한 채팅 구현
-
-#### 우리동네가구(2021.04 ~ 2021.12)
-
-- Javascript 프로젝트를 Typescript로 마이그레이션
-- styled-components를 사용한 UI 작업
-- 아임포트를 사용한 PG 연동 및 결제 기능 구현
-
-#### 한라대학교 모바일 LMS(2021.01 ~ 2021.10)
-
-- CodePush를 사용하여 앱 동적 업데이트
-- react-native-document-picker를 사용한 파일 업로드
-- rn-fetch-blob를 사용한 강의자료 다운로드
-- react-native-webview를 사용한 강의영상 재생 및 학습상태 저장
-
-## Skill
-
-- Frontend: React.js, Next.js, React Native
-- Backend: Django
-- Devops: Docker, AWS(EC2, RDS, S3 등)
+- App/Web 풀스택 개발: React Native를 활용한 하이브리드 앱 개발 및 Google Play/App Store 배포, 심사 과정 전담 (총 N건 출시)
+- 백엔드 및 인프라 구축: Django 기반의 REST API 서버 설계 및 개발, AWS EC2/RDS를 활용한 인프라 환경 구축 및 Route53 도메인 관리
+- 주요 기능 구현:
+  - Iamport 모듈을 활용한 PG사 결제 연동 기능 구현
+  - WebRTC 솔루션을 활용한 실시간 화상 통화 기능 개발
+  - i18n 라이브러리를 활용한 글로벌 서비스 다국어 지원 적용
