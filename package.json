@@ -11,7 +11,7 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "cz": "cz",
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -40,8 +40,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
@@ -54,7 +54,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,mdx,json}": [
+    "*.{js,jsx,ts,tsx,md,mdx,json,astro}": [
       "prettier --write"
     ]
   },
