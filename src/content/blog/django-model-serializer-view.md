@@ -13,7 +13,6 @@ ogImage: "../../assets/images/python-django.png"
 하나의 모델 클래스는 데이터베이스에서 하나의 테이블에 해당된다.
 
 - 필드타입
-
   - CharField: 길이가 제한된 문자열 형식, max_length 옵션을 지정해야한다.
   - TextField: 길이 제한이 없는 문자열 형식
   - IntegerField: 32비트 정수형 필드
