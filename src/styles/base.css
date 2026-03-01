@@ -10,7 +10,7 @@
   --color-skin-card-muted: var(--color-card-muted);
   --color-skin-line: var(--color-border);
 
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: "Pretendard", sans-serif;
 }
 
 @layer base {
@@ -40,7 +40,7 @@
     display: block;
   }
   body {
-    @apply bg-skin-fill text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted flex min-h-[100svh] flex-col font-mono;
+    @apply bg-skin-fill text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted flex min-h-[100svh] flex-col font-sans;
   }
   section,
   footer {
