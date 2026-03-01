@@ -21,16 +21,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <h1>Jin's Blog</h1>
+    <section id="hero" class="pt-8 pb-6">
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">
+        Jin's Blog
+      </h1>
       <a
         target="_blank"
         href="/rss.xml"
-        class="rss-link"
+        class="mb-6"
         aria-label="rss feed"
         title="RSS Feed"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-skin-accent mb-2 h-6 w-6 scale-110 sm:mb-3 sm:scale-125"
           ><path
             d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
           ></path><path
@@ -40,17 +44,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
+      <p class="my-2">
         안녕하세요!<br />
         블로그에서는 제가 프로젝트를 수행하면서 겪은 경험 또는 배운 내용을 기술할
         예정이에요.<br />
         글에서 잘못된 내용 또는 궁금한 점이 있다면 저에게 알려주세요!
       </p>
       {
-        // only display if at least one social link is enabled
         socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
             <Socials />
           </div>
         )
@@ -62,8 +65,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>Featured</h2>
+          <section id="featured" class="pt-12 pb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
             <ul>
               {featuredPosts.map(({ data, slug }) => (
                 <Card
@@ -79,8 +82,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <section id="recent-posts">
-      <h2>Recent Posts</h2>
+    <section id="recent-posts" class="pt-12 pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
       <ul>
         {
           sortedPosts
@@ -97,7 +100,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             )
         }
       </ul>
-      <div class="all-posts-btn-wrapper">
+      <div class="my-8 text-center">
         <LinkButton href="/posts">
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -112,41 +115,3 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   <Footer />
 </Layout>
-
-<style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
-  }
-  #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
-  }
-</style>
