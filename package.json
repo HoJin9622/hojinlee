@@ -19,7 +19,7 @@
     "@astrojs/rss": "^4.0.15",
     "@fontsource/pretendard": "^5.2.5",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^5.14.1",
+    "astro": "^5.18.0",
     "fuse.js": "^7.1.0",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
@@ -28,7 +28,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.4.0",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@divriots/jampack": "^0.34.0",
     "@eslint/js": "^10.0.1",
