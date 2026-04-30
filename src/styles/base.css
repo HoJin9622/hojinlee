@@ -121,6 +121,10 @@
   color: unset;
 }
 
+.prose :where(th, td):not(:where([class~="not-prose"] *)) {
+  padding: 0.5rem 0.75rem;
+}
+
 @layer components {
   .display-none {
     @apply hidden;
