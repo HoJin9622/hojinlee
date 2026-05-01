@@ -1,5 +1,5 @@
 ---
-author: Jin
+author: Hojin Lee
 pubDatetime: 2022-05-10
 title: "Cloudflare Images"
 tags:

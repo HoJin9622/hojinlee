@@ -1,5 +1,5 @@
 ---
-author: Jin
+author: Hojin Lee
 pubDatetime: 2022-11-18
 title: "먼스터 NestJS에서 Django로 서버전환"
 description: "서버 전환을 통한 생산성 개선"

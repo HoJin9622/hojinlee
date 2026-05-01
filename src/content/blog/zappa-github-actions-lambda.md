@@ -1,5 +1,5 @@
 ---
-author: Jin
+author: Hojin Lee
 pubDatetime: 2022-05-22
 title: "Zappa, Github Actions, AWS Lambda를 이용한 Serverless CI/CD 구축"
 tags:

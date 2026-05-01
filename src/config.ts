@@ -2,9 +2,9 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://www.hojinlee.dev/", // replace this with your deployed domain
-  author: "Jin",
+  author: "Hojin Lee",
   desc: "개인 개발 기술 블로그",
-  title: "Jin - Web Developer",
+  title: "Hojin Lee",
   ogImage: "home-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 8,

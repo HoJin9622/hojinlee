@@ -1,5 +1,5 @@
 ---
-author: Jin
+author: Hojin Lee
 pubDatetime: 2022-09-06
 title: "2022 Dev-Matching: 웹 프론트엔드 개발자(하반기)-1 후기"
 description: vanilla js...
