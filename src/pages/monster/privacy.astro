@@ -1,477 +1,550 @@
 ---
-import { SITE } from "@config";
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import Breadcrumbs from "@components/Breadcrumbs.astro";
+import "@styles/base.css";
+import "@fontsource/pretendard/400.css";
+import "@fontsource/pretendard/500.css";
+import "@fontsource/pretendard/600.css";
+import "@fontsource/pretendard/700.css";
 
-const pageTitle = `먼스터(Monster) 개인정보처리방침 | ${SITE.title}`;
+const pageTitle = "먼스터(Monster) 개인정보처리방침";
 const pageDescription =
-  "대한민국 개인정보 보호법 및 앱마켓 심사 가이드라인을 준수하는 먼스터(Monster) 모바일 앱의 공식 개인정보처리방침입니다.";
+  "금융 상품 비교 서비스 먼스터(Monster) 모바일 앱의 공식 개인정보처리방침입니다.";
 const effectiveDate = "2026년 3월 20일";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header />
-  <Breadcrumbs />
-
-  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
-    {/* 타이틀 헤더 */}
-    <header class="border-skin-line mb-8 border-b pb-6">
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="bg-[#f8f9fa] text-[#212529] antialiased">
+    {/* 독립형 상단 앱 바 */}
+    <header class="border-b border-gray-200 bg-white">
       <div
-        class="bg-skin-card text-skin-accent mb-3 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+        class="mx-auto flex max-w-3xl items-center justify-between px-4 py-4 sm:px-6"
       >
-        <span>모바일 앱</span>
-        <span>•</span>
-        <span>먼스터 (Monster)</span>
-        <span>•</span>
-        <span>버전 3.0.0</span>
+        <div class="flex items-center gap-2.5">
+          <span
+            class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white shadow-sm"
+          >
+            M
+          </span>
+          <div>
+            <h1 class="text-base leading-tight font-bold text-gray-900">
+              먼스터 (Monster)
+            </h1>
+            <p class="text-xs text-gray-500">모바일 앱 개인정보처리방침</p>
+          </div>
+        </div>
+        <span
+          class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700"
+        >
+          v3.0.0
+        </span>
       </div>
-      <h1 class="text-skin-base text-2xl font-bold tracking-tight sm:text-3xl">
-        먼스터(Monster) 개인정보처리방침
-      </h1>
-      <p class="text-skin-base/70 mt-2 text-sm">
-        <strong>시행일자:</strong>
-        {effectiveDate}
-      </p>
     </header>
 
-    {/* 상단 핵심 요약 (이용자 및 앱마켓 심사관 빠른 확인용) */}
-    <section
-      class="border-skin-line bg-skin-card mb-10 rounded-2xl border p-5 shadow-sm sm:p-6"
-    >
-      <h2
-        class="text-skin-base mb-3 flex items-center gap-2 text-base font-bold"
+    {/* 본문 컨테이너 */}
+    <main class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      {/* 문서 헤더 */}
+      <div
+        class="mb-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="text-skin-accent h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <div
+          class="mb-3 inline-block rounded-md bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-600"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          ></path>
-        </svg>
-        개인정보 처리 주요 현황 요약
-      </h2>
-      <ul class="text-skin-base/90 space-y-2 text-sm leading-relaxed">
-        <li class="flex items-start gap-2">
-          <span class="text-skin-accent font-semibold">1.</span>
-          <span
-            ><strong>회원가입 없음 / 직접 식별정보 미수집:</strong> 별도의 회원가입
-            없이 이용하며, 이름·주민번호·연락처·이메일·계좌번호 등 직접적인 개인 식별
-            정보를 수집·보관하지 않습니다.</span
-          >
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-skin-accent font-semibold">2.</span>
-          <span
-            ><strong>기기 로컬 저장:</strong> 찜한 상품(망태기)과 검색 필터는 단말기
-            내부(AsyncStorage)에만 저장되며 외부 서버로 전송되지 않습니다. 앱 삭제
-            시 즉시 파기됩니다.</span
-          >
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-skin-accent font-semibold">3.</span>
-          <span
-            ><strong>비맞춤형 광고 송출:</strong> Google AdMob의 배너 광고를 송출하며,
-            이용자의 개인 행동을 추적하는 맞춤형 광고를 요청하지 않고 <strong
-              >비맞춤형(Non-Personalized) 광고 전용</strong
-            >으로 동작합니다.</span
-          >
-        </li>
-      </ul>
-    </section>
+          공식 규정
+        </div>
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+          개인정보처리방침
+        </h2>
+        <p class="mt-2 text-sm text-gray-500">
+          <strong>시행일자:</strong>
+          {effectiveDate}
+        </p>
 
-    {/* 법정 필수 조항 본문 */}
-    <article
-      class="prose prose-headings:text-skin-base prose-p:text-skin-base/85 prose-li:text-skin-base/85 prose-strong:text-skin-base max-w-none space-y-6"
-    >
-      <p class="text-sm leading-relaxed">
-        이호진(이하 "운영자")은 모바일 애플리케이션 <strong
-          >'먼스터(Monster)'</strong
-        >(이하 "앱" 또는 "서비스")를 이용하는 정보주체의 자유와 권리 보호를
-        서약하며, 「개인정보 보호법」 제30조 및 관계 법령, Google Play 개발자
-        정책, Apple App Store 심사 지침에 따라 이용자의 개인정보 및 권익을
-        보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과
-        같이 개인정보처리방침을 수립·공개합니다.
-      </p>
-
-      <hr class="border-skin-line my-6" />
-
-      <h2 id="article-1" class="text-lg font-bold">
-        제1조 (개인정보의 처리 목적)
-      </h2>
-      <p>
-        운영자는 다음의 목적을 위해 최소한의 정보를 처리합니다. 처리하고 있는
-        정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는
-        경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한
-        조치를 이행할 것입니다.
-      </p>
-      <ol class="list-decimal space-y-1 pl-5 text-sm">
-        <li>
-          <strong>금융 상품 비교 및 편의 서비스 제공:</strong> 시중 은행 및 저축은행의
-          예금·적금 금리 정보 제공, 이자 계산, 관심 상품(망태기) 북마크 기능 제공
-        </li>
-        <li>
-          <strong>모바일 인앱 광고 송출 및 운영 통계:</strong> 서비스 무료 제공 유지를
-          위한 배너 광고 송출, 광고 게재 빈도 제어(Frequency Capping), 부정 클릭 방지
-          및 노출 성과 측정
-        </li>
-        <li>
-          <strong>서비스 보안 및 안정성 유지:</strong> 비인가 API 접근 차단, 비정상적
-          트래픽 방어, 시스템 오류 진단 및 성능 최적화
-        </li>
-      </ol>
-
-      <h2 id="article-2" class="text-lg font-bold">
-        제2조 (처리하는 개인정보의 항목 및 수집 방법)
-      </h2>
-      <p>
-        앱은 회원가입이나 로그인 기능을 제공하지 않으므로, 정보주체를 직접
-        식별할 수 있는 고유식별정보(주민등록번호 등), 성명, 연락처, 주소,
-        금융계좌정보 등을 일절 수집하거나 서버에 저장하지 않습니다.
-      </p>
-      <p class="text-skin-base mt-2 text-sm font-semibold">
-        구체적인 처리 항목 및 수집 방식은 다음과 같습니다:
-      </p>
-
-      <div class="my-3 overflow-x-auto">
-        <table
-          class="border-skin-line w-full border text-left text-xs sm:text-sm"
+        {/* 상단 3대 핵심 요약 카드 */}
+        <div
+          class="mt-6 rounded-xl border border-blue-100 bg-blue-50/60 p-4 sm:p-5"
         >
-          <thead
-            class="bg-skin-card text-skin-base border-skin-line border-b font-semibold"
+          <h3
+            class="mb-3 flex items-center gap-2 text-sm font-bold text-blue-900"
           >
-            <tr>
-              <th class="border-skin-line border-r p-2 sm:p-3">구분</th>
-              <th class="border-skin-line border-r p-2 sm:p-3">처리 항목</th>
-              <th class="border-skin-line border-r p-2 sm:p-3"
-                >수집 및 저장 주체</th
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-blue-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
+            </svg>
+            핵심 요약 안내
+          </h3>
+          <ul
+            class="space-y-2 text-xs leading-relaxed text-blue-950 sm:text-sm"
+          >
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">✔</span>
+              <span
+                ><strong>회원가입 없음:</strong> 성명, 주민등록번호, 연락처, 계좌번호
+                등 직접적인 식별정보를 일절 수집하거나 서버에 저장하지 않습니다.</span
               >
-              <th class="p-2 sm:p-3">처리 목적</th>
-            </tr>
-          </thead>
-          <tbody class="divide-skin-line divide-y">
-            <tr>
-              <td class="border-skin-line border-r p-2 font-medium sm:p-3"
-                >단말기 로컬 데이터</td
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">✔</span>
+              <span
+                ><strong>기기 로컬 저장:</strong> 찜한 상품(망태기) 및 검색 필터는
+                이용자의 단말기 내부(AsyncStorage)에만 저장되며 외부 서버로 전송되지
+                않습니다.</span
               >
-              <td class="border-skin-line border-r p-2 sm:p-3"
-                >찜한 상품 ID 목록(망태기), 필터 설정값 (은행, 가입방식,
-                금리유형)</td
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">✔</span>
+              <span
+                ><strong>비맞춤형 광고 송출:</strong> Google AdMob 배너 광고 송출
+                시 사용자의 행동을 추적하는 맞춤형 광고를 요청하지 않으며, <strong
+                  >비맞춤형(Non-Personalized) 광고 전용</strong
+                >으로 동작합니다.</span
               >
-              <td class="border-skin-line border-r p-2 sm:p-3"
-                >이용자 단말기 내부 저장소<br /><span
-                  class="text-skin-accent text-xs font-semibold"
-                  >(외부 서버 전송 없음)</span
-                ></td
-              >
-              <td class="p-2 sm:p-3"
-                >앱 재실행 시 관심 상품 목록 및 사용자 설정 유지</td
-              >
-            </tr>
-            <tr>
-              <td class="border-skin-line border-r p-2 font-medium sm:p-3"
-                >광고 및 기기 정보<br /><span class="text-skin-base/70 text-xs"
-                  >(Google AdMob)</span
-                ></td
-              >
-              <td class="border-skin-line border-r p-2 sm:p-3">
-                기기 모델명, OS 버전, 화면 해상도, IP 주소(대략적 위치 추정용),
-                언어 설정, 광고 노출/클릭 반응 기록, 크래시 진단 로그
-              </td>
-              <td class="border-skin-line border-r p-2 sm:p-3"
-                >Google LLC<br /><span class="text-skin-base/70 text-xs"
-                  >(Google Mobile Ads SDK)</span
-                ></td
-              >
-              <td class="p-2 sm:p-3">
-                비맞춤형 배너 광고 송출, 광고 성과 통계 측정, 부정 트래픽 방지<br
-                />
-                <span class="text-skin-accent text-xs font-semibold"
-                  >(*행태 추적 기반의 맞춤형 광고 미사용)</span
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* 법정 필수 조항 카드 */}
+      <div
+        class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
+      >
+        <article class="space-y-8 text-sm leading-relaxed text-gray-700">
+          <p class="text-sm leading-relaxed text-gray-600">
+            이호진(이하 "운영자")은 모바일 애플리케이션 <strong
+              >'먼스터(Monster)'</strong
+            >(이하 "앱" 또는 "서비스")를 이용하는 정보주체의 자유와 권리 보호를
+            서약하며, 「개인정보 보호법」 제30조 및 관계 법령, Google Play
+            개발자 정책, Apple App Store 심사 지침을 준수하여 다음과 같이
+            개인정보처리방침을 수립·공개합니다.
+          </p>
+
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제1조 (개인정보의 처리 목적)
+            </h3>
+            <p>
+              운영자는 다음의 목적을 위해 최소한의 정보를 처리합니다. 처리하고
+              있는 정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용
+              목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의
+              동의를 받는 등 필요한 조치를 이행할 것입니다.
+            </p>
+            <ol class="list-decimal space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>금융 상품 비교 및 편의 서비스 제공:</strong> 은행 및 저축은행의
+                예금·적금 금리 정보 조회, 이자 계산, 관심 상품(망태기) 보관 기능 제공
+              </li>
+              <li>
+                <strong>모바일 인앱 광고 송출 및 운영 통계:</strong> 서비스 무료 제공
+                유지를 위한 비맞춤형 배너 광고 송출, 광고 게재 빈도 제어(Frequency
+                Capping), 부정 클릭 방지 및 노출 성과 측정
+              </li>
+              <li>
+                <strong>서비스 보안 및 안정성 유지:</strong> 비인가 API 접근 차단,
+                비정상적 트래픽 방어, 시스템 오류 진단 및 성능 최적화
+              </li>
+            </ol>
+          </section>
+
+          <section class="space-y-3 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제2조 (처리하는 개인정보의 항목 및 수집 방법)
+            </h3>
+            <p>
+              앱은 회원가입이나 로그인 절차가 없으므로, 이용자의 성명, 전화번호,
+              이메일, 생년월일, 주민등록번호, 계좌번호 등 직접적인 개인 식별
+              정보를 일절 수집하거나 당사 서버에 저장하지 않습니다.
+            </p>
+
+            <div class="overflow-x-auto rounded-xl border border-gray-200">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead
+                  class="border-b border-gray-200 bg-gray-50 font-semibold text-gray-800"
                 >
-              </td>
-            </tr>
-            <tr>
-              <td class="border-skin-line border-r p-2 font-medium sm:p-3"
-                >네트워크 접속 로그<br /><span class="text-skin-base/70 text-xs"
-                  >(Cloudflare Workers)</span
-                ></td
-              >
-              <td class="border-skin-line border-r p-2 sm:p-3"
-                >접속 IP 주소, 요청 일시, User-Agent, API 호출 URL</td
-              >
-              <td class="border-skin-line border-r p-2 sm:p-3"
-                >Cloudflare, Inc.<br /><span class="text-skin-base/70 text-xs"
-                  >(API 호스팅 인프라)</span
-                ></td
-              >
-              <td class="p-2 sm:p-3"
-                >API 서버 네트워크 보안, DDoS 공격 방어, 서비스 트래픽 모니터링</td
-              >
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                  <tr>
+                    <th class="border-r border-gray-200 p-3">구분</th>
+                    <th class="border-r border-gray-200 p-3">처리 항목</th>
+                    <th class="border-r border-gray-200 p-3"
+                      >수집 및 저장 주체</th
+                    >
+                    <th class="p-3">처리 목적</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-gray-600">
+                  <tr>
+                    <td
+                      class="border-r border-gray-200 p-3 font-medium text-gray-900"
+                      >단말기 로컬 데이터</td
+                    >
+                    <td class="border-r border-gray-200 p-3"
+                      >찜한 상품 ID 목록(망태기), 필터 설정값 (은행, 가입방식,
+                      금리유형)</td
+                    >
+                    <td class="border-r border-gray-200 p-3"
+                      >이용자 단말기 내부 저장소<br /><span
+                        class="text-xs font-semibold text-blue-600"
+                        >(외부 서버 전송 없음)</span
+                      ></td
+                    >
+                    <td class="p-3">앱 내 관심 상품 북마크 및 검색 필터 유지</td
+                    >
+                  </tr>
+                  <tr>
+                    <td
+                      class="border-r border-gray-200 p-3 font-medium text-gray-900"
+                      >광고 및 기기 정보<br /><span
+                        class="text-xs text-gray-400">(Google AdMob)</span
+                      ></td
+                    >
+                    <td class="border-r border-gray-200 p-3">
+                      기기 모델명, OS 버전, 해상도, IP 주소(대략적 위치 추정용),
+                      국가/언어 설정, 광고 반응 기록, 크래시 진단 로그
+                    </td>
+                    <td class="border-r border-gray-200 p-3"
+                      >Google LLC<br /><span class="text-xs text-gray-400"
+                        >(Google Mobile Ads SDK)</span
+                      ></td
+                    >
+                    <td class="p-3">
+                      비맞춤형 배너 광고 송출, 광고 성과 통계 측정, 부정 클릭
+                      방지<br />
+                      <span class="text-xs font-semibold text-blue-600"
+                        >(*행태 추적 기반의 맞춤형 광고 미사용)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="border-r border-gray-200 p-3 font-medium text-gray-900"
+                      >네트워크 접속 로그<br /><span
+                        class="text-xs text-gray-400">(Cloudflare Workers)</span
+                      ></td
+                    >
+                    <td class="border-r border-gray-200 p-3"
+                      >접속 IP 주소, 요청 일시, User-Agent, API 호출 URL</td
+                    >
+                    <td class="border-r border-gray-200 p-3"
+                      >Cloudflare, Inc.<br /><span class="text-xs text-gray-400"
+                        >(API 호스팅 인프라)</span
+                      ></td
+                    >
+                    <td class="p-3"
+                      >API 서버 네트워크 보안, DDoS 공격 방어, 시스템 안정성
+                      유지</td
+                    >
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
 
-      <h2 id="article-3" class="text-lg font-bold">
-        제3조 (개인정보의 처리 및 보유 기간)
-      </h2>
-      <ol class="list-decimal space-y-1 pl-5 text-sm">
-        <li>
-          <strong>단말기 로컬 데이터 (관심 상품, 설정값):</strong> 이용자가 앱을 삭제하거나
-          단말기 내 애플리케이션 저장소 데이터를 초기화할 때까지 단말기 내부에서만
-          보유되며, 삭제 시 즉시 파기됩니다.
-        </li>
-        <li>
-          <strong>제3자 광고 데이터 (Google AdMob):</strong> Google의 데이터 보관
-          정책 및 개인정보처리방침에 따릅니다.
-        </li>
-        <li>
-          <strong>서버 접속 로그:</strong> 네트워크 보안 및 시스템 오류 방지를 위해
-          Cloudflare 표준 로그 보관 정책에 따라 일정 기간 보관 후 자동 삭제됩니다.
-        </li>
-      </ol>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제3조 (개인정보의 처리 및 보유 기간)
+            </h3>
+            <ol class="list-decimal space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>단말기 내부 저장 데이터:</strong> 이용자가 앱을 삭제하거나
+                단말기 내 애플리케이션 저장소 데이터를 초기화할 때까지 단말기 내부에서만
+                보관되며, 삭제 시 즉시 파기됩니다.
+              </li>
+              <li>
+                <strong>제3자 광고 SDK 정보:</strong> Google AdMob을 통해 처리되는
+                비맞춤형 광고 및 기기 관련 데이터는 Google의 데이터 보관 정책 및 개인정보처리방침에
+                따릅니다.
+              </li>
+              <li>
+                <strong>서버 접속 로그:</strong> 보안 및 시스템 모니터링을 위해 생성되는
+                통상적인 접속 로그는 Cloudflare 표준 보관 정책에 따라 일정 기간 보관
+                후 자동 파기됩니다.
+              </li>
+            </ol>
+          </section>
 
-      <h2 id="article-4" class="text-lg font-bold">
-        제4조 (개인정보의 제3자 제공)
-      </h2>
-      <p>
-        운영자는 원칙적으로 정보주체의 개인정보를 외부에 제공하지 않습니다.
-        다만, 서비스 운영 및 무료 제공 유지를 위해 아래와 같이 모바일 광고
-        사업자의 SDK를 연동하여 정보가 처리됩니다.
-      </p>
-      <div
-        class="border-skin-line bg-skin-card my-3 rounded-xl border p-4 text-xs leading-relaxed sm:text-sm"
-      >
-        <ul class="space-y-1">
-          <li><strong>제공받는 자:</strong> Google LLC (Google AdMob)</li>
-          <li>
-            <strong>제공 목적:</strong> 모바일 앱 내 비맞춤형 배너 광고 송출, 광고
-            성과 통계 분석, 부정 이용 방지
-          </li>
-          <li>
-            <strong>제공 항목:</strong> 기기 식별 정보(모델명, OS 버전), 대략적 위치(IP
-            주소 기반), 광고 반응 로그
-          </li>
-          <li>
-            <strong>보유 및 이용 기간:</strong> Google 개인정보 보호정책 준수 (<a
-              href="https://policies.google.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-skin-accent underline"
-              >Google 개인정보 보호정책 확인</a
-            >)
-          </li>
-          <li>
-            <strong>특기 사항:</strong> 앱은 <code
-              class="bg-skin-fill/10 rounded px-1 py-0.5"
-              >requestNonPersonalizedAdsOnly: true</code
-            > 모드로 동작하여 <strong
-              >개인 맞춤형 타겟팅 광고를 요청하지 않습니다.</strong
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제4조 (개인정보의 제3자 제공)
+            </h3>
+            <p>
+              운영자는 정보주체의 개인정보를 원칙적으로 외부에 제공하지
+              않습니다. 다만, 서비스 운영 및 무료 제공 유지를 위한 인앱 광고
+              송출을 위해 아래와 같이 전문 광고 사업자의 SDK를 연동하고
+              있습니다.
+            </p>
+            <div
+              class="space-y-1 rounded-xl border border-gray-200 bg-gray-50 p-4 text-xs text-gray-700 sm:text-sm"
             >
-          </li>
-        </ul>
-      </div>
+              <p><strong>제공받는 자:</strong> Google LLC (Google AdMob)</p>
+              <p>
+                <strong>제공 목적:</strong> 모바일 앱 내 비맞춤형(Non-Personalized)
+                배너 광고 송출, 광고 성과 및 통계 분석, 부정 이용 방지
+              </p>
+              <p>
+                <strong>제공 항목:</strong> 기기 식별 정보(모델명, OS 버전, 해상도),
+                대략적 위치(IP 기반), 광고 노출 및 클릭 로그
+              </p>
+              <p>
+                <strong>보유 및 이용 기간:</strong> Google 개인정보 보호정책 준수
+                (<a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 underline"
+                  >Google 개인정보 보호정책 확인</a
+                >)
+              </p>
+              <p class="font-semibold text-blue-700">
+                ※ 특기 사항: 앱은 <code
+                  class="rounded bg-gray-200 px-1 py-0.5 text-xs text-gray-800"
+                  >requestNonPersonalizedAdsOnly: true</code
+                > 모드로 동작하여 개인 맞춤형 타겟팅 광고를 일절 요청하지 않습니다.
+              </p>
+            </div>
+          </section>
 
-      <h2 id="article-5" class="text-lg font-bold">
-        제5조 (개인정보처리의 위탁)
-      </h2>
-      <p>
-        운영자는 원활한 서버리스 API 호스팅 및 데이터 보호를 위해 다음과 같이
-        개인정보 처리 업무를 위탁하고 있습니다.
-      </p>
-      <ul class="list-disc space-y-1 pl-5 text-sm">
-        <li><strong>수탁자:</strong> Cloudflare, Inc.</li>
-        <li>
-          <strong>위탁 업무 내용:</strong> 서버리스 API 인프라 운영(Cloudflare Workers),
-          데이터베이스 호스팅(Cloudflare D1), 네트워크 보안 및 DDoS 방어
-        </li>
-      </ul>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제5조 (개인정보처리의 위탁)
+            </h3>
+            <p>
+              운영자는 원활한 서버리스 API 호스팅 및 데이터 보호를 위해 다음과
+              같이 개인정보 처리 업무를 위탁하고 있습니다.
+            </p>
+            <ul class="list-disc space-y-1 pl-5 text-gray-600">
+              <li><strong>수탁자:</strong> Cloudflare, Inc.</li>
+              <li>
+                <strong>위탁 업무 내용:</strong> 서버리스 API 인프라 운영(Cloudflare
+                Workers), 데이터베이스 호스팅(Cloudflare D1), 네트워크 보안 및 트래픽
+                보호
+              </li>
+            </ul>
+          </section>
 
-      <h2 id="article-6" class="text-lg font-bold">
-        제6조 (개인정보의 파기 절차 및 방법)
-      </h2>
-      <p>
-        운영자는 원칙적으로 서버에 개인정보를 저장하지 않으며, 단말기에 저장된
-        데이터는 다음의 절차 및 방법에 따라 파기됩니다.
-      </p>
-      <ul class="list-disc space-y-1 pl-5 text-sm">
-        <li>
-          <strong>파기 절차:</strong> 이용자가 애플리케이션을 삭제하거나 기기 설정에서
-          앱 데이터를 삭제하는 경우 즉시 파기됩니다.
-        </li>
-        <li>
-          <strong>파기 방법:</strong> 단말기 내부 저장소의 전자적 파일은 재생 불가능한
-          기술적 방법으로 즉시 영구 삭제됩니다.
-        </li>
-      </ul>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제6조 (개인정보의 파기 절차 및 방법)
+            </h3>
+            <ul class="list-disc space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>파기 절차:</strong> 이용자가 앱을 삭제하거나 단말기 설정에서
+                앱 데이터를 초기화하는 경우, 단말기 내부 저장소(AsyncStorage)에 저장된
+                모든 데이터는 즉시 물리적으로 파기됩니다.
+              </li>
+              <li>
+                <strong>파기 방법:</strong> 단말기 내부 저장소의 전자적 파일은 재생할
+                수 없는 기술적 방법을 사용하여 즉시 영구 삭제됩니다.
+              </li>
+            </ul>
+          </section>
 
-      <h2 id="article-7" class="text-lg font-bold">
-        제7조 (정보주체와 법정대리인의 권리·의무 및 행사방법)
-      </h2>
-      <ol class="list-decimal space-y-1 pl-5 text-sm">
-        <li>
-          정보주체는 언제든지 단말기 내 앱 삭제를 통해 로컬에 저장된 모든 관심
-          상품 데이터와 설정값을 직접 파기할 수 있습니다.
-        </li>
-        <li>
-          정보주체는 개인정보 보호책임자에게 이메일을 통해 개인정보 열람, 정정,
-          삭제, 처리정지 등을 요구할 수 있습니다.
-        </li>
-        <li>
-          단, 앱은 별도의 회원가입 계정이나 서버 데이터베이스 상의 개인
-          식별정보를 보유하지 않으므로, 별도의 서버 회원 탈퇴나 서버 데이터 삭제
-          조치는 해당되지 않습니다.
-        </li>
-      </ol>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제7조 (정보주체와 법정대리인의 권리·의무 및 행사방법)
+            </h3>
+            <ol class="list-decimal space-y-1 pl-5 text-gray-600">
+              <li>
+                정보주체는 언제든지 단말기 내 앱 삭제를 통해 로컬에 저장된 관심
+                상품 데이터와 설정값을 직접 파기할 수 있습니다.
+              </li>
+              <li>
+                정보주체는 개인정보 보호책임자에게 이메일을 통해 개인정보 관련
+                문의 및 열람, 정정, 삭제, 처리정지 등을 요청할 수 있습니다.
+              </li>
+              <li>
+                단, 앱은 별도의 회원가입 계정이나 서버 데이터베이스 상의 개인
+                식별정보를 보유하지 않으므로 별도의 서버 회원 탈퇴 절차가
+                수반되지 않습니다.
+              </li>
+            </ol>
+          </section>
 
-      <h2 id="article-8" class="text-lg font-bold">
-        제8조 (개인정보의 안전성 확보 조치)
-      </h2>
-      <p>
-        운영자는 「개인정보 보호법」 제29조에 따라 서비스의 안전성 확보를 위해
-        다음과 같은 기술적·관리적 조치를 취하고 있습니다.
-      </p>
-      <ul class="list-disc space-y-1 pl-5 text-sm">
-        <li>
-          <strong>전송 구간 암호화:</strong> API 서버와 클라이언트 간의 모든 통신은
-          보안 프로토콜(HTTPS / SSL / TLS)을 통해 전송 구간이 암호화됩니다.
-        </li>
-        <li>
-          <strong>접근 통제 및 인증:</strong> 비인가된 외부의 불법 호출을 방지하기
-          위해 전용 API Secret Key 검증 체계를 적용하고 있습니다.
-        </li>
-        <li>
-          <strong>개인정보 최소 수집의 원칙:</strong> 회원가입 기능을 배제하고 직접
-          식별정보를 일절 저장하지 않는 프라이버시 중심 설계를 적용하고 있습니다.
-        </li>
-      </ul>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제8조 (개인정보의 안전성 확보 조치)
+            </h3>
+            <p>
+              운영자는 「개인정보 보호법」 제29조에 따라 서비스의 안전성 확보를
+              위해 다음과 같은 조치를 취하고 있습니다.
+            </p>
+            <ul class="list-disc space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>전송 구간 암호화:</strong> API 서버 통신 시 보안 프로토콜(HTTPS
+                / SSL / TLS)을 기본 적용하여 데이터 통신을 보호합니다.
+              </li>
+              <li>
+                <strong>API 접근 보안:</strong> 비인가된 외부 호출을 방지하기 위해
+                클라이언트-서버 간 인증 키 검증 메커니즘을 적용하고 있습니다.
+              </li>
+              <li>
+                <strong>최소 수집 원칙 준수:</strong> 불필요한 개인 식별 정보를 원천적으로
+                수집하지 않는 프라이버시 중심 설계를 유지합니다.
+              </li>
+            </ul>
+          </section>
 
-      <h2 id="article-9" class="text-lg font-bold">
-        제9조 (자동 수집 장치의 설치·운영 및 거부에 관한 사항)
-      </h2>
-      <p>
-        앱은 개인 식별용 웹 쿠키(Cookie)를 사용하지 않습니다. 다만, 비맞춤형
-        광고 송출을 위한 기기 식별 정보 처리를 원치 않는 경우 각 운영체제
-        설정에서 다음과 같이 차단할 수 있습니다.
-      </p>
-      <ul class="list-disc space-y-1 pl-5 text-sm">
-        <li>
-          <strong>Apple iOS:</strong> 기기 [설정] &gt; [개인정보 보호 및 보안] &gt;
-          [추적] &gt; '앱이 추적을 요청하도록 허용' 끔(OFF)
-        </li>
-        <li>
-          <strong>Google Android:</strong> 기기 [설정] &gt; [보안 및 개인정보 보호]
-          &gt; [광고] &gt; '광고 ID 삭제' 또는 '광고 ID 재설정'
-        </li>
-      </ul>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제9조 (자동 수집 장치의 설치·운영 및 거부에 관한 사항)
+            </h3>
+            <p>
+              앱은 개인 식별용 웹 쿠키를 사용하지 않습니다. 비맞춤형 광고 송출을
+              위한 기기 식별 정보 처리를 원치 않는 경우 각 운영체제 설정에서
+              다음과 같이 차단할 수 있습니다.
+            </p>
+            <ul class="list-disc space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>Apple iOS:</strong> 기기 [설정] &gt; [개인정보 보호 및 보안]
+                &gt; [추적] &gt; '앱이 추적을 요청하도록 허용' 끔(OFF)
+              </li>
+              <li>
+                <strong>Google Android:</strong> 기기 [설정] &gt; [보안 및 개인정보
+                보호] &gt; [광고] &gt; '광고 ID 삭제' 또는 '광고 ID 재설정'
+              </li>
+            </ul>
+          </section>
 
-      <h2 id="article-10" class="text-lg font-bold">
-        제10조 (외부 링크 사이트에 대한 면책)
-      </h2>
-      <p class="text-sm">
-        앱에서 제공하는 금융 상품 가입 링크를 클릭하여 각 금융기관(은행,
-        저축은행 등)의 공식 웹사이트 또는 앱으로 이동하는 경우, 해당 제3자
-        사이트에서 이루어지는 모든 개인정보 처리는 해당 금융기관의
-        개인정보처리방침이 적용됩니다.
-      </p>
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제10조 (외부 링크 사이트에 대한 면책)
+            </h3>
+            <p class="text-gray-600">
+              앱 내에서 제공되는 상품 가입 링크를 클릭하여 해당 은행 및
+              금융기관의 공식 웹사이트 또는 앱으로 이동하는 경우, 해당 제3자
+              사이트에서 이루어지는 개인정보 처리는 해당 금융기관의
+              개인정보처리방침이 적용됩니다.
+            </p>
+          </section>
 
-      <h2 id="article-11" class="text-lg font-bold">
-        제11조 (개인정보 보호책임자 및 고충처리 연락처)
-      </h2>
-      <p class="text-sm">
-        운영자는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 이와 관련한
-        정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보
-        보호책임자를 지정하고 있습니다.
-      </p>
-      <div
-        class="border-skin-line bg-skin-card not-prose my-3 rounded-xl border p-4 text-sm leading-relaxed"
-      >
-        <h4 class="text-skin-base mb-1 font-bold">개인정보 보호책임자</h4>
-        <ul class="text-skin-base/85 space-y-1 text-xs sm:text-sm">
-          <li><strong>성명:</strong> 이호진 (Hojin Lee)</li>
-          <li><strong>소속/직책:</strong> 먼스터(Monster) 개발 및 운영자</li>
-          <li>
-            <strong>전자우편(이메일):</strong>
-            <a
-              href="mailto:hojin9622@gmail.com"
-              class="text-skin-accent font-medium underline"
-              >hojin9622@gmail.com</a
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제11조 (개인정보 보호책임자 및 문의처)
+            </h3>
+            <p>
+              운영자는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 이와
+              관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이
+              개인정보 보호책임자를 지정하고 있습니다.
+            </p>
+            <div
+              class="space-y-1 rounded-xl border border-gray-200 bg-gray-50 p-4 text-xs text-gray-700 sm:text-sm"
             >
-          </li>
-          <li>
-            <strong>웹사이트:</strong>
-            <a
-              href="https://www.hojinlee.dev"
-              class="text-skin-accent underline">https://www.hojinlee.dev</a
+              <p><strong>성명:</strong> 이호진 (Hojin Lee)</p>
+              <p><strong>소속/직책:</strong> 먼스터(Monster) 개발·운영자</p>
+              <p>
+                <strong>이메일 문의:</strong>
+                <a
+                  href="mailto:hojin9622@gmail.com"
+                  class="font-medium text-blue-600 underline"
+                  >hojin9622@gmail.com</a
+                >
+              </p>
+              <p>
+                <strong>웹사이트:</strong>
+                <a
+                  href="https://www.hojinlee.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 underline">https://www.hojinlee.dev</a
+                >
+              </p>
+            </div>
+          </section>
+
+          <section class="space-y-2 border-t border-gray-100 pt-6">
+            <h3 class="text-base font-bold text-gray-900">
+              제12조 (권익침해 구제방법)
+            </h3>
+            <p class="text-gray-600">
+              정보주체는 개인정보 침해로 인한 구제를 받기 위하여 아래의 기관에
+              분쟁해결이나 상담 등을 신청할 수 있습니다.
+            </p>
+            <ul
+              class="list-disc space-y-1 pl-5 text-xs text-gray-600 sm:text-sm"
             >
-          </li>
-        </ul>
+              <li>
+                <strong>개인정보분쟁조정위원회:</strong> (국번없이) 1833-6972 (<a
+                  href="https://www.kopico.go.kr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline">www.kopico.go.kr</a
+                >)
+              </li>
+              <li>
+                <strong>개인정보침해신고센터:</strong> (국번없이) 118 (<a
+                  href="https://privacy.kisa.or.kr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline">privacy.kisa.or.kr</a
+                >)
+              </li>
+              <li>
+                <strong>대검찰청 사이버수사과:</strong> (국번없이) 1301 (<a
+                  href="https://www.spo.go.kr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline">www.spo.go.kr</a
+                >)
+              </li>
+              <li>
+                <strong>경찰청 사이버수사국:</strong> (국번없이) 182 (<a
+                  href="https://ecrm.police.go.kr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline">ecrm.police.go.kr</a
+                >)
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="space-y-1 border-t border-gray-100 pt-6 text-xs text-gray-500"
+          >
+            <h3 class="mb-1 text-sm font-bold text-gray-900">
+              제13조 (개인정보처리방침의 변경)
+            </h3>
+            <p>
+              본 개인정보처리방침은 법령이나 서비스 변경에 따라 내용이 추가,
+              삭제 또는 수정될 수 있으며, 개정 시 본 페이지를 통해 공지합니다.
+            </p>
+            <p class="pt-1">
+              • <strong>공고일자:</strong> 2026년 3월 20일 / <strong
+                >시행일자:</strong
+              > 2026년 3월 20일
+            </p>
+          </section>
+        </article>
       </div>
+    </main>
 
-      <h2 id="article-12" class="text-lg font-bold">
-        제12조 (권익침해 구제방법)
-      </h2>
-      <p class="text-sm">
-        정보주체는 개인정보 침해로 인한 구제를 받기 위하여 아래의 기관에
-        분쟁해결이나 상담 등을 신청할 수 있습니다.
-      </p>
-      <ul class="list-disc space-y-1 pl-5 text-xs sm:text-sm">
-        <li>
-          <strong>개인정보분쟁조정위원회:</strong> (국번없이) 1833-6972 (<a
-            href="https://www.kopico.go.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline">www.kopico.go.kr</a
-          >)
-        </li>
-        <li>
-          <strong>개인정보침해신고센터:</strong> (국번없이) 118 (<a
-            href="https://privacy.kisa.or.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline">privacy.kisa.or.kr</a
-          >)
-        </li>
-        <li>
-          <strong>대검찰청 사이버수사과:</strong> (국번없이) 1301 (<a
-            href="https://www.spo.go.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline">www.spo.go.kr</a
-          >)
-        </li>
-        <li>
-          <strong>경찰청 사이버수사국:</strong> (국번없이) 182 (<a
-            href="https://ecrm.police.go.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline">ecrm.police.go.kr</a
-          >)
-        </li>
-      </ul>
-
-      <h2 id="article-13" class="text-lg font-bold">
-        제13조 (개인정보처리방침의 변경 및 고지)
-      </h2>
-      <p class="text-sm">
-        본 개인정보처리방침은 법령, 정책 또는 보안 기술의 변경에 따라 개정될 수
-        있으며, 개정 시 본 웹페이지를 통해 변경 사항을 공지합니다.
-      </p>
-      <ul class="text-skin-base/75 list-disc space-y-0.5 pl-5 text-xs">
-        <li><strong>공고일자:</strong> 2026년 3월 20일</li>
-        <li><strong>시행일자:</strong> 2026년 3월 20일</li>
-      </ul>
-    </article>
-  </main>
-
-  <Footer />
-</Layout>
+    {/* 전용 심플 푸터 */}
+    <footer
+      class="border-t border-gray-200 bg-white py-8 text-center text-xs text-gray-400"
+    >
+      <div class="mx-auto max-w-3xl px-4">
+        <p>© 2026 먼스터 (Monster). All rights reserved.</p>
+        <p class="mt-1">
+          Designed for Google Play & Apple App Store Compliance
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
