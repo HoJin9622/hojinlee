@@ -1,0 +1,643 @@
+---
+import "@styles/base.css";
+import "@fontsource/pretendard/400.css";
+import "@fontsource/pretendard/500.css";
+import "@fontsource/pretendard/600.css";
+import "@fontsource/pretendard/700.css";
+
+const appName = "tv맛집";
+const appNameEn = "tvfood";
+const developerName = "EveryWave";
+const packageName = "net.nextlevels.tvfood";
+const pageTitle = `${appName} 개인정보처리방침`;
+const pageDescription = `${developerName}의 모바일 애플리케이션 ${appName}(${packageName}) 공식 개인정보처리방침입니다.`;
+const effectiveDate = "2026년 10월 5일";
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="min-h-screen bg-white font-sans text-[#212529] antialiased">
+    <div class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
+      {/* 문서 헤더 */}
+      <div class="mb-8 border-b border-gray-200 pb-6">
+        <div
+          class="mb-2 inline-block rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700"
+        >
+          Google Play / App Store 공식 개인정보처리방침
+        </div>
+        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+          {appName} ({appNameEn}) 개인정보처리방침
+        </h1>
+        <div
+          class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 sm:text-sm"
+        >
+          <span><strong>개발사:</strong> {developerName}</span>
+          <span>•</span>
+          <span><strong>패키지/번들 ID:</strong> {packageName}</span>
+          <span>•</span>
+          <span>시행일자: {effectiveDate}</span>
+        </div>
+      </div>
+
+      {/* 앱 식별 정보 요약 박스 (스토어 등록 정보 일치 안내) */}
+      <div
+        class="mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-xs sm:text-sm"
+      >
+        <h2 class="mb-2 font-bold text-gray-900">
+          애플리케이션 및 개발자 식별 정보
+        </h2>
+        <div class="grid grid-cols-1 gap-1.5 text-gray-700 sm:grid-cols-2">
+          <div>
+            <span class="font-semibold text-gray-900"
+              >앱 이름(스토어 등록명):</span
+            >{" "}
+            {appName}
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900"
+              >개발자(스토어 판매자명):</span
+            >{" "}
+            {developerName}
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900"
+              >패키지명(Package / Bundle ID):</span
+            >{" "}
+            {packageName}
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900">서비스 영문명:</span>
+            {appNameEn}
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900">운영 및 책임자:</span> 이호진
+            (Hojin Lee)
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900">문의처 이메일:</span>{" "}
+            hojin9622@gmail.com
+          </div>
+        </div>
+      </div>
+
+      {/* 본문 약관 */}
+      <div class="space-y-8 text-sm leading-relaxed text-gray-800">
+        <p class="leading-relaxed">
+          <strong>{developerName}</strong>(대표/운영자: 이호진, 이하 "운영자"
+          또는 "개발사")는 Google Play 스토어 및 Apple App Store를 통해 배포되는
+          모바일 애플리케이션 <strong>'{appName}'</strong>(패키지/번들 ID: <strong
+            >{packageName}</strong
+          >, 영문명: '{appNameEn}', 이하 "앱" 또는 "서비스") 이용자의 개인정보
+          및 위치정보를 중요시하며, 「개인정보 보호법」, 「위치정보의 보호 및
+          이용 등에 관한 법률」, Google Play 개발자 프로그램 정책, Apple App
+          Store 심사 지침 등 관련 법령과 규정을 준수합니다. 본 방침은 앱 이용 시
+          어떠한 정보가 처리되고 어떻게 안전하게 관리되는지 투명하게 안내하기
+          위해 작성되었습니다.
+        </p>
+
+        {/* 제1조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제1조 (개인정보의 처리 목적)
+          </h2>
+          <p class="mb-2 text-gray-700">
+            운영자는 다음의 목적을 위해서만 최소한의 정보를 처리하며, 명시된
+            목적 이외의 용도로는 사용하지 않습니다.
+          </p>
+          <ul class="list-disc space-y-1 pl-5 text-gray-700">
+            <li>
+              <strong>TV 프로그램 및 유튜브 방영 맛집 정보 제공:</strong> 방송(줄서는식당,
+              나혼자산다, 생활의달인 등) 및 유튜브(또간집, 쯔양 등)에 소개된 전국
+              맛집의 상호, 카테고리, 대표 메뉴, 소개 영상 시점 링크 등 공개 맛집 데이터
+              조회 서비스 제공
+            </li>
+            <li>
+              <strong>위치기반 내 주변 맛집 탐색 및 거리 표시:</strong> 이용자의 현재
+              위치를 기반으로 지도 화면 내 식당 위치 표시, 현재 위치로부터 식당까지의
+              직선거리(km) 계산 및 거리순 정렬 기능 제공
+            </li>
+            <li>
+              <strong>앱 실행 환경 설정 보관:</strong> 온보딩 가이드 화면 표시 여부
+              등 앱 내 기본 UI 상태 유지
+            </li>
+            <li>
+              <strong>모바일 광고 송출:</strong> 서비스 무료 운영을 위한 모바일 배너
+              광고(Google AdMob) 송출, 광고 게재 빈도 제어, 광고 성과 통계 측정 및
+              부정 트래픽 방지
+            </li>
+            <li>
+              <strong>서비스 보안 및 안정성 유지:</strong> 비정상적인 트래픽 대응,
+              DDoS 공격 방어 및 API 서버 안정성 모니터링
+            </li>
+          </ul>
+        </div>
+
+        {/* 제2조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제2조 (처리하는 개인정보 및 위치정보 항목)
+          </h2>
+          <p class="mb-3 text-gray-700">
+            본 앱은 <strong>별도의 회원가입이나 로그인 절차가 없습니다.</strong> 따라서
+            이용자의 이름, 주민등록번호, 연락처, 이메일 주소, 비밀번호 등 직접적인
+            개인 식별 정보를 일절 수집하거나 서버에 저장하지 않습니다.
+          </p>
+          <div class="my-3 overflow-x-auto">
+            <table
+              class="w-full border border-gray-200 text-left text-xs sm:text-sm"
+            >
+              <thead
+                class="border-b border-gray-200 bg-gray-50 font-semibold text-gray-900"
+              >
+                <tr>
+                  <th class="border-r border-gray-200 p-2.5 sm:p-3">구분</th>
+                  <th class="border-r border-gray-200 p-2.5 sm:p-3">항목</th>
+                  <th class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >수집 및 저장 주체</th
+                  >
+                  <th class="p-2.5 sm:p-3">처리 목적 및 저장 여부</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 text-gray-700">
+                <tr>
+                  <td
+                    class="border-r border-gray-200 p-2.5 font-medium text-gray-900 sm:p-3"
+                    >위치정보<br /><span class="text-xs text-gray-500"
+                      >(GPS 센서)</span
+                    ></td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >이용자 단말기의 현재 GPS 좌표 (위도, 경도)</td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >단말기 OS (expo-location) 및 API 서버 일시 전송</td
+                  >
+                  <td class="p-2.5 sm:p-3">
+                    지도상 내 위치 마커 표시, 식당과의 거리(km) 계산 및 거리순
+                    정렬<br />
+                    <span class="font-semibold text-blue-600"
+                      >※ 서버 DB에 저장하지 않음 (계산 완료 즉시 메모리에서
+                      폐기)</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="border-r border-gray-200 p-2.5 font-medium text-gray-900 sm:p-3"
+                    >단말기 로컬 데이터</td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >온보딩 가이드 확인 여부 (@ONBOARDING)</td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >이용자 단말기 내부 저장소 (AsyncStorage)<br /><span
+                      class="text-xs text-gray-500">(외부 서버 전송 없음)</span
+                    ></td
+                  >
+                  <td class="p-2.5 sm:p-3"
+                    >앱 실행 시 온보딩 화면 재노출 방지 (앱 삭제 시 파기)</td
+                  >
+                </tr>
+                <tr>
+                  <td
+                    class="border-r border-gray-200 p-2.5 font-medium text-gray-900 sm:p-3"
+                    >광고 및 기기 정보<br /><span class="text-xs text-gray-500"
+                      >(Google AdMob)</span
+                    ></td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3">
+                    기기 모델명, OS 버전, 해상도, IP 주소(국가/도시 등 대략적
+                    위치 추정용), 광고 식별자(광고 ID / IDFA / GAID), 광고 반응
+                    기록, 진단 데이터
+                  </td>
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >Google LLC (Google Mobile Ads SDK)</td
+                  >
+                  <td class="p-2.5 sm:p-3">
+                    모바일 배너 광고 송출, 광고 성과 통계 측정, 부정 클릭 방지
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="border-r border-gray-200 p-2.5 font-medium text-gray-900 sm:p-3"
+                    >서버 접속 로그<br /><span class="text-xs text-gray-500"
+                      >(Cloudflare)</span
+                    ></td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >접속 IP 주소, 요청 시각, User-Agent, API 호출 URL</td
+                  >
+                  <td class="border-r border-gray-200 p-2.5 sm:p-3"
+                    >Cloudflare, Inc. (API 인프라)</td
+                  >
+                  <td class="p-2.5 sm:p-3"
+                    >네트워크 보안, 비정상 트래픽 탐지, 시스템 안정성 유지</td
+                  >
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 제3조 - 위치정보의 보호 및 처리에 관한 특별 조항 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제3조 (위치정보의 보호 및 처리에 관한 사항)
+          </h2>
+          <p class="mb-2 text-gray-700">
+            운영자는 「위치정보의 보호 및 이용 등에 관한 법률」에 따라 다음과
+            같이 위치정보를 안전하게 처리합니다.
+          </p>
+          <ol class="list-decimal space-y-2 pl-5 text-gray-700">
+            <li>
+              <strong>위치정보의 이용 목적 및 서비스 내용:</strong>
+              <ul class="mt-1 list-disc space-y-0.5 pl-5 text-gray-600">
+                <li>
+                  앱 내 지도 화면에서 이용자의 현재 위치를 마커로 표시하고
+                  지도의 중심을 이동시킵니다.
+                </li>
+                <li>
+                  이용자의 현재 좌표를 기준으로 등록된 식당 간의 직선거리(km)를
+                  산출하여 화면에 표시하고, 거리순 정렬 필터를 적용합니다.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>위치정보 수집 방법:</strong> 이용자가 앱 화면에서 '내 위치'
+              버튼을 누르거나 거리순 정렬 목록을 조회할 때, 단말기 운영체제의 위치
+              센서(GPS, Wi-Fi 등)를 통해 <strong>포그라운드(앱 실행 중)</strong> 상태에서만
+              수집됩니다. <strong
+                >앱이 백그라운드에 있을 때는 위치정보를 일절 수집하지 않습니다.</strong
+              >
+            </li>
+            <li>
+              <strong>위치정보의 보유 및 파기 (비저장 원칙):</strong>
+              <ul class="mt-1 list-disc space-y-0.5 pl-5 text-gray-600">
+                <li>
+                  운영자는 이용자의 위치정보를 데이터베이스나 파일 등 <strong
+                    >어떠한 영구 저장소에도 저장하지 않습니다.</strong>
+                </li>
+                <li>
+                  위치정보는 API 서버에서 거리(km)를 연산하여 클라이언트에
+                  응답을 전송하는 즉시 휘발성 메모리에서 영구히
+                  삭제(파기)됩니다.
+                </li>
+                <li>
+                  또한 위치정보 수집·이용·제공사실 확인자료 역시 생성하거나
+                  보관하지 않습니다.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>위치정보 제3자 제공 금지:</strong> 운영자는 이용자의 동의 없이
+              위치정보를 제3자에게 제공하거나 외부에 공개하지 않습니다.
+            </li>
+            <li>
+              <strong>위치정보 권한 철회 및 권리:</strong> 이용자는 단말기 OS 설정을
+              통해 언제든지 위치 권한 허용을 철회하거나 거부할 수 있습니다. 위치 권한을
+              거부하더라도 기본 지도 보기, 식당 검색, 카테고리 필터 등 위치 기반 기능
+              외의 모든 일반 서비스는 정상적으로 이용 가능합니다.
+            </li>
+          </ol>
+        </div>
+
+        {/* 제4조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제4조 (개인정보의 처리 및 보유 기간)
+          </h2>
+          <ol class="list-decimal space-y-1 pl-5 text-gray-700">
+            <li>
+              <strong>단말기 로컬 데이터:</strong> 온보딩 설정값은 이용자가 앱을 삭제하거나
+              단말기 설정에서 앱 데이터를 초기화할 때까지 기기 내부에 보관되며, 앱
+              삭제 시 즉시 파기됩니다.
+            </li>
+            <li>
+              <strong>위치정보:</strong> 단말기에서 전송된 위치 좌표는 실시간 거리
+              계산에 1회 사용된 후 지체 없이 즉시 파기됩니다 (보유 기간 0초).
+            </li>
+            <li>
+              <strong>제3자 광고 데이터:</strong> Google AdMob의 데이터 보관 정책
+              및 개인정보 보호정책에 따라 관리됩니다.
+            </li>
+            <li>
+              <strong>서버 접속 로그:</strong> 네트워크 보안 및 시스템 안정성을 위해
+              Cloudflare 표준 방침에 따라 일정 기간 보관 후 자동 파기됩니다.
+            </li>
+          </ol>
+        </div>
+
+        {/* 제5조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제5조 (개인정보의 제3자 제공)
+          </h2>
+          <p class="mb-2 text-gray-700">
+            운영자는 이용자의 개인정보를 제3자에게 판매하거나 무단 제공하지
+            않습니다. 다만, 무료 서비스 운영을 위한 모바일 배너 광고 송출을 위해
+            다음과 같이 구글 광고 모듈을 연동하고 있습니다.
+          </p>
+          <div
+            class="space-y-1 border border-gray-200 bg-gray-50 p-3.5 text-xs text-gray-700 sm:text-sm"
+          >
+            <p><strong>제공받는 자:</strong> Google LLC (Google AdMob)</p>
+            <p>
+              <strong>제공 목적:</strong> 모바일 앱 내 배너 광고 송출, 광고 게재 빈도
+              제어, 광고 성과 통계 분석, 부정 클릭 및 부정 트래픽 방지
+            </p>
+            <p>
+              <strong>제공 항목:</strong> 기기 식별 정보(광고 ID / IDFA / GAID, 기기
+              모델명, OS 버전, 해상도), IP 주소 기반의 대략적 위치, 광고 노출 및 클릭
+              로그
+            </p>
+            <p>
+              <strong>보유 및 이용 기간:</strong> Google 개인정보 보호정책 준수 (<a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-medium text-gray-900 underline"
+                >Google 개인정보처리방침 확인</a
+              >)
+            </p>
+          </div>
+        </div>
+
+        {/* 제6조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제6조 (개인정보처리의 위탁)
+          </h2>
+          <p class="mb-1 text-gray-700">
+            운영자는 효율적인 서버리스 API 인프라 운영 및 네트워크 보안을 위해
+            다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.
+          </p>
+          <ul class="list-disc space-y-1 pl-5 text-gray-700">
+            <li><strong>수탁자:</strong> Cloudflare, Inc.</li>
+            <li>
+              <strong>위탁 업무 내용:</strong> 서버리스 API 인프라 운영(Cloudflare
+              Workers), 데이터베이스 호스팅(Cloudflare D1), 콘텐츠 전송 네트워크(CDN),
+              DDoS 방어 및 네트워크 보안 모니터링
+            </li>
+          </ul>
+        </div>
+
+        {/* 제7조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제7조 (개인정보의 파기 절차 및 방법)
+          </h2>
+          <ul class="list-disc space-y-1 pl-5 text-gray-700">
+            <li>
+              <strong>파기 절차:</strong> 이용자가 앱을 삭제하거나 기기 설정에서 앱
+              데이터를 삭제하면 단말기 로컬 저장소에 저장된 모든 데이터는 즉시 물리적으로
+              파기됩니다.
+            </li>
+            <li>
+              <strong>파기 방법:</strong> 단말기 내부 저장소(AsyncStorage)의 전자적
+              파일은 재생할 수 없는 기술적 방법을 사용하여 즉시 영구 삭제되며, 실시간
+              위치정보는 연산 직후 메모리에서 덮어쓰기 방식으로 소멸됩니다.
+            </li>
+          </ul>
+        </div>
+
+        {/* 제8조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제8조 (정보주체의 권리·의무 및 행사 방법)
+          </h2>
+          <ol class="list-decimal space-y-1 pl-5 text-gray-700">
+            <li>
+              정보주체는 언제든지 단말기 [설정] 메뉴를 통해 위치 정보 제공
+              권한을 허용하거나 거부할 수 있습니다.
+            </li>
+            <li>
+              정보주체는 앱 삭제 또는 데이터 초기화를 통해 단말기에 보관된
+              설정값을 직접 파기할 수 있습니다.
+            </li>
+            <li>
+              본 앱은 회원 계정 시스템 및 서버 회원 DB를 운영하지 않으므로,
+              별도의 회원 탈퇴 절차가 필요하지 않습니다.
+            </li>
+            <li>
+              정보주체는 아래에 안내된 보호책임자 이메일을 통해 개인정보 및
+              위치정보와 관련된 문의, 불만 처리, 의견 제시 등을 자유롭게
+              요청하실 수 있습니다.
+            </li>
+          </ol>
+        </div>
+
+        {/* 제9조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제9조 (개인정보 및 위치정보의 안전성 확보 조치)
+          </h2>
+          <p class="mb-1 text-gray-700">
+            운영자는 이용자의 정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록
+            다음과 같은 기술적·관리적 보호조치를 취하고 있습니다.
+          </p>
+          <ul class="list-disc space-y-1 pl-5 text-gray-700">
+            <li>
+              <strong>전송 구간 암호화:</strong> 앱과 API 서버 간의 모든 데이터 통신은
+              최신 보안 프로토콜(HTTPS / TLS)을 적용하여 안전하게 암호화되어 전송됩니다.
+            </li>
+            <li>
+              <strong>개인정보 미저장 원칙 (Stateless 아키텍처):</strong> 사용자의
+              위치 좌표나 단말기 식별자를 서버 데이터베이스에 저장하지 않는 무상태(Stateless)
+              구조를 채택하여 서버 해킹 등으로 인한 정보 유출 위험을 원천 차단합니다.
+            </li>
+            <li>
+              <strong>최소 권한의 원칙:</strong> 위치 기반 맛집 거리 계산을 위한 포그라운드
+              위치 권한 외에 불필요한 민감 권한(백그라운드 위치, 연락처, 마이크, 사진첩
+              등)을 일절 요구하지 않습니다.
+            </li>
+            <li>
+              <strong>관리자 API 보안:</strong> 식당 데이터 수집 및 관리자 엔드포인트에는
+              강력한 관리자 전용 인증 키(Admin API Key) 검증 체계를 적용하여 비인가
+              접근을 차단합니다.
+            </li>
+          </ul>
+        </div>
+
+        {/* 제10조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제10조 (자동 수집 장치의 설치·운영 및 거부 방법)
+          </h2>
+          <p class="mb-1 text-gray-700">
+            앱은 개인 식별용 쿠키를 사용하지 않습니다. 위치 정보 및 광고 ID
+            수집을 거부하고자 하시는 경우 단말기 OS 설정을 통해 차단하실 수
+            있습니다.
+          </p>
+          <div class="mt-2 space-y-2 text-xs sm:text-sm">
+            <div class="rounded border border-gray-100 bg-gray-50 p-3">
+              <strong class="text-gray-900">1. 위치 정보 수집 거부/해제:</strong
+              >
+              <ul class="mt-1 list-disc pl-5 text-gray-700">
+                <li>
+                  <strong>iOS:</strong> [설정] &gt; [개인정보 보호 및 보안] &gt; [위치
+                  서비스] &gt; 'tv맛집' &gt; '안 함' 선택
+                </li>
+                <li>
+                  <strong>Android:</strong> [설정] &gt; [애플리케이션] &gt; 'tv맛집'
+                  &gt; [권한] &gt; [위치] &gt; '허용 안함' 선택
+                </li>
+              </ul>
+            </div>
+            <div class="rounded border border-gray-100 bg-gray-50 p-3">
+              <strong class="text-gray-900">2. 맞춤형 광고 식별자 차단:</strong>
+              <ul class="mt-1 list-disc pl-5 text-gray-700">
+                <li>
+                  <strong>iOS:</strong> [설정] &gt; [개인정보 보호 및 보안] &gt; [추적]
+                  &gt; 'tv맛집' 앱 추적 비허용
+                </li>
+                <li>
+                  <strong>Android:</strong> [설정] &gt; [보안 및 개인정보 보호] &gt;
+                  [광고] &gt; '광고 ID 삭제' 또는 '재설정'
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 제11조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제11조 (외부 링크 및 기타 기능에 대한 안내)
+          </h2>
+          <ul class="list-disc space-y-1.5 pl-5 text-gray-700">
+            <li>
+              <strong>외부 플랫폼 이동:</strong> 식당 상세 화면에서 유튜브 영상 링크,
+              네이버 지도, 카카오맵 바로가기 버튼을 누르면 해당 제3자 플랫폼으로 이동합니다.
+              외부 사이트나 앱으로 이동한 후의 개인정보 처리는 해당 플랫폼의 개인정보처리방침이
+              적용됩니다.
+            </li>
+            <li>
+              <strong>클립보드 복사 기능:</strong> 식당의 주소 정보를 클립보드에 복사할
+              수 있는 편의 기능을 제공합니다. 이는 단말기 내부에서만 수행되며 클립보드의
+              기존 내용이나 복사된 데이터를 수집하거나 외부로 전송하지 않습니다.
+            </li>
+          </ul>
+        </div>
+
+        {/* 제12조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제12조 (개인정보 보호책임자 및 위치정보 관리책임자)
+          </h2>
+          <p class="mb-2 text-gray-700">
+            운영자는 개인정보 및 위치정보를 보호하고 관련 불만을 처리하기 위하여
+            아래와 같이 책임자를 지정하고 있습니다.
+          </p>
+          <div
+            class="space-y-1 border border-gray-200 bg-gray-50 p-3.5 text-xs text-gray-700 sm:text-sm"
+          >
+            <p>
+              <strong>개발사 / 운영자 (Google Play 등록명):</strong>
+              {developerName}
+            </p>
+            <p>
+              <strong>대상 애플리케이션:</strong>
+              {appName} ({packageName})
+            </p>
+            <p>
+              <strong>개인정보 보호책임자 및 위치정보 관리책임자:</strong> 이호진
+              (Hojin Lee)
+            </p>
+            <p>
+              <strong>문의처 이메일:</strong>
+              <a
+                href="mailto:hojin9622@gmail.com"
+                class="font-medium text-gray-900 underline"
+                >hojin9622@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>공식 웹사이트:</strong>
+              <a
+                href="https://www.hojinlee.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-900 underline">https://www.hojinlee.dev</a
+              >
+            </p>
+          </div>
+        </div>
+
+        {/* 제13조 */}
+        <div>
+          <h2 class="mb-2 text-base font-bold text-gray-900">
+            제13조 (권익침해 구제방법)
+          </h2>
+          <p class="mb-1 text-gray-700">
+            개인정보 침해에 대한 피해구제 및 상담은 아래의 기관에 문의하실 수
+            있습니다.
+          </p>
+          <ul class="list-disc space-y-1 pl-5 text-gray-700">
+            <li>
+              개인정보분쟁조정위원회: (국번없이) 1833-6972 (<a
+                href="https://www.kopico.go.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline">www.kopico.go.kr</a
+              >)
+            </li>
+            <li>
+              개인정보침해신고센터: (국번없이) 118 (<a
+                href="https://privacy.kisa.or.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline">privacy.kisa.or.kr</a
+              >)
+            </li>
+            <li>
+              대검찰청 사이버수사과: (국번없이) 1301 (<a
+                href="https://www.spo.go.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline">www.spo.go.kr</a
+              >)
+            </li>
+            <li>
+              경찰청 사이버수사국: (국번없이) 182 (<a
+                href="https://ecrm.police.go.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline">ecrm.police.go.kr</a
+              >)
+            </li>
+          </ul>
+        </div>
+
+        {/* 제14조 */}
+        <div class="border-t border-gray-200 pt-4 text-xs text-gray-500">
+          <p><strong>제14조 (개인정보처리방침의 변경)</strong></p>
+          <p class="mt-1">
+            본 개인정보처리방침은 관계 법령, 정부 지침 또는 서비스 운영 정책의
+            변경에 따라 내용이 추가, 삭제 및 수정될 수 있습니다. 방침을 개정하는
+            경우 웹페이지 및 앱 내 공지를 통하여 지체 없이 안내하겠습니다.
+          </p>
+          <p class="mt-1">
+            공고일자: {effectiveDate} / 시행일자: {effectiveDate}
+          </p>
+        </div>
+      </div>
+
+      {/* 문서 바닥글 */}
+      <div class="mt-12 border-t border-gray-200 pt-6 text-xs text-gray-400">
+        <p>© 2026 {developerName}. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
