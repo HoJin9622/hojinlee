@@ -5,12 +5,13 @@ import "@fontsource/pretendard/500.css";
 import "@fontsource/pretendard/600.css";
 import "@fontsource/pretendard/700.css";
 
-const appName = "tv맛집";
+const appName = "플레이트";
+const appNameDisplay = "플레이트 (Playte)";
 const appNameEn = "tvfood";
 const developerName = "EveryWave";
 const packageName = "net.nextlevels.tvfood";
-const pageTitle = `${appName} 개인정보처리방침`;
-const pageDescription = `${developerName}의 모바일 애플리케이션 ${appName}(${packageName}) 공식 개인정보처리방침입니다.`;
+const pageTitle = `${appNameDisplay} 개인정보처리방침`;
+const pageDescription = `${developerName}의 모바일 애플리케이션 ${appNameDisplay}(${packageName}) 공식 개인정보처리방침입니다.`;
 const effectiveDate = "2026년 10월 5일";
 ---
 
@@ -38,7 +39,7 @@ const effectiveDate = "2026년 10월 5일";
           Google Play / App Store 공식 개인정보처리방침
         </div>
         <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-          {appName} ({appNameEn}) 개인정보처리방침
+          {appNameDisplay} 개인정보처리방침
         </h1>
         <div
           class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 sm:text-sm"
@@ -63,7 +64,7 @@ const effectiveDate = "2026년 10월 5일";
             <span class="font-semibold text-gray-900"
               >앱 이름(스토어 등록명):</span
             >{" "}
-            {appName}
+            {appNameDisplay}
           </div>
           <div>
             <span class="font-semibold text-gray-900"
@@ -78,7 +79,8 @@ const effectiveDate = "2026년 10월 5일";
             {packageName}
           </div>
           <div>
-            <span class="font-semibold text-gray-900">서비스 영문명:</span>
+            <span class="font-semibold text-gray-900">서비스 영문명(Slug):</span
+            >{" "}
             {appNameEn}
           </div>
           <div>
@@ -97,14 +99,13 @@ const effectiveDate = "2026년 10월 5일";
         <p class="leading-relaxed">
           <strong>{developerName}</strong>(대표/운영자: 이호진, 이하 "운영자"
           또는 "개발사")는 Google Play 스토어 및 Apple App Store를 통해 배포되는
-          모바일 애플리케이션 <strong>'{appName}'</strong>(패키지/번들 ID: <strong
-            >{packageName}</strong
-          >, 영문명: '{appNameEn}', 이하 "앱" 또는 "서비스") 이용자의 개인정보
-          및 위치정보를 중요시하며, 「개인정보 보호법」, 「위치정보의 보호 및
-          이용 등에 관한 법률」, Google Play 개발자 프로그램 정책, Apple App
-          Store 심사 지침 등 관련 법령과 규정을 준수합니다. 본 방침은 앱 이용 시
-          어떠한 정보가 처리되고 어떻게 안전하게 관리되는지 투명하게 안내하기
-          위해 작성되었습니다.
+          모바일 애플리케이션 <strong>'{appNameDisplay}'</strong>(패키지/번들
+          ID: <strong>{packageName}</strong>, 영문 슬러그: '{appNameEn}', 이하
+          "앱" 또는 "서비스") 이용자의 개인정보 및 위치정보를 중요시하며,
+          「개인정보 보호법」, 「위치정보의 보호 및 이용 등에 관한 법률」,
+          Google Play 개발자 프로그램 정책, Apple App Store 심사 지침 등 관련
+          법령과 규정을 준수합니다. 본 방침은 앱 이용 시 어떠한 정보가 처리되고
+          어떻게 안전하게 관리되는지 투명하게 안내하기 위해 작성되었습니다.
         </p>
 
         {/* 제1조 */}
@@ -118,10 +119,10 @@ const effectiveDate = "2026년 10월 5일";
           </p>
           <ul class="list-disc space-y-1 pl-5 text-gray-700">
             <li>
-              <strong>TV 프로그램 및 유튜브 방영 맛집 정보 제공:</strong> 방송(줄서는식당,
-              나혼자산다, 생활의달인 등) 및 유튜브(또간집, 쯔양 등)에 소개된 전국
-              맛집의 상호, 카테고리, 대표 메뉴, 소개 영상 시점 링크 등 공개 맛집 데이터
-              조회 서비스 제공
+              <strong>방송 및 유튜브 방영 맛집 정보 제공:</strong> 방송 프로그램(줄서는식당,
+              나혼자산다, 생활의달인 등) 및 인기 유튜브 채널(또간집, 쯔양 등)에 소개된
+              전국 맛집의 상호, 카테고리, 대표 메뉴, 소개 영상 시점 링크 등 공개 맛집
+              데이터 조회 서비스 제공
             </li>
             <li>
               <strong>위치기반 내 주변 맛집 탐색 및 거리 표시:</strong> 이용자의 현재
@@ -188,7 +189,7 @@ const effectiveDate = "2026년 10월 5일";
                     지도상 내 위치 마커 표시, 식당과의 거리(km) 계산 및 거리순
                     정렬<br />
                     <span class="font-semibold text-blue-600"
-                      >※ 서버 DB에 저장하지 않음 (계산 완료 즉시 메모리에서
+                      >※ 서버 DB에 영구 저장하지 않음 (거리 계산 즉시 메모리에서
                       폐기)</span
                     >
                   </td>
@@ -207,7 +208,8 @@ const effectiveDate = "2026년 10월 5일";
                     ></td
                   >
                   <td class="p-2.5 sm:p-3"
-                    >앱 실행 시 온보딩 화면 재노출 방지 (앱 삭제 시 파기)</td
+                    >앱 실행 시 온보딩 화면 재노출 방지 (외부 서버 전송 없음, 앱
+                    삭제 시 파기)</td
                   >
                 </tr>
                 <tr>
@@ -226,7 +228,8 @@ const effectiveDate = "2026년 10월 5일";
                     >Google LLC (Google Mobile Ads SDK)</td
                   >
                   <td class="p-2.5 sm:p-3">
-                    모바일 배너 광고 송출, 광고 성과 통계 측정, 부정 클릭 방지
+                    모바일 배너 광고 송출, 광고 게재 빈도 제어, 광고 성과 통계
+                    측정, 부정 클릭 방지
                   </td>
                 </tr>
                 <tr>
@@ -287,12 +290,13 @@ const effectiveDate = "2026년 10월 5일";
               <ul class="mt-1 list-disc space-y-0.5 pl-5 text-gray-600">
                 <li>
                   운영자는 이용자의 위치정보를 데이터베이스나 파일 등 <strong
-                    >어떠한 영구 저장소에도 저장하지 않습니다.</strong>
+                    >어떠한 영구 저장소에도 저장하지 않습니다.</strong
+                  >
                 </li>
                 <li>
                   위치정보는 API 서버에서 거리(km)를 연산하여 클라이언트에
-                  응답을 전송하는 즉시 휘발성 메모리에서 영구히
-                  삭제(파기)됩니다.
+                  응답을 전송하는 즉시 휘발성 메모리에서 영구히 삭제(파기)됩니다
+                  (보유 기간 0초).
                 </li>
                 <li>
                   또한 위치정보 수집·이용·제공사실 확인자료 역시 생성하거나
@@ -309,6 +313,12 @@ const effectiveDate = "2026년 10월 5일";
               통해 언제든지 위치 권한 허용을 철회하거나 거부할 수 있습니다. 위치 권한을
               거부하더라도 기본 지도 보기, 식당 검색, 카테고리 필터 등 위치 기반 기능
               외의 모든 일반 서비스는 정상적으로 이용 가능합니다.
+            </li>
+            <li>
+              <strong>8세 이하의 아동 등의 보호의무자의 권리:</strong> 8세 이하의
+              아동, 피성년후견인 등 법률에 정한 자의 보호의무자가 위치정보의 이용에
+              동의하는 경우, 보호의무자는 위치정보 이용 동의 철회 및 열람·고지를 요구할
+              수 있습니다.
             </li>
           </ol>
         </div>
@@ -407,7 +417,7 @@ const effectiveDate = "2026년 10월 5일";
             <li>
               <strong>파기 방법:</strong> 단말기 내부 저장소(AsyncStorage)의 전자적
               파일은 재생할 수 없는 기술적 방법을 사용하여 즉시 영구 삭제되며, 실시간
-              위치정보는 연산 직후 메모리에서 덮어쓰기 방식으로 소멸됩니다.
+              위치정보는 연산 직후 메모리에서 휘발되어 소멸됩니다.
             </li>
           </ul>
         </div>
@@ -487,10 +497,10 @@ const effectiveDate = "2026년 10월 5일";
               <ul class="mt-1 list-disc pl-5 text-gray-700">
                 <li>
                   <strong>iOS:</strong> [설정] &gt; [개인정보 보호 및 보안] &gt; [위치
-                  서비스] &gt; 'tv맛집' &gt; '안 함' 선택
+                  서비스] &gt; '플레이트' &gt; '안 함' 선택
                 </li>
                 <li>
-                  <strong>Android:</strong> [설정] &gt; [애플리케이션] &gt; 'tv맛집'
+                  <strong>Android:</strong> [설정] &gt; [애플리케이션] &gt; '플레이트'
                   &gt; [권한] &gt; [위치] &gt; '허용 안함' 선택
                 </li>
               </ul>
@@ -500,7 +510,7 @@ const effectiveDate = "2026년 10월 5일";
               <ul class="mt-1 list-disc pl-5 text-gray-700">
                 <li>
                   <strong>iOS:</strong> [설정] &gt; [개인정보 보호 및 보안] &gt; [추적]
-                  &gt; 'tv맛집' 앱 추적 비허용
+                  &gt; '플레이트' 앱 추적 비허용
                 </li>
                 <li>
                   <strong>Android:</strong> [설정] &gt; [보안 및 개인정보 보호] &gt;
@@ -526,7 +536,7 @@ const effectiveDate = "2026년 10월 5일";
             <li>
               <strong>클립보드 복사 기능:</strong> 식당의 주소 정보를 클립보드에 복사할
               수 있는 편의 기능을 제공합니다. 이는 단말기 내부에서만 수행되며 클립보드의
-              기존 내용이나 복사된 데이터를 수집하거나 외부로 전송하지 않습니다.
+              기존 내용을 조회하거나 복사된 데이터를 수집하여 외부로 전송하지 않습니다.
             </li>
           </ul>
         </div>
@@ -544,12 +554,12 @@ const effectiveDate = "2026년 10월 5일";
             class="space-y-1 border border-gray-200 bg-gray-50 p-3.5 text-xs text-gray-700 sm:text-sm"
           >
             <p>
-              <strong>개발사 / 운영자 (Google Play 등록명):</strong>
+              <strong>개발사 / 운영자 (스토어 등록명):</strong>
               {developerName}
             </p>
             <p>
               <strong>대상 애플리케이션:</strong>
-              {appName} ({packageName})
+              {appNameDisplay} ({packageName})
             </p>
             <p>
               <strong>개인정보 보호책임자 및 위치정보 관리책임자:</strong> 이호진
